@@ -4,7 +4,6 @@ import json
 import datetime
 import os
 
-# 目标 URL 基础模板 (可以根据需要遍历未来几个月)
 BASE_URL = "https://nanabunnonijyuuni-mobile.com/s/n110/media/list?ima=3625&dy={}"
 
 def fetch_events_for_month(year_month):
@@ -21,20 +20,12 @@ def fetch_events_for_month(year_month):
         soup = BeautifulSoup(response.text, 'html.parser')
         
         events = []
-        
-        # 注意：这里的 CSS 选择器('.media-list li', '.date' 等)
-        # 是基于常见日系官网结构的猜测。
-        # 实际使用时，如果抓取不到数据，请在浏览器中按 F12 检查真实网页的 HTML 结构，
-        # 并在此处修改 find_all 和 select 的类名。
-        
-        list_items = soup.find_all('li', class_='list_item') # 假设列表项的类名
+        list_items = soup.find_all('li', class_='list_item')
         if not list_items:
-            # 尝试另一种通用选择器
             list_items = soup.select('.media_list li, .schedule_list li, article')
             
         for item in list_items:
             try:
-                # 提取日期 (格式可能需要转换)
                 date_elem = item.find(class_=['date', 'time', 'day'])
                 title_elem = item.find(class_=['title', 'name', 'txt'])
                 category_elem = item.find(class_=['category', 'tag', 'label'])
@@ -42,11 +33,10 @@ def fetch_events_for_month(year_month):
                 if not date_elem or not title_elem:
                     continue
                     
-                raw_date = date_elem.text.strip() # 例如 "2026.03.14" 
+                raw_date = date_elem.text.strip()
                 title = title_elem.text.strip()
                 category = category_elem.text.strip() if category_elem else "Other"
                 
-                # 简单的分类映射
                 cat_en = "Other"
                 if "TV" in category.upper() or "テレビ" in category: cat_en = "TV"
                 elif "RADIO" in category.upper() or "ラジオ" in category: cat_en = "Radio"
@@ -54,10 +44,7 @@ def fetch_events_for_month(year_month):
                 elif "LIVE" in category.upper() or "ライブ" in category: cat_en = "Live"
                 elif "EVENT" in category.upper() or "イベント" in category: cat_en = "Event"
                 
-                # 尝试标准化日期为 YYYY-MM-DD
-                # 这部分需要根据实际网页日期的格式微调
                 clean_date = raw_date.replace('.', '-').replace('/', '-')
-                # 如果网页只写了 "14日"，我们需要组合它
                 if len(clean_date) <= 3: 
                     day = ''.join(filter(str.isdigit, raw_date)).zfill(2)
                     clean_date = f"{year_month[:4]}-{year_month[4:]}-{day}"
@@ -67,7 +54,6 @@ def fetch_events_for_month(year_month):
                 detail_url = ""
                 if link_elem and link_elem.has_attr('href'):
                     detail_url = link_elem['href']
-                    # 如果是相对路径，则补全为绝对路径
                     if detail_url.startswith('/'):
                         detail_url = "https://nanabunnonijyuuni-mobile.com" + detail_url
                 
@@ -76,7 +62,7 @@ def fetch_events_for_month(year_month):
                     "date": clean_date,
                     "title": title,
                     "category": cat_en,
-                    "time": "", # 如果网页有提供具体时间可以提取
+                    "time": "", 
                     "url": detail_url
                 })
             except Exception as e:
@@ -90,25 +76,59 @@ def fetch_events_for_month(year_month):
 
 def main():
     all_events = []
-    
-    # 获取从 2018 年到明年的所有数据
-    now = datetime.datetime.now()
-    start_year = 2018
-    end_year = now.year + 1
-    
     months_to_fetch = []
-    for year in range(start_year, end_year + 1):
-        for month in range(1, 13):
-            months_to_fetch.append(f"{year}{month:02d}")
-            
+    now = datetime.datetime.now()
+    
+    # 读取 GitHub Actions 传进来的环境变量
+    is_fetch_all = os.environ.get('FETCH_ALL') == 'true'
+    
+    if is_fetch_all:
+        print("--- 执行全量抓取 (2018年至今) ---")
+        start_year = 2018
+        end_year = now.year + 1
+        for year in range(start_year, end_year + 1):
+            for month in range(1, 13):
+                months_to_fetch.append(f"{year}{month:02d}")
+    else:
+        print("--- 执行日常增量抓取 (近两个月) ---")
+        # 仅抓取当月和下个月
+        months_to_fetch.append(now.strftime("%Y%m"))
+        months_to_fetch.append((now + datetime.timedelta(days=31)).strftime("%Y%m"))
+
+    # 去重并排序月份
+    months_to_fetch = sorted(list(set(months_to_fetch)))
+    
+    # 尝试读取本地旧的 events.json (用于增量合并)
+    existing_events = []
+    if not is_fetch_all and os.path.exists('events.json'):
+        try:
+            with open('events.json', 'r', encoding='utf-8') as f:
+                existing_events = json.load(f)
+        except Exception:
+            pass
+
+    # 抓取数据
     for ym in months_to_fetch:
         events = fetch_events_for_month(ym)
         all_events.extend(events)
         
-    # 保存为 JSON 文件，供前端 HTML 读取
+    # 合并数据
+    if not is_fetch_all:
+        # 使用字典按 ID 去重，新数据覆盖旧数据
+        events_dict = {e['id']: e for e in existing_events}
+        for e in all_events:
+            events_dict[e['id']] = e
+        final_events = list(events_dict.values())
+    else:
+        final_events = all_events
+        
+    # 按日期排序
+    final_events.sort(key=lambda x: x['date'])
+        
+    # 写入 JSON
     with open('events.json', 'w', encoding='utf-8') as f:
-        json.dump(all_events, f, ensure_ascii=False, indent=2)
-    print(f"成功生成 events.json，共 {len(all_events)} 条数据")
+        json.dump(final_events, f, ensure_ascii=False, indent=2)
+    print(f"成功更新 events.json，当前总共 {len(final_events)} 条数据")
 
 if __name__ == "__main__":
     main()
