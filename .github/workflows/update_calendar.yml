@@ -12,16 +12,20 @@ on:
         type: boolean
         default: false
 
+# 赋予 GitHub Actions 修改和推送代码的权限（解决 exit code 128 报错）
+permissions:
+  contents: write
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
     
     steps:
       - name: 检出代码
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # 升级到 v4 解决 Node.js 警告
         
       - name: 设置 Python 环境
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5 # 升级到 v5 解决 Node.js 警告
         with:
           python-version: '3.x'
           
