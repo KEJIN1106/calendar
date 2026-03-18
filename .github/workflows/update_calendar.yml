@@ -5,6 +5,12 @@ on:
     # 每天 UTC 时间 00:00 (北京时间早上 8:00) 自动运行一次
     - cron: '0 0 * * *'
   workflow_dispatch: # 允许在 GitHub 网页上手动点击运行
+    inputs:
+      fetch_all:
+        description: '全量抓取 (勾选后将抓取2018年至今的所有历史活动)'
+        required: true
+        type: boolean
+        default: false
 
 jobs:
   update-data:
@@ -25,6 +31,9 @@ jobs:
           pip install requests beautifulsoup4
           
       - name: 运行爬虫脚本
+        env:
+          # 将 GitHub Actions 面板里的勾选状态传递给 Python 脚本
+          FETCH_ALL: ${{ github.event.inputs.fetch_all == 'true' && 'true' || 'false' }}
         run: python scraper.py
         
       - name: 提交并推送更改 (如果数据有更新)
