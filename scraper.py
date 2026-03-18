@@ -4,75 +4,238 @@ import json
 import datetime
 import os
 
-BASE_URL = "https://nanabunnonijyuuni-mobile.com/s/n110/media/list?ima=3625&dy={}"
+"""
+This script scrapes schedule (media) entries from the official 22/7 mobile site.
 
-def fetch_events_for_month(year_month):
+The previous implementation relied on a very specific page structure built around
+`<li>` elements within a `.media_list` or `.schedule_list`. However, the site
+has since been redesigned: each day on the schedule is represented by a
+`<div class="media_box">` containing a date header and one or more events. To
+address the scraping failures reported by the user, the base URL and parsing
+logic have been updated. The `ima` query parameter used previously appears
+to be a session-specific identifier that is not necessary for retrieving the
+monthly schedule, so it has been removed. Events are now extracted from
+`.media_box` elements and mapped to English categories for the calendar.
+"""
+
+# Base URL for fetching monthly schedules. The `dy` query parameter takes a
+# year/month value in YYYYMM format. Do not include an `ima` parameter here;
+# it is injected by the site for internal navigation but is not required for
+# retrieval.
+BASE_URL = "https://nanabunnonijyuuni-mobile.com/s/n110/media/list?dy={}"
+
+def fetch_events_for_month(year_month: str) -> list:
+    """Fetch and parse schedule events for a given year/month.
+
+    The 22/7 mobile site groups each day's entries under a `.media_box` div.
+    Within that container, the date is split into separate year and month/day
+    fields and each event is represented by an `<a class="media_box_list">`.
+
+    Args:
+        year_month: A string of the form "YYYYMM" representing the year and
+            month to fetch.
+
+    Returns:
+        A list of event dictionaries with keys: id, date, title, category,
+        time (blank), and url.
+    """
     url = BASE_URL.format(year_month)
     print(f"正在获取: {url}")
-    
+
+    # Use a common browser user agent; some sites block generic clients.
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        'User-Agent': (
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+            'AppleWebKit/537.36 (KHTML, like Gecko) '
+            'Chrome/120.0 Safari/537.36'
+        ),
+        'Accept-Language': 'ja,en;q=0.9',
+        'Referer': 'https://nanabunnonijyuuni-mobile.com/'
     }
-    
+
     try:
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, timeout=30)
         response.raise_for_status()
-        soup = BeautifulSoup(response.text, 'html.parser')
-        
-        events = []
-        list_items = soup.find_all('li', class_='list_item')
-        if not list_items:
-            list_items = soup.select('.media_list li, .schedule_list li, article')
-            
-        for item in list_items:
+    except Exception as e:
+        # Surface network errors to the caller and return empty list
+        print(f"获取网页失败: {e}")
+        return []
+
+    soup = BeautifulSoup(response.text, 'html.parser')
+    events: list = []
+
+    # Find all date containers on the page
+    media_boxes = soup.find_all('div', class_='media_box')
+    if not media_boxes:
+        # Fallback: if we can't find the new structure, attempt the old list-based structure
+        legacy_items = soup.select('.media_list li, .schedule_list li, article')
+        for item in legacy_items:
             try:
                 date_elem = item.find(class_=['date', 'time', 'day'])
                 title_elem = item.find(class_=['title', 'name', 'txt'])
                 category_elem = item.find(class_=['category', 'tag', 'label'])
-                
                 if not date_elem or not title_elem:
                     continue
-                    
-                raw_date = date_elem.text.strip()
-                title = title_elem.text.strip()
-                category = category_elem.text.strip() if category_elem else "Other"
-                
-                cat_en = "Other"
-                if "TV" in category.upper() or "テレビ" in category: cat_en = "TV"
-                elif "RADIO" in category.upper() or "ラジオ" in category: cat_en = "Radio"
-                elif "WEB" in category.upper() or "配信" in category: cat_en = "Web"
-                elif "LIVE" in category.upper() or "ライブ" in category: cat_en = "Live"
-                elif "EVENT" in category.upper() or "イベント" in category: cat_en = "Event"
-                
-                clean_date = raw_date.replace('.', '-').replace('/', '-')
-                if len(clean_date) <= 3: 
-                    day = ''.join(filter(str.isdigit, raw_date)).zfill(2)
-                    clean_date = f"{year_month[:4]}-{year_month[4:]}-{day}"
-                
-                # 提取详情链接
+                raw_date = date_elem.get_text(strip=True)
+                title = title_elem.get_text(strip=True)
+                category_text = category_elem.get_text(strip=True) if category_elem else ''
+                clean_date = _normalize_date(raw_date, year_month)
+                cat_en = _map_category(category_text)
                 link_elem = item.find('a')
-                detail_url = ""
+                detail_url = ''
                 if link_elem and link_elem.has_attr('href'):
                     detail_url = link_elem['href']
                     if detail_url.startswith('/'):
-                        detail_url = "https://nanabunnonijyuuni-mobile.com" + detail_url
-                
+                        detail_url = 'https://nanabunnonijyuuni-mobile.com' + detail_url
                 events.append({
-                    "id": f"{clean_date}-{hash(title)}",
-                    "date": clean_date,
-                    "title": title,
-                    "category": cat_en,
-                    "time": "", 
-                    "url": detail_url
+                    'id': f"{clean_date}-{hash(title + category_text)}",
+                    'date': clean_date,
+                    'title': title,
+                    'category': cat_en,
+                    'time': '',
+                    'url': detail_url,
                 })
             except Exception as e:
-                print(f"解析单个项目时出错: {e}")
-                
+                print(f"解析旧结构时出错: {e}")
         return events
-        
-    except Exception as e:
-        print(f"获取网页失败: {e}")
-        return []
+
+    # Parse each media box representing a single date
+    for box in media_boxes:
+        try:
+            # Extract year and month/day
+            year_div = box.find('div', class_='media_date_year')
+            day_div = box.find('div', class_='media_date_day')
+            if not year_div or not day_div:
+                continue
+            year = year_div.get_text(strip=True)
+            # day_div may contain text like "03.07" followed by a day-of-week <span>
+            month_day_raw = day_div.get_text(separator=' ', strip=True).split()[0]
+            # month_day_raw is of the form "MM.DD"
+            if '.' in month_day_raw:
+                month, day = month_day_raw.split('.')
+            elif '/' in month_day_raw:
+                month, day = month_day_raw.split('/')
+            else:
+                # fallback: use substring slicing
+                month = month_day_raw[:2]
+                day = month_day_raw[2:]
+            date_str = f"{year}-{month.zfill(2)}-{day.zfill(2)}"
+
+            # Each <a class="media_box_list"> inside this box is an event
+            for link in box.find_all('a', class_='media_box_list'):
+                try:
+                    category_elem = link.find('div', class_='media_category')
+                    title_elem = link.find('div', class_='media_title')
+                    category_text = ''
+                    title = ''
+                    if category_elem:
+                        # Text may be inside a <span>
+                        category_text = category_elem.get_text(strip=True)
+                    if title_elem:
+                        title = title_elem.get_text(strip=True)
+                    if not title:
+                        continue
+                    cat_en = _map_category(category_text)
+                    # Construct detail URL
+                    href = link.get('href', '')
+                    detail_url = ''
+                    if href:
+                        if href.startswith('/'):
+                            detail_url = 'https://nanabunnonijyuuni-mobile.com' + href
+                        else:
+                            detail_url = href
+                    event_id = f"{date_str}-{hash(title + category_text)}"
+                    events.append({
+                        'id': event_id,
+                        'date': date_str,
+                        'title': title,
+                        'category': cat_en,
+                        'time': '',
+                        'url': detail_url,
+                    })
+                except Exception as e:
+                    print(f"解析单个活动时出错: {e}")
+        except Exception as e:
+            print(f"解析日期块时出错: {e}")
+
+    return events
+
+
+def _normalize_date(raw_date: str, year_month: str) -> str:
+    """Normalize dates from legacy list structures.
+
+    The old schedule layout uses compact date strings like "3/5" or "03.05".
+    When only day and month are present, this function prepends the year from
+    `year_month` to construct a full ISO date.
+
+    Args:
+        raw_date: The raw date string extracted from the page.
+        year_month: The current year/month in YYYYMM format.
+
+    Returns:
+        A ISO formatted date string (YYYY-MM-DD).
+    """
+    # Replace separators and extract digits
+    clean = raw_date.replace('.', '-').replace('/', '-').strip()
+    parts = [p for p in clean.split('-') if p]
+    if len(parts) == 2:
+        # e.g. ['03', '07'] -> prefix year
+        year = year_month[:4]
+        month, day = parts
+    elif len(parts) == 3:
+        year, month, day = parts
+    else:
+        # fallback: treat raw_date as day only
+        year = year_month[:4]
+        month = year_month[4:]
+        # keep only digits from raw_date
+        day = ''.join(filter(str.isdigit, raw_date))
+    return f"{year}-{month.zfill(2)}-{day.zfill(2)}"
+
+
+def _map_category(category_text: str) -> str:
+    """Map Japanese or site-specific category names to English labels.
+
+    This helper centralises category translations. If a category is unrecognised
+    it defaults to "Other".
+
+    Args:
+        category_text: Raw text from the `.media_category` element.
+
+    Returns:
+        A simple English category string recognised by the calendar front-end.
+    """
+    if not category_text:
+        return 'Other'
+    text = category_text.strip().lower()
+    # Japanese category names and their English counterparts
+    mapping = {
+        'テレビ': 'TV',
+        'tv': 'TV',
+        'ラジオ': 'Radio',
+        'radio': 'Radio',
+        'web': 'Web',
+        '配信': 'Web',
+        'ライブ': 'Live',
+        'live': 'Live',
+        'イベント': 'Event',
+        'event': 'Event',
+        '特典会': 'Event',
+        '雑誌': 'Release',
+        'cd': 'Release',
+        'dvd': 'Release',
+        'その他': 'Other',
+        'other': 'Other',
+    }
+    # Attempt exact match first
+    for key, value in mapping.items():
+        if key.lower() == text:
+            return value
+    # Attempt partial matches
+    for key, value in mapping.items():
+        if key.lower() in text:
+            return value
+    return 'Other'
 
 def main():
     all_events = []
