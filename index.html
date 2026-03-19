@@ -18,8 +18,12 @@
                         nana: {
                             blue: "#1a3668",
                             light: "#e6f0fa",
-                            accent: "#4a90e2"
+                            accent: "#4a90e2",
+                            pink: "#df7083"
                         }
+                    },
+                    boxShadow: {
+                        soft: "0 10px 30px rgba(26,54,104,0.08)"
                     }
                 }
             }
@@ -29,7 +33,7 @@
     <style>
         body {
             font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-            background-color: #f8fafc;
+            background: linear-gradient(180deg, #f8fafc 0%, #edf4fb 100%);
         }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
@@ -42,7 +46,9 @@
         const { useState, useEffect, useMemo } = React;
 
         const MOCK_EVENTS = [
-            { id: 1, date: "2026-03-14", title: "22/7 音乐节目出演", category: "TV", time: "", url: "https://nanabunnonijyuuni-mobile.com/" }
+            { id: 1, date: "2026-03-07", title: "TOKYO MX・BS11『22/7 計算外』", category: "TV", time: "", url: "https://nanabunnonijyuuni-mobile.com/" },
+            { id: 2, date: "2026-03-07", title: "『IDORISE!! FESTIVAL 2026』", category: "Event", time: "", url: "https://nanabunnonijyuuni-mobile.com/" },
+            { id: 3, date: "2026-03-14", title: "『河瀬詩の泡沫らじお-UTAKATA RADIO-』", category: "Radio", time: "", url: "https://nanabunnonijyuuni-mobile.com/" }
         ];
 
         const CATEGORY_COLORS = {
@@ -57,10 +63,10 @@
 
         const CATEGORY_LABELS = {
             All: "全部",
+            Event: "Event",
             TV: "TV",
             Radio: "Radio",
             Web: "Web",
-            Event: "Event",
             Live: "Live",
             Release: "Release",
             Other: "Other"
@@ -68,6 +74,7 @@
 
         const VIEW_LABELS = {
             month: "月历",
+            week: "周视图",
             list: "列表",
             category: "分类"
         };
@@ -76,6 +83,30 @@
             if (!dateStr) return "";
             const [y, m, d] = dateStr.split("-");
             return `${y}年${Number(m)}月${Number(d)}日`;
+        }
+
+        function formatShortDate(dateStr) {
+            if (!dateStr) return "";
+            const [_, m, d] = dateStr.split("-");
+            return `${Number(m)}/${Number(d)}`;
+        }
+
+        function toDate(dateStr) {
+            const [y, m, d] = dateStr.split("-").map(Number);
+            return new Date(y, m - 1, d);
+        }
+
+        function getWeekDates(baseDate) {
+            const d = new Date(baseDate);
+            const day = d.getDay();
+            const start = new Date(d);
+            start.setDate(d.getDate() - day);
+
+            return Array.from({ length: 7 }, (_, i) => {
+                const current = new Date(start);
+                current.setDate(start.getDate() + i);
+                return current;
+            });
         }
 
         function groupByDate(items) {
@@ -94,6 +125,10 @@
                 map[item.category].push(item);
             });
             return map;
+        }
+
+        function sameMonth(a, b) {
+            return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth();
         }
 
         const App = () => {
@@ -144,47 +179,32 @@
                 lucide.createIcons();
             });
 
-            const getDaysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
-            const getFirstDayOfMonth = (year, month) => new Date(year, month, 1).getDay();
-
-            const nextMonth = () => {
-                setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
-            };
-
-            const prevMonth = () => {
-                setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
-            };
-
-            const daysInMonth = getDaysInMonth(currentDate.getFullYear(), currentDate.getMonth());
-            const firstDay = getFirstDayOfMonth(currentDate.getFullYear(), currentDate.getMonth());
-
             const monthNames = ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"];
             const dayNames = ["日", "一", "二", "三", "四", "五", "六"];
 
             const currentMonthPrefix = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, "0")}`;
 
-            const filteredEvents = useMemo(() => {
-                return events.filter((e) => {
-                    const inMonth = e.date?.startsWith(currentMonthPrefix);
-                    const inCategory = activeCategory === "All" ? true : e.category === activeCategory;
-                    const inSearch = searchText.trim()
-                        ? (e.title || "").toLowerCase().includes(searchText.trim().toLowerCase())
-                        : true;
-                    return inMonth && inCategory && inSearch;
-                });
-            }, [events, currentMonthPrefix, activeCategory, searchText]);
-
             const allMonthEvents = useMemo(() => {
                 return events.filter(e => e.date?.startsWith(currentMonthPrefix));
             }, [events, currentMonthPrefix]);
 
+            const filteredEvents = useMemo(() => {
+                return allMonthEvents.filter((e) => {
+                    const inCategory = activeCategory === "All" ? true : e.category === activeCategory;
+                    const inSearch = searchText.trim()
+                        ? (e.title || "").toLowerCase().includes(searchText.trim().toLowerCase())
+                        : true;
+                    return inCategory && inSearch;
+                });
+            }, [allMonthEvents, activeCategory, searchText]);
+
             const monthCategoryStats = useMemo(() => {
                 const stats = {
                     All: allMonthEvents.length,
+                    Event: 0,
                     TV: 0,
                     Radio: 0,
                     Web: 0,
-                    Event: 0,
                     Live: 0,
                     Release: 0,
                     Other: 0
@@ -196,24 +216,197 @@
                 return stats;
             }, [allMonthEvents]);
 
-            const getEventsForDate = (dateString) => {
-                return filteredEvents.filter(e => e.date === dateString);
-            };
+            const sortedFilteredEvents = useMemo(() => {
+                return [...filteredEvents].sort((a, b) => {
+                    return a.date.localeCompare(b.date) || (a.title || "").localeCompare(b.title || "");
+                });
+            }, [filteredEvents]);
+
+            const latestEvents = useMemo(() => {
+                return [...sortedFilteredEvents].slice(0, 8);
+            }, [sortedFilteredEvents]);
+
+            const getDaysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
+            const getFirstDayOfMonth = (year, month) => new Date(year, month, 1).getDay();
+
+            const daysInMonth = getDaysInMonth(currentDate.getFullYear(), currentDate.getMonth());
+            const firstDay = getFirstDayOfMonth(currentDate.getFullYear(), currentDate.getMonth());
+
+            const nextMonth = () => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
+            const prevMonth = () => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
+            const jumpToToday = () => setCurrentDate(new Date());
+            const jumpToCurrentMonth = () => setCurrentDate(new Date(2026, 2, 1));
+
+            const getEventsForDate = (dateString) => filteredEvents.filter(e => e.date === dateString);
 
             const handleDayClick = (day) => {
                 const dateString = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
-                setSelectedDate({
-                    day,
-                    dateString,
-                    events: getEventsForDate(dateString)
-                });
+                setSelectedDate({ day, dateString, events: getEventsForDate(dateString) });
             };
 
-            const groupedListEvents = useMemo(() => groupByDate(filteredEvents), [filteredEvents]);
-            const groupedCategoryEvents = useMemo(() => groupByCategory(filteredEvents), [filteredEvents]);
+            const groupedListEvents = useMemo(() => groupByDate(sortedFilteredEvents), [sortedFilteredEvents]);
+            const groupedCategoryEvents = useMemo(() => groupByCategory(sortedFilteredEvents), [sortedFilteredEvents]);
+            const weekDates = useMemo(() => getWeekDates(currentDate), [currentDate]);
+
+            const weekEvents = useMemo(() => {
+                const dateSet = new Set(
+                    weekDates.map(d =>
+                        `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`
+                    )
+                );
+                return sortedFilteredEvents.filter(e => dateSet.has(e.date));
+            }, [weekDates, sortedFilteredEvents]);
+
+            const totalCategoriesWithEvents = useMemo(() => {
+                return ["Event", "TV", "Radio", "Web", "Live", "Release", "Other"]
+                    .filter(cat => monthCategoryStats[cat] > 0).length;
+            }, [monthCategoryStats]);
+
+            const renderHero = () => (
+                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-nana-blue via-[#244b8d] to-nana-pink text-white shadow-soft">
+                    <div className="absolute inset-0 opacity-10">
+                        <div className="absolute -top-10 -right-10 w-56 h-56 rounded-full bg-white"></div>
+                        <div className="absolute bottom-0 left-10 w-36 h-36 rounded-full bg-white"></div>
+                    </div>
+                    <div className="relative p-6 md:p-8">
+                        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                            <div>
+                                <div className="inline-flex items-center gap-2 text-xs md:text-sm bg-white/15 px-3 py-1 rounded-full mb-3">
+                                    <i data-lucide="sparkles" className="w-4 h-4"></i>
+                                    22/7 官方活动聚合日历
+                                </div>
+                                <h1 className="text-2xl md:text-4xl font-bold leading-tight">
+                                    用更清晰的方式查看
+                                    <br />
+                                    22/7 每月活动安排
+                                </h1>
+                                <p className="mt-3 text-white/85 text-sm md:text-base max-w-2xl">
+                                    支持月历、周视图、列表和分类模式，快速筛选 Event / TV / Radio 等活动。
+                                </p>
+                            </div>
+
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 min-w-full md:min-w-[440px]">
+                                <div className="rounded-2xl bg-white/12 backdrop-blur p-4">
+                                    <div className="text-xs text-white/70">本月活动</div>
+                                    <div className="text-2xl font-bold mt-1">{allMonthEvents.length}</div>
+                                </div>
+                                <div className="rounded-2xl bg-white/12 backdrop-blur p-4">
+                                    <div className="text-xs text-white/70">筛选后</div>
+                                    <div className="text-2xl font-bold mt-1">{filteredEvents.length}</div>
+                                </div>
+                                <div className="rounded-2xl bg-white/12 backdrop-blur p-4">
+                                    <div className="text-xs text-white/70">有活动分类</div>
+                                    <div className="text-2xl font-bold mt-1">{totalCategoriesWithEvents}</div>
+                                </div>
+                                <div className="rounded-2xl bg-white/12 backdrop-blur p-4">
+                                    <div className="text-xs text-white/70">当前视图</div>
+                                    <div className="text-lg font-bold mt-2">{VIEW_LABELS[viewMode]}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+
+            const renderToolbar = () => (
+                <div className="bg-white rounded-2xl shadow-soft border border-white/60 p-4 md:p-5">
+                    <div className="flex flex-col gap-4">
+                        <div className="flex flex-col xl:flex-row gap-3 xl:items-center xl:justify-between">
+                            <div className="flex flex-wrap gap-2">
+                                {["month", "week", "list", "category"].map((mode) => (
+                                    <button
+                                        key={mode}
+                                        onClick={() => setViewMode(mode)}
+                                        className={`px-3 py-2 rounded-xl text-sm font-medium border transition ${
+                                            viewMode === mode
+                                                ? "bg-nana-blue text-white border-nana-blue shadow"
+                                                : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50"
+                                        }`}
+                                    >
+                                        {VIEW_LABELS[mode]}
+                                    </button>
+                                ))}
+                            </div>
+
+                            <div className="flex flex-col md:flex-row gap-3">
+                                <div className="relative">
+                                    <i data-lucide="search" className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                                    <input
+                                        type="text"
+                                        value={searchText}
+                                        onChange={(e) => setSearchText(e.target.value)}
+                                        placeholder="搜索活动标题"
+                                        className="w-full md:w-72 rounded-xl border border-gray-200 pl-9 pr-3 py-2.5 text-sm outline-none focus:border-nana-accent"
+                                    />
+                                </div>
+
+                                <div className="flex gap-2">
+                                    <button
+                                        onClick={jumpToToday}
+                                        className="px-3 py-2 rounded-xl text-sm font-medium border border-gray-200 bg-white hover:bg-gray-50"
+                                    >
+                                        今天
+                                    </button>
+                                    <button
+                                        onClick={jumpToCurrentMonth}
+                                        className="px-3 py-2 rounded-xl text-sm font-medium border border-gray-200 bg-white hover:bg-gray-50"
+                                    >
+                                        回到示例月
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-wrap gap-2">
+                            {Object.keys(CATEGORY_LABELS).map((cat) => (
+                                <button
+                                    key={cat}
+                                    onClick={() => setActiveCategory(cat)}
+                                    className={`px-3 py-1.5 rounded-full text-xs font-medium border transition ${
+                                        activeCategory === cat
+                                            ? "bg-nana-pink text-white border-nana-pink"
+                                            : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50"
+                                    }`}
+                                >
+                                    {CATEGORY_LABELS[cat]} ({monthCategoryStats[cat] ?? 0})
+                                </button>
+                            ))}
+                        </div>
+
+                        <div className="flex items-center justify-between bg-gray-50 rounded-xl px-4 py-3 text-sm text-gray-600">
+                            <div>
+                                {isLoading ? "正在加载活动数据..." : dataSource}
+                            </div>
+                            <div className="hidden md:block">
+                                当前月份共有 {allMonthEvents.length} 条，当前筛选显示 {filteredEvents.length} 条
+                            </div>
+                        </div>
+
+                        {loadError && (
+                            <div className="rounded-xl bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-600 break-all">
+                                错误信息：{loadError}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+
+            const renderCalendarNav = () => (
+                <div className="bg-white rounded-2xl shadow-soft border border-white/60 p-4 md:p-6 flex justify-between items-center">
+                    <button onClick={prevMonth} className="p-2 rounded-full hover:bg-gray-100 transition text-gray-600">
+                        <i data-lucide="chevron-left" className="w-6 h-6"></i>
+                    </button>
+                    <h2 className="text-2xl font-bold text-gray-800">
+                        {currentDate.getFullYear()} 年 {monthNames[currentDate.getMonth()]}
+                    </h2>
+                    <button onClick={nextMonth} className="p-2 rounded-full hover:bg-gray-100 transition text-gray-600">
+                        <i data-lucide="chevron-right" className="w-6 h-6"></i>
+                    </button>
+                </div>
+            );
 
             const renderMonthView = () => (
-                <div className="bg-white border-x border-b border-gray-100 rounded-b-2xl shadow-sm overflow-hidden">
+                <div className="bg-white rounded-2xl shadow-soft border border-white/60 overflow-hidden">
                     <div className="grid grid-cols-7 bg-gray-50 border-b border-gray-100">
                         {dayNames.map((day, i) => (
                             <div
@@ -227,7 +420,7 @@
 
                     <div className="grid grid-cols-7 auto-rows-fr">
                         {[...Array(firstDay)].map((_, i) => (
-                            <div key={`empty-${i}`} className="min-h-[100px] p-2 border-b border-r border-gray-50 bg-gray-50/50"></div>
+                            <div key={`empty-${i}`} className="min-h-[105px] p-2 border-b border-r border-gray-50 bg-gray-50/50"></div>
                         ))}
 
                         {[...Array(daysInMonth)].map((_, i) => {
@@ -242,7 +435,7 @@
                                 <div
                                     key={day}
                                     onClick={() => handleDayClick(day)}
-                                    className="min-h-[100px] md:min-h-[120px] p-1 md:p-2 border-b border-r border-gray-100 hover:bg-nana-light/30 transition cursor-pointer relative group"
+                                    className="min-h-[105px] md:min-h-[128px] p-1.5 md:p-2 border-b border-r border-gray-100 hover:bg-nana-light/30 transition cursor-pointer relative group"
                                 >
                                     <div className="flex justify-between items-start mb-1">
                                         <span
@@ -255,7 +448,7 @@
                                             {day}
                                         </span>
                                         {dayEvents.length > 0 && (
-                                            <span className="text-xs bg-gray-100 text-gray-500 px-1.5 rounded-full hidden md:block">
+                                            <span className="text-[10px] bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded-full hidden md:block">
                                                 {dayEvents.length}
                                             </span>
                                         )}
@@ -265,16 +458,15 @@
                                         {dayEvents.slice(0, 3).map((e) => (
                                             <div
                                                 key={e.id}
-                                                className={`text-xs px-1.5 py-1 rounded truncate border ${
+                                                className={`text-[11px] px-1.5 py-1 rounded-lg truncate border ${
                                                     CATEGORY_COLORS[e.category] || CATEGORY_COLORS.Other
                                                 }`}
                                             >
-                                                {e.time && <span className="font-semibold mr-1">{e.time}</span>}
                                                 {e.title}
                                             </div>
                                         ))}
                                         {dayEvents.length > 3 && (
-                                            <div className="text-xs text-center text-gray-400 font-medium">
+                                            <div className="text-[11px] text-center text-gray-400 font-medium">
                                                 + {dayEvents.length - 3} 个活动
                                             </div>
                                         )}
@@ -286,24 +478,76 @@
                 </div>
             );
 
+            const renderWeekView = () => (
+                <div className="bg-white rounded-2xl shadow-soft border border-white/60 overflow-hidden">
+                    <div className="grid grid-cols-1 md:grid-cols-7 border-b border-gray-100 bg-gray-50">
+                        {weekDates.map((date, idx) => {
+                            const dateString = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+                            const items = getEventsForDate(dateString);
+                            const today = new Date().toDateString() === date.toDateString();
+                            return (
+                                <div key={dateString} className="p-4 border-r last:border-r-0">
+                                    <div className={`text-xs ${idx === 0 || idx === 6 ? "text-nana-accent" : "text-gray-500"}`}>
+                                        {dayNames[idx]}
+                                    </div>
+                                    <div className={`mt-1 text-lg font-bold ${today ? "text-nana-blue" : "text-gray-800"}`}>
+                                        {date.getMonth() + 1}/{date.getDate()}
+                                    </div>
+                                    <div className="text-xs text-gray-400 mt-1">{items.length} 条活动</div>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-7">
+                        {weekDates.map((date) => {
+                            const dateString = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+                            const items = getEventsForDate(dateString);
+                            return (
+                                <div key={dateString} className="min-h-[260px] p-3 border-r last:border-r-0 border-b md:border-b-0">
+                                    <div className="space-y-2">
+                                        {items.length === 0 ? (
+                                            <div className="text-xs text-gray-300 pt-2">暂无活动</div>
+                                        ) : (
+                                            items.map((e) => (
+                                                <a
+                                                    key={e.id}
+                                                    href={e.url || "#"}
+                                                    target={e.url ? "_blank" : "_self"}
+                                                    rel="noopener noreferrer"
+                                                    className={`block text-xs px-2 py-2 rounded-xl border hover:opacity-90 ${
+                                                        CATEGORY_COLORS[e.category] || CATEGORY_COLORS.Other
+                                                    }`}
+                                                >
+                                                    <div className="font-semibold line-clamp-2">{e.title}</div>
+                                                    <div className="mt-1 opacity-70 uppercase">{e.category}</div>
+                                                </a>
+                                            ))
+                                        )}
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            );
+
             const renderListView = () => (
-                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 md:p-6">
+                <div className="bg-white rounded-2xl shadow-soft border border-white/60 p-5 md:p-6">
                     {groupedListEvents.length === 0 ? (
-                        <div className="text-center py-10 text-gray-400">当前条件下没有活动</div>
+                        <div className="text-center py-12 text-gray-400">当前条件下没有活动</div>
                     ) : (
-                        <div className="space-y-6">
+                        <div className="space-y-8">
                             {groupedListEvents.map(([date, items]) => (
                                 <div key={date}>
-                                    <div className="sticky top-20 z-[1] bg-white pb-2">
-                                        <h3 className="text-lg font-bold text-gray-800 border-l-4 border-nana-accent pl-3">
-                                            {formatDateCN(date)}
-                                        </h3>
-                                    </div>
-                                    <div className="space-y-3 mt-3">
+                                    <h3 className="text-lg font-bold text-gray-800 border-l-4 border-nana-accent pl-3">
+                                        {formatDateCN(date)}
+                                    </h3>
+                                    <div className="space-y-3 mt-4">
                                         {items.map((e) => (
                                             <div
                                                 key={e.id}
-                                                className={`p-4 rounded-xl border ${CATEGORY_COLORS[e.category] || CATEGORY_COLORS.Other}`}
+                                                className={`p-4 rounded-2xl border ${CATEGORY_COLORS[e.category] || CATEGORY_COLORS.Other}`}
                                             >
                                                 <div className="flex items-start justify-between gap-3">
                                                     <div className="flex-1">
@@ -343,7 +587,7 @@
                         {categoriesToShow.map((cat) => {
                             const items = groupedCategoryEvents[cat] || [];
                             return (
-                                <div key={cat} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 md:p-6">
+                                <div key={cat} className="bg-white rounded-2xl shadow-soft border border-white/60 p-5 md:p-6">
                                     <div className="flex items-center justify-between mb-4">
                                         <h3 className="text-lg font-bold text-gray-800">{CATEGORY_LABELS[cat]}</h3>
                                         <span className={`text-xs px-2 py-1 rounded-full border ${CATEGORY_COLORS[cat] || CATEGORY_COLORS.Other}`}>
@@ -354,32 +598,26 @@
                                     {items.length === 0 ? (
                                         <div className="text-sm text-gray-400">这一类当前月份没有活动</div>
                                     ) : (
-                                        <div className="space-y-3">
-                                            {items
-                                                .sort((a, b) => a.date.localeCompare(b.date) || a.title.localeCompare(b.title))
-                                                .map((e) => (
-                                                    <div
-                                                        key={e.id}
-                                                        className={`p-4 rounded-xl border ${CATEGORY_COLORS[e.category] || CATEGORY_COLORS.Other}`}
-                                                    >
-                                                        <div className="flex items-start justify-between gap-3">
-                                                            <div className="flex-1">
-                                                                <div className="text-xs opacity-70 mb-1">{formatDateCN(e.date)}</div>
-                                                                <div className="font-bold text-sm md:text-base">{e.title}</div>
-                                                            </div>
-                                                            {e.url && (
-                                                                <a
-                                                                    href={e.url}
-                                                                    target="_blank"
-                                                                    rel="noopener noreferrer"
-                                                                    className="text-xs text-nana-accent hover:text-blue-800 whitespace-nowrap"
-                                                                >
-                                                                    查看详情
-                                                                </a>
-                                                            )}
-                                                        </div>
-                                                    </div>
-                                                ))}
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                            {items.map((e) => (
+                                                <div
+                                                    key={e.id}
+                                                    className={`p-4 rounded-2xl border ${CATEGORY_COLORS[e.category] || CATEGORY_COLORS.Other}`}
+                                                >
+                                                    <div className="text-xs opacity-70 mb-2">{formatDateCN(e.date)}</div>
+                                                    <div className="font-bold text-sm md:text-base">{e.title}</div>
+                                                    {e.url && (
+                                                        <a
+                                                            href={e.url}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="inline-block mt-3 text-xs text-nana-accent hover:text-blue-800"
+                                                        >
+                                                            查看详情
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            ))}
                                         </div>
                                     )}
                                 </div>
@@ -389,13 +627,20 @@
                 );
             };
 
+            const renderMainView = () => {
+                if (viewMode === "month") return renderMonthView();
+                if (viewMode === "week") return renderWeekView();
+                if (viewMode === "list") return renderListView();
+                return renderCategoryView();
+            };
+
             return (
                 <div className="min-h-screen pb-12">
-                    <header className="bg-nana-blue text-white shadow-md py-4 px-6 sticky top-0 z-20">
-                        <div className="max-w-6xl mx-auto flex justify-between items-center">
+                    <header className="bg-nana-blue text-white shadow-md py-4 px-6 sticky top-0 z-30 backdrop-blur">
+                        <div className="max-w-7xl mx-auto flex justify-between items-center">
                             <h1 className="text-xl md:text-2xl font-bold flex items-center gap-2">
                                 <i data-lucide="calendar-heart" className="w-6 h-6"></i>
-                                22/7 (ナナブンノニジュウニ) 活动日历
+                                22/7 活动日历
                             </h1>
                             <a
                                 href="https://nanabunnonijyuuni-mobile.com/"
@@ -403,94 +648,68 @@
                                 rel="noopener noreferrer"
                                 className="text-sm text-nana-light hover:text-white transition hidden md:block"
                             >
-                                访问官方移动端
+                                官方站点
                             </a>
                         </div>
                     </header>
 
-                    <main className="max-w-6xl mx-auto mt-8 px-4">
-                        <div className="mb-4 rounded-xl border bg-white p-3 text-sm text-gray-600 shadow-sm">
-                            {isLoading ? "正在加载活动数据..." : dataSource}
-                            <div className="mt-1 text-gray-500">
-                                当前月份共有 {allMonthEvents.length} 条活动，当前筛选后显示 {filteredEvents.length} 条
-                            </div>
-                            {loadError && (
-                                <div className="mt-2 text-red-500 break-all">
-                                    错误信息：{loadError}
-                                </div>
-                            )}
-                        </div>
+                    <main className="max-w-7xl mx-auto mt-8 px-4 space-y-6">
+                        {renderHero()}
+                        {renderToolbar()}
 
-                        <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-6">
-                            <div>
-                                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 md:p-6 flex justify-between items-center">
-                                    <button onClick={prevMonth} className="p-2 rounded-full hover:bg-gray-100 transition text-gray-600">
-                                        <i data-lucide="chevron-left" className="w-6 h-6"></i>
-                                    </button>
-                                    <h2 className="text-2xl font-bold text-gray-800">
-                                        {currentDate.getFullYear()} 年 {monthNames[currentDate.getMonth()]}
-                                    </h2>
-                                    <button onClick={nextMonth} className="p-2 rounded-full hover:bg-gray-100 transition text-gray-600">
-                                        <i data-lucide="chevron-right" className="w-6 h-6"></i>
-                                    </button>
-                                </div>
-
-                                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 mt-4 space-y-4">
-                                    <div className="flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
-                                        <div className="flex flex-wrap gap-2">
-                                            {["month", "list", "category"].map((mode) => (
-                                                <button
-                                                    key={mode}
-                                                    onClick={() => setViewMode(mode)}
-                                                    className={`px-3 py-2 rounded-lg text-sm font-medium border transition ${
-                                                        viewMode === mode
-                                                            ? "bg-nana-blue text-white border-nana-blue"
-                                                            : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50"
-                                                    }`}
-                                                >
-                                                    {VIEW_LABELS[mode]}
-                                                </button>
-                                            ))}
-                                        </div>
-
-                                        <div className="relative">
-                                            <input
-                                                type="text"
-                                                value={searchText}
-                                                onChange={(e) => setSearchText(e.target.value)}
-                                                placeholder="搜索活动标题"
-                                                className="w-full md:w-64 rounded-lg border border-gray-200 px-3 py-2 text-sm outline-none focus:border-nana-accent"
-                                            />
-                                        </div>
-                                    </div>
-
-                                    <div className="flex flex-wrap gap-2">
+                        <div className="grid grid-cols-1 xl:grid-cols-[260px_minmax(0,1fr)_300px] gap-6">
+                            <aside className="space-y-4">
+                                <div className="bg-white rounded-2xl shadow-soft border border-white/60 p-4">
+                                    <h3 className="text-lg font-bold text-gray-800 mb-4">分类页签</h3>
+                                    <div className="space-y-2">
                                         {Object.keys(CATEGORY_LABELS).map((cat) => (
                                             <button
                                                 key={cat}
-                                                onClick={() => setActiveCategory(cat)}
-                                                className={`px-3 py-1.5 rounded-full text-xs font-medium border transition ${
+                                                onClick={() => {
+                                                    setActiveCategory(cat);
+                                                    if (cat !== "All") setViewMode("category");
+                                                }}
+                                                className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-sm border transition ${
                                                     activeCategory === cat
-                                                        ? "bg-nana-accent text-white border-nana-accent"
-                                                        : "bg-white text-gray-600 border-gray-200 hover:bg-gray-50"
+                                                        ? "bg-nana-blue text-white border-nana-blue"
+                                                        : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50"
                                                 }`}
                                             >
-                                                {CATEGORY_LABELS[cat]} ({monthCategoryStats[cat] ?? 0})
+                                                <span>{CATEGORY_LABELS[cat]}</span>
+                                                <span className="text-xs opacity-80">{monthCategoryStats[cat] ?? 0}</span>
                                             </button>
                                         ))}
                                     </div>
                                 </div>
 
-                                <div className="mt-4">
-                                    {viewMode === "month" && renderMonthView()}
-                                    {viewMode === "list" && renderListView()}
-                                    {viewMode === "category" && renderCategoryView()}
+                                <div className="bg-white rounded-2xl shadow-soft border border-white/60 p-4">
+                                    <h3 className="text-lg font-bold text-gray-800 mb-4">快速模式</h3>
+                                    <div className="grid grid-cols-2 gap-2">
+                                        {["month", "week", "list", "category"].map((mode) => (
+                                            <button
+                                                key={mode}
+                                                onClick={() => setViewMode(mode)}
+                                                className={`px-3 py-2 rounded-xl text-sm border ${
+                                                    viewMode === mode
+                                                        ? "bg-nana-pink text-white border-nana-pink"
+                                                        : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50"
+                                                }`}
+                                            >
+                                                {VIEW_LABELS[mode]}
+                                            </button>
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
+                            </aside>
+
+                            <section className="space-y-4">
+                                {renderCalendarNav()}
+                                {renderMainView()}
+                            </section>
 
                             <aside className="space-y-4">
-                                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
-                                    <h3 className="text-lg font-bold text-gray-800 mb-3">本月统计</h3>
+                                <div className="bg-white rounded-2xl shadow-soft border border-white/60 p-4">
+                                    <h3 className="text-lg font-bold text-gray-800 mb-4">本月统计</h3>
                                     <div className="space-y-2">
                                         {Object.entries(monthCategoryStats).map(([cat, count]) => (
                                             <div key={cat} className="flex items-center justify-between text-sm">
@@ -503,30 +722,34 @@
                                     </div>
                                 </div>
 
-                                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
-                                    <h3 className="text-lg font-bold text-gray-800 mb-3">快捷筛选</h3>
-                                    <div className="grid grid-cols-2 gap-2">
-                                        {["Event", "TV", "Radio", "Web", "Live", "Release"].map((cat) => (
-                                            <button
-                                                key={cat}
-                                                onClick={() => {
-                                                    setActiveCategory(cat);
-                                                    setViewMode("category");
-                                                }}
-                                                className={`text-xs px-3 py-2 rounded-lg border ${CATEGORY_COLORS[cat] || CATEGORY_COLORS.Other}`}
-                                            >
-                                                {CATEGORY_LABELS[cat]}
-                                            </button>
-                                        ))}
+                                <div className="bg-white rounded-2xl shadow-soft border border-white/60 p-4">
+                                    <h3 className="text-lg font-bold text-gray-800 mb-4">最近活动</h3>
+                                    <div className="space-y-3">
+                                        {latestEvents.length === 0 ? (
+                                            <div className="text-sm text-gray-400">暂无活动</div>
+                                        ) : (
+                                            latestEvents.map((e) => (
+                                                <div key={e.id} className="border border-gray-100 rounded-xl p-3 hover:bg-gray-50 transition">
+                                                    <div className="text-xs text-gray-400">{formatShortDate(e.date)}</div>
+                                                    <div className="text-sm font-semibold text-gray-800 mt-1 line-clamp-2">{e.title}</div>
+                                                    <div className="mt-2">
+                                                        <span className={`text-[11px] px-2 py-1 rounded-full border ${CATEGORY_COLORS[e.category] || CATEGORY_COLORS.Other}`}>
+                                                            {e.category}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            ))
+                                        )}
                                     </div>
                                 </div>
 
-                                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
-                                    <h3 className="text-lg font-bold text-gray-800 mb-3">使用说明</h3>
+                                <div className="bg-white rounded-2xl shadow-soft border border-white/60 p-4">
+                                    <h3 className="text-lg font-bold text-gray-800 mb-4">说明</h3>
                                     <div className="text-sm text-gray-600 space-y-2">
-                                        <p>月历：适合按日期查看。</p>
-                                        <p>列表：适合连续浏览本月全部活动。</p>
-                                        <p>分类：适合单独查看 Event / TV / Radio 等。</p>
+                                        <p>月历：适合按日期总览。</p>
+                                        <p>周视图：适合看一周内密集安排。</p>
+                                        <p>列表：适合连续浏览整月活动。</p>
+                                        <p>分类：适合单独查看 Event / TV / Radio。</p>
                                     </div>
                                 </div>
                             </aside>
