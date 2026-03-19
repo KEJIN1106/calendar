@@ -514,7 +514,12 @@ def fetch_bang_dream_events(max_pages: int = 12) -> list:
 
             full_url = _normalize_url(href, SITE_ROOT_BD)
 
-            if "/events?page=" in full_url or full_url.rstrip("/") == SITE_ROOT_BD + "/events":
+            # 排除列表页、分页页
+            if full_url.rstrip("/") == SITE_ROOT_BD + "/events":
+                continue
+            if "/events?page=" in full_url:
+                continue
+            if re.search(r"/events/page/\d+/?", full_url):
                 continue
 
             if full_url in seen_urls:
