@@ -12,6 +12,13 @@ BASE_URL_227 = "https://nanabunnonijyuuni-mobile.com/s/n110/media/list?dy={}"
 
 SITE_ROOT_BD = "https://bang-dream.com"
 
+# 只保留你需要的三类
+BD_CATEGORY_TAGS = {
+    "Live": "live",
+    "Event": "event",
+    "Other": "other",
+}
+
 
 # =========================
 # Common helpers
@@ -346,10 +353,10 @@ def fetch_227_events_for_month(year_month: str) -> list:
 # BanG Dream! helpers
 # =========================
 
-def _bd_all_list_url(page: int) -> str:
+def _bd_list_url_by_category(tag: str, page: int) -> str:
     if page == 1:
-        return f"{SITE_ROOT_BD}/events/"
-    return f"{SITE_ROOT_BD}/events?page={page}"
+        return f"{SITE_ROOT_BD}/events/?artist%5B%5D=all&event_tag={tag}&year=all&month=all&s="
+    return f"{SITE_ROOT_BD}/events/page/{page}/?artist%5B0%5D=all&event_tag={tag}&year=all&month=all&s"
 
 
 def _bd_date_candidates(date_text: str):
@@ -400,46 +407,39 @@ def _map_bd_category(category_text: str) -> str:
     return "Other"
 
 
-def _collect_bang_dream_links(soup: BeautifulSoup) -> list:
+def _collect_bang_dream_links_from_html(html: str) -> list:
+    """
+    直接从原始 HTML 提取 /events/slug/ 链接
+    """
+    matches = re.findall(r'\/events\/(?!page\/)([A-Za-z0-9_\-]+)\/', html)
     urls = []
     seen = set()
 
-    for a in soup.find_all("a", href=True):
-        href = a.get("href", "").strip()
-        if not href:
-            continue
-        if not href.startswith("/events/"):
-            continue
-
-        full_url = _normalize_url(href, SITE_ROOT_BD)
-        if full_url in seen:
-            continue
-
-        seen.add(full_url)
-        urls.append(full_url)
+    for slug in matches:
+        full_url = f"{SITE_ROOT_BD}/events/{slug}/"
+        if full_url not in seen:
+            seen.add(full_url)
+            urls.append(full_url)
 
     return urls
 
 
-def _extract_list_categories(soup: BeautifulSoup) -> dict:
+def _extract_list_categories_from_html(html: str) -> dict:
     """
-    从总列表页提取：详情URL -> 类别
-    依据列表条目前缀 Live / Event / Release / Store / Other
+    尝试从列表页原始 HTML 中推断 URL -> 类别
     """
     mapping = {}
 
-    # 直接扫所有 /events/ 链接的文本
-    for a in soup.find_all("a", href=True):
-        href = a.get("href", "").strip()
-        if not href.startswith("/events/"):
-            continue
+    pattern = re.compile(
+        r'(Live|Event|Release|Store|Other)\s+.*?\/events\/(?!page\/)([A-Za-z0-9_\-]+)\/',
+        re.IGNORECASE | re.DOTALL
+    )
 
-        full_url = _normalize_url(href, SITE_ROOT_BD)
-        text = a.get_text(" ", strip=True)
-
-        m = re.match(r'^(Live|Event|Release|Store|Other)\b', text)
-        if m:
-            mapping[full_url] = _map_bd_category(m.group(1))
+    for m in pattern.finditer(html):
+        raw_category = m.group(1)
+        slug = m.group(2)
+        full_url = f"{SITE_ROOT_BD}/events/{slug}/"
+        mapping[full_url] = _map_bd_category(raw_category)
 
     return mapping
 
@@ -528,8 +528,8 @@ def _parse_bang_dream_detail(detail_url: str, headers: dict, fallback_category: 
     return events
 
 
-def fetch_bang_dream_events(max_pages: int = 20) -> list:
-    print("[BanG Dream!] 开始抓取总列表分页")
+def fetch_bang_dream_events(max_pages_per_category: int = 30) -> list:
+    print("[BanG Dream!] 开始抓取")
     headers = {
         "User-Agent": (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -542,67 +542,73 @@ def fetch_bang_dream_events(max_pages: int = 20) -> list:
 
     all_events = []
     seen_urls = set()
-    consecutive_zero_pages = 0
 
-    for page in range(1, max_pages + 1):
-        url = _bd_all_list_url(page)
-        print(f"[BanG Dream!] 正在获取列表页: {url}")
+    for raw_category, tag in BD_CATEGORY_TAGS.items():
+        mapped_category = _map_bd_category(raw_category)
+        print(f"[BanG Dream!] 开始抓分类 {raw_category} (event_tag={tag})")
 
-        try:
-            response = requests.get(url, headers=headers, timeout=30)
-            response.raise_for_status()
-        except Exception as e:
-            print(f"[BanG Dream!] 第 {page} 页获取失败: {e}")
-            consecutive_zero_pages += 1
-            if consecutive_zero_pages >= 3:
-                break
-            continue
+        consecutive_zero_pages = 0
 
-        print(f"[BanG Dream!] 第 {page} 页状态码: {response.status_code}")
-        print(f"[BanG Dream!] 第 {page} 页实际地址: {response.url}")
+        for page in range(1, max_pages_per_category + 1):
+            url = _bd_list_url_by_category(tag, page)
+            print(f"[BanG Dream!] [{raw_category}] 正在获取列表页: {url}")
 
-        soup = BeautifulSoup(response.text, "html.parser")
-        links = _collect_bang_dream_links(soup)
-        category_map = _extract_list_categories(soup)
-
-        print(f"[BanG Dream!] 第 {page} 页候选链接数: {len(links)}")
-
-        page_events_before = len(all_events)
-        page_detail_urls = []
-
-        for full_url in links:
-            if full_url.rstrip("/") == SITE_ROOT_BD + "/events":
-                continue
-            if re.search(r"/events/page/\d+/?$", full_url):
-                continue
-            if full_url in seen_urls:
+            try:
+                response = requests.get(url, headers=headers, timeout=30)
+                response.raise_for_status()
+            except Exception as e:
+                print(f"[BanG Dream!] [{raw_category}] 第 {page} 页获取失败: {e}")
+                consecutive_zero_pages += 1
+                if consecutive_zero_pages >= 3:
+                    break
                 continue
 
-            seen_urls.add(full_url)
-            page_detail_urls.append(full_url)
+            print(f"[BanG Dream!] [{raw_category}] 第 {page} 页状态码: {response.status_code}")
+            print(f"[BanG Dream!] [{raw_category}] 第 {page} 页实际地址: {response.url}")
 
-        print(f"[BanG Dream!] 第 {page} 页详情链接数: {len(page_detail_urls)}")
+            html = response.text
 
-        for detail_url in page_detail_urls:
-            fallback_category = category_map.get(detail_url, "Other")
-            detail_events = _parse_bang_dream_detail(detail_url, headers, fallback_category=fallback_category)
-            if detail_events:
-                all_events.extend(detail_events)
-                print(f"[BanG Dream!] 抓到: {detail_url} -> {len(detail_events)} 条")
+            links = _collect_bang_dream_links_from_html(html)
+            category_map = _extract_list_categories_from_html(html)
+
+            print(f"[BanG Dream!] [{raw_category}] 第 {page} 页候选链接数: {len(links)}")
+
+            page_events_before = len(all_events)
+            page_detail_urls = []
+
+            for full_url in links:
+                if full_url.rstrip("/") == SITE_ROOT_BD + "/events":
+                    continue
+                if re.search(r"/events/page/\d+/?$", full_url):
+                    continue
+                if full_url in seen_urls:
+                    continue
+
+                seen_urls.add(full_url)
+                page_detail_urls.append(full_url)
+
+            print(f"[BanG Dream!] [{raw_category}] 第 {page} 页详情链接数: {len(page_detail_urls)}")
+
+            for detail_url in page_detail_urls:
+                fallback_category = category_map.get(detail_url, mapped_category)
+                detail_events = _parse_bang_dream_detail(detail_url, headers, fallback_category=fallback_category)
+                if detail_events:
+                    all_events.extend(detail_events)
+                    print(f"[BanG Dream!] [{raw_category}] 抓到: {detail_url} -> {len(detail_events)} 条")
+                else:
+                    print(f"[BanG Dream!] [{raw_category}] 未抓到有效活动: {detail_url}")
+
+            page_added = len(all_events) - page_events_before
+            print(f"[BanG Dream!] [{raw_category}] 第 {page} 页新增活动数: {page_added}")
+
+            if page_added == 0:
+                consecutive_zero_pages += 1
             else:
-                print(f"[BanG Dream!] 未抓到有效活动: {detail_url}")
+                consecutive_zero_pages = 0
 
-        page_added = len(all_events) - page_events_before
-        print(f"[BanG Dream!] 第 {page} 页新增活动数: {page_added}")
-
-        if page_added == 0:
-            consecutive_zero_pages += 1
-        else:
-            consecutive_zero_pages = 0
-
-        if consecutive_zero_pages >= 3:
-            print("[BanG Dream!] 连续 3 页无新增，停止抓取")
-            break
+            if consecutive_zero_pages >= 3:
+                print(f"[BanG Dream!] [{raw_category}] 连续 3 页无新增，停止该分类")
+                break
 
     all_events = _dedupe_events(all_events)
     print(f"[BanG Dream!] 抓取完成，总活动数: {len(all_events)}")
@@ -621,7 +627,7 @@ def main():
     is_fetch_all = os.environ.get("FETCH_ALL") == "true"
 
     if is_fetch_all:
-        print("--- 执行全量抓取 (22/7 2018年至今 + BanG Dream! 总分页) ---")
+        print("--- 执行全量抓取 (22/7 2018年至今 + BanG Dream! 分类分页) ---")
         start_year = 2018
         end_year = now.year + 1
         for year in range(start_year, end_year + 1):
@@ -647,7 +653,7 @@ def main():
     for ym in months_to_fetch:
         all_events.extend(fetch_227_events_for_month(ym))
 
-    all_events.extend(fetch_bang_dream_events(max_pages=20))
+    all_events.extend(fetch_bang_dream_events(max_pages_per_category=30))
 
     merged_events = existing_events + all_events if not is_fetch_all else all_events
     final_events = _dedupe_events(merged_events)
