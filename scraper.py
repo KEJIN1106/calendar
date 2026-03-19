@@ -350,10 +350,10 @@ def fetch_227_events_for_month(year_month: str) -> list:
 
 def _bd_date_candidates(date_text: str):
     """
-    从类似：
+    支持：
     2026年8月29日(土)・30日(日)
     2026年4月17日(金)、4月26日(日)、5月1日(金)
-    中提取多个日期，返回 YYYY-MM-DD 列表
+    2026年6月18日(木)・6月26日(金)
     """
     if not date_text:
         return []
@@ -361,24 +361,28 @@ def _bd_date_candidates(date_text: str):
     text = date_text.replace("開催日時", "").strip()
     text = text.replace("、", "・").replace("･", "・")
 
-    matches = list(re.finditer(r'(?:(\d{4})年)?(\d{1,2})月(\d{1,2})日', text))
-    if not matches:
-        return []
-
+    parts = [p.strip() for p in text.split("・") if p.strip()]
     dates = []
-    current_year = None
 
-    for m in matches:
-        year = m.group(1)
-        month = m.group(2)
-        day = m.group(3)
+    current_year = None
+    current_month = None
+
+    for part in parts:
+        m = re.search(r'(?:(\d{4})年)?(?:(\d{1,2})月)?(\d{1,2})日', part)
+        if not m:
+            continue
+
+        year, month, day = m.groups()
 
         if year:
             current_year = int(year)
-        if current_year is None:
+        if month:
+            current_month = int(month)
+
+        if current_year is None or current_month is None:
             continue
 
-        dates.append(f"{current_year:04d}-{int(month):02d}-{int(day):02d}")
+        dates.append(f"{current_year:04d}-{current_month:02d}-{int(day):02d}")
 
     return dates
 
@@ -398,6 +402,67 @@ def _map_bd_category(category_text: str) -> str:
     return "Other"
 
 
+def _parse_bang_dream_detail(detail_url: str, headers: dict) -> list:
+    try:
+        response = requests.get(detail_url, headers=headers, timeout=30)
+        response.raise_for_status()
+    except Exception as e:
+        print(f"[BanG Dream!] 详情页获取失败: {detail_url} | {e}")
+        return []
+
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    category = "Other"
+    page_text = soup.get_text("\n", strip=True)
+
+    m_cat = re.search(r'^\s*(Live|Event|Release|Store|Other)\s*$', page_text, re.MULTILINE)
+    if m_cat:
+        category = _map_bd_category(m_cat.group(1).strip())
+
+    title = ""
+    h1 = soup.find("h1")
+    if h1:
+        title = h1.get_text(strip=True)
+
+    if not title:
+        og_title = soup.find("meta", attrs={"property": "og:title"})
+        if og_title and og_title.get("content"):
+            title = og_title["content"].split("|")[0].strip()
+
+    if not title:
+        print(f"[BanG Dream!] 详情页标题解析失败: {detail_url}")
+        return []
+
+    date_text = ""
+    m_date = re.search(r'開催日時\s+([^\n]+(?:\n[^\n]+)?)', page_text)
+    if m_date:
+        date_text = m_date.group(1).strip()
+
+    if not date_text:
+        print(f"[BanG Dream!] 详情页日期解析失败: {detail_url}")
+        return []
+
+    dates = _bd_date_candidates(date_text)
+    if not dates:
+        print(f"[BanG Dream!] 日期候选为空: {detail_url} | {date_text}")
+        return []
+
+    events = []
+    for date_str in dates:
+        events.append({
+            "id": _stable_event_id("BanG Dream!", date_str, title, category, detail_url),
+            "date": date_str,
+            "title": title,
+            "category": category,
+            "time": "",
+            "url": detail_url,
+            "project": "BanG Dream!",
+            "source": "bang-dream.com",
+        })
+
+    return events
+
+
 def fetch_bang_dream_events(max_pages: int = 12) -> list:
     print("[BanG Dream!] 开始抓取")
     headers = {
@@ -411,10 +476,11 @@ def fetch_bang_dream_events(max_pages: int = 12) -> list:
     }
 
     all_events = []
+    seen_urls = set()
 
     for page in range(1, max_pages + 1):
         url = BASE_URL_BD.format(page)
-        print(f"[BanG Dream!] 正在获取: {url}")
+        print(f"[BanG Dream!] 正在获取列表页: {url}")
 
         try:
             response = requests.get(url, headers=headers, timeout=30)
@@ -432,12 +498,11 @@ def fetch_bang_dream_events(max_pages: int = 12) -> list:
         print(f"[BanG Dream!] 第 {page} 页候选链接数: {len(links)}")
 
         page_events_before = len(all_events)
+        page_detail_urls = []
 
         for a in links:
             href = a.get("href", "").strip()
-            title_text = a.get_text(" ", strip=True)
-
-            if not href or not title_text:
+            if not href:
                 continue
 
             full_url = _normalize_url(href, SITE_ROOT_BD)
@@ -445,48 +510,21 @@ def fetch_bang_dream_events(max_pages: int = 12) -> list:
             if "/events?page=" in full_url or full_url.rstrip("/") == SITE_ROOT_BD + "/events":
                 continue
 
-            # 更宽松：只要能提取出开头分类即可
-            category_match = re.match(r'^(Live|Event|Release|Store|Other)\s+', title_text)
-            if not category_match:
+            if full_url in seen_urls:
                 continue
 
-            raw_category = category_match.group(1).strip()
-            category = _map_bd_category(raw_category)
+            seen_urls.add(full_url)
+            page_detail_urls.append(full_url)
 
-            # 去掉分类前缀
-            rest = re.sub(r'^(Live|Event|Release|Store|Other)\s+', '', title_text, count=1).strip()
+        print(f"[BanG Dream!] 第 {page} 页详情链接数: {len(page_detail_urls)}")
 
-            # 用“開催日時”分割标题与日期
-            if "開催日時" not in rest:
-                print(f"[BanG Dream!] 跳过（无開催日時）: {title_text[:120]}")
-                continue
-
-            title_part, date_part = rest.split("開催日時", 1)
-            title = title_part.strip()
-            raw_date_text = date_part.strip()
-
-            # 去掉地点和概要后面的内容，避免污染日期文本
-            raw_date_text = re.split(r'\s+場所\s+|\s+概要\s+', raw_date_text)[0].strip()
-
-            if not title:
-                continue
-
-            dates = _bd_date_candidates(raw_date_text)
-            if not dates:
-                print(f"[BanG Dream!] 日期解析失败: {title_text[:120]}")
-                continue
-
-            for date_str in dates:
-                all_events.append({
-                    "id": _stable_event_id("BanG Dream!", date_str, title, category, full_url),
-                    "date": date_str,
-                    "title": title,
-                    "category": category,
-                    "time": "",
-                    "url": full_url,
-                    "project": "BanG Dream!",
-                    "source": "bang-dream.com",
-                })
+        for detail_url in page_detail_urls:
+            detail_events = _parse_bang_dream_detail(detail_url, headers)
+            if detail_events:
+                all_events.extend(detail_events)
+                print(f"[BanG Dream!] 抓到: {detail_url} -> {len(detail_events)} 条")
+            else:
+                print(f"[BanG Dream!] 未抓到有效活动: {detail_url}")
 
         page_added = len(all_events) - page_events_before
         print(f"[BanG Dream!] 第 {page} 页新增活动数: {page_added}")
@@ -497,6 +535,7 @@ def fetch_bang_dream_events(max_pages: int = 12) -> list:
     all_events = _dedupe_events(all_events)
     print(f"[BanG Dream!] 抓取完成，总活动数: {len(all_events)}")
     return all_events
+
 
 # =========================
 # Main
