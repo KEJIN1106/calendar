@@ -11,7 +11,7 @@ SITE_ROOT_227 = "https://nanabunnonijyuuni-mobile.com"
 BASE_URL_227 = "https://nanabunnonijyuuni-mobile.com/s/n110/media/list?dy={}"
 
 SITE_ROOT_BD = "https://bang-dream.com"
-BASE_URL_BD = "https://bang-dream.com/events?page={}"
+BASE_URL_BD = "https://bang-dream.com/events/page/{}/"
 
 
 # =========================
@@ -164,6 +164,10 @@ def _dedupe_events(events: list) -> list:
 
     return rebuilt
 
+
+# =========================
+# 22/7 helpers
+# =========================
 
 def _normalize_227_date(raw_date: str, year_month: str) -> str:
     clean = raw_date.replace(".", "-").replace("/", "-").strip()
@@ -345,8 +349,14 @@ def fetch_227_events_for_month(year_month: str) -> list:
 
 
 # =========================
-# BanG Dream!
+# BanG Dream! helpers
 # =========================
+
+def _bd_list_url(page: int) -> str:
+    if page == 1:
+        return SITE_ROOT_BD + "/events/"
+    return BASE_URL_BD.format(page)
+
 
 def _bd_date_candidates(date_text: str):
     """
@@ -358,7 +368,7 @@ def _bd_date_candidates(date_text: str):
     if not date_text:
         return []
 
-    text = date_text.replace("開催日時", "").strip()
+    text = date_text.replace("開催日時", "").replace("開催日", "").replace("日程", "").strip()
     text = text.replace("、", "・").replace("･", "・")
 
     parts = [p.strip() for p in text.split("・") if p.strip()]
@@ -402,6 +412,10 @@ def _map_bd_category(category_text: str) -> str:
     return "Other"
 
 
+# =========================
+# BanG Dream!
+# =========================
+
 def _parse_bang_dream_detail(detail_url: str, headers: dict) -> list:
     try:
         response = requests.get(detail_url, headers=headers, timeout=30)
@@ -414,7 +428,6 @@ def _parse_bang_dream_detail(detail_url: str, headers: dict) -> list:
     page_text = soup.get_text("\n", strip=True)
     compact_text = re.sub(r"\s+", " ", page_text)
 
-    # 标题
     title = ""
     h1 = soup.find("h1")
     if h1:
@@ -429,15 +442,12 @@ def _parse_bang_dream_detail(detail_url: str, headers: dict) -> list:
         print(f"[BanG Dream!] 详情页标题解析失败: {detail_url}")
         return []
 
-    # 分类
     category = "Other"
     m_cat = re.search(r'^\s*(Live|Event|Release|Store|Other)\s*$', page_text, re.MULTILINE)
     if m_cat:
         category = _map_bd_category(m_cat.group(1).strip())
 
-    # 日期：兼容 日程 / 開催日 / 開催日時
     raw_date_text = ""
-
     patterns = [
         r'(?:日程|開催日|開催日時)\s*[:：]?\s*(.{0,180})',
     ]
@@ -452,7 +462,6 @@ def _parse_bang_dream_detail(detail_url: str, headers: dict) -> list:
         print(f"[BanG Dream!] 详情页日期解析失败: {detail_url}")
         return []
 
-    # 在这些字段前截断，避免把后面说明吞进去
     raw_date_text = re.split(
         r'場所|会場|概要|出演|チケット|料金|開場|開演|お問い合わせ|主催|協賛',
         raw_date_text
@@ -495,7 +504,7 @@ def fetch_bang_dream_events(max_pages: int = 12) -> list:
     seen_urls = set()
 
     for page in range(1, max_pages + 1):
-        url = BASE_URL_BD.format(page)
+        url = _bd_list_url(page)
         print(f"[BanG Dream!] 正在获取列表页: {url}")
 
         try:
@@ -523,12 +532,11 @@ def fetch_bang_dream_events(max_pages: int = 12) -> list:
 
             full_url = _normalize_url(href, SITE_ROOT_BD)
 
-            # 排除列表页、分页页
             if full_url.rstrip("/") == SITE_ROOT_BD + "/events":
                 continue
-            if "/events?page=" in full_url:
+            if "/events?page=" in full_url or "?page=" in full_url:
                 continue
-            if re.search(r"/events/page/\d+/?", full_url):
+            if re.search(r"/events/page/\d+/?$", full_url):
                 continue
 
             if full_url in seen_urls:
@@ -593,12 +601,10 @@ def main():
         except Exception as e:
             print(f"读取旧 events.json 失败: {e}")
 
-    # 22/7
     for ym in months_to_fetch:
         month_events = fetch_227_events_for_month(ym)
         all_events.extend(month_events)
 
-    # BanG Dream!
     bd_events = fetch_bang_dream_events(max_pages=12)
     all_events.extend(bd_events)
 
