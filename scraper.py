@@ -11,16 +11,12 @@ SITE_ROOT_227 = "https://nanabunnonijyuuni-mobile.com"
 BASE_URL_227 = "https://nanabunnonijyuuni-mobile.com/s/n110/media/list?dy={}"
 
 SITE_ROOT_BD = "https://bang-dream.com"
-BASE_URL_BD_ALL = "https://bang-dream.com/events/"
-# 官网分类：Live / Event / Release / Store / Other
-# 站点当前常见 event_tag:
-# Live=19, Event=20, Release=21, Store=22, Other=23
+
+# 官网实际可用分类
 BD_CATEGORY_TAGS = {
-    "Live": 19,
-    "Event": 20,
-    "Release": 21,
-    "Store": 22,
-    "Other": 23,
+    "Live": "live",
+    "Event": "event",
+    "Other": "other",
 }
 
 
@@ -362,10 +358,10 @@ def fetch_227_events_for_month(year_month: str) -> list:
 # BanG Dream! helpers
 # =========================
 
-def _bd_list_url_by_category(tag: int, page: int) -> str:
+def _bd_list_url_by_category(tag: str, page: int) -> str:
     if page == 1:
-        return f"{SITE_ROOT_BD}/events/?event_tag={tag}"
-    return f"{SITE_ROOT_BD}/events/?event_tag={tag}&page={page}"
+        return f"{SITE_ROOT_BD}/events/?artist%5B%5D=all&event_tag={tag}&year=all&month=all&s="
+    return f"{SITE_ROOT_BD}/events/page/{page}/?artist%5B0%5D=all&event_tag={tag}&year=all&month=all&s"
 
 
 def _bd_date_candidates(date_text: str):
@@ -373,14 +369,13 @@ def _bd_date_candidates(date_text: str):
     支持：
     2026年8月29日(土)・30日(日)
     2026年4月17日(金)、4月26日(日)、5月1日(金)
-    2026年6月18日(木)・6月26日(金)
     2024年5月3日(金･祝)・4日(土)・5日(日)
     """
     if not date_text:
         return []
 
     text = date_text.replace("開催日時", "").replace("開催日", "").replace("日程", "").strip()
-    text = text.replace("、", "・").replace("･", "・").replace("～", "〜")
+    text = text.replace("、", "・").replace("･", "・")
 
     parts = [p.strip() for p in text.split("・") if p.strip()]
     dates = []
@@ -414,8 +409,6 @@ def _map_bd_category(category_text: str) -> str:
         return "Live"
     if text == "event":
         return "Event"
-    if text in {"release", "store", "other"}:
-        return "Other"
     return "Other"
 
 
@@ -534,7 +527,6 @@ def fetch_bang_dream_events(max_pages_per_category: int = 30) -> list:
             print(f"[BanG Dream!] [{raw_category}] 第 {page} 页实际地址: {response.url}")
 
             soup = BeautifulSoup(response.text, "html.parser")
-
             links = soup.select('a[href^="/events/"], a[href*="/events/"]')
             print(f"[BanG Dream!] [{raw_category}] 第 {page} 页候选链接数: {len(links)}")
 
@@ -550,11 +542,9 @@ def fetch_bang_dream_events(max_pages_per_category: int = 30) -> list:
 
                 if full_url.rstrip("/") == SITE_ROOT_BD + "/events":
                     continue
-                if "/events?page=" in full_url or "?page=" in full_url and "/events/" not in full_url:
-                    continue
                 if re.search(r"/events/page/\d+/?$", full_url):
                     continue
-                if "event_tag=" in full_url:
+                if "event_tag=" in full_url and "/events/" not in full_url.rstrip("/"):
                     continue
 
                 if full_url in seen_urls:
@@ -625,12 +615,10 @@ def main():
         except Exception as e:
             print(f"读取旧 events.json 失败: {e}")
 
-    # 22/7
     for ym in months_to_fetch:
         month_events = fetch_227_events_for_month(ym)
         all_events.extend(month_events)
 
-    # BanG Dream!
     bd_events = fetch_bang_dream_events(max_pages_per_category=30)
     all_events.extend(bd_events)
 
