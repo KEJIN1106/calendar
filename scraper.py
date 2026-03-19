@@ -411,6 +411,8 @@ def _parse_bang_dream_detail(detail_url: str, headers: dict) -> list:
         return []
 
     soup = BeautifulSoup(response.text, "html.parser")
+    page_text = soup.get_text("\n", strip=True)
+    compact_text = re.sub(r"\s+", " ", page_text)
 
     # 标题
     title = ""
@@ -427,27 +429,34 @@ def _parse_bang_dream_detail(detail_url: str, headers: dict) -> list:
         print(f"[BanG Dream!] 详情页标题解析失败: {detail_url}")
         return []
 
-    # 分类：优先从页面文本中找独立一行的 Live / Event / Release
+    # 分类
     category = "Other"
-    page_text = soup.get_text("\n", strip=True)
-
     m_cat = re.search(r'^\s*(Live|Event|Release|Store|Other)\s*$', page_text, re.MULTILINE)
     if m_cat:
         category = _map_bd_category(m_cat.group(1).strip())
 
-    # 压平成单行，方便抓“開催日時”后面的整段
-    compact_text = re.sub(r"\s+", " ", page_text)
+    # 日期：兼容 日程 / 開催日 / 開催日時
+    raw_date_text = ""
 
-    # 先找“開催日時”后面的一小段窗口
-    m_date = re.search(r'開催日時[:：]?\s*(.{0,160})', compact_text)
-    if not m_date:
+    patterns = [
+        r'(?:日程|開催日|開催日時)\s*[:：]?\s*(.{0,180})',
+    ]
+
+    for pat in patterns:
+        m_date = re.search(pat, compact_text)
+        if m_date:
+            raw_date_text = m_date.group(1).strip()
+            break
+
+    if not raw_date_text:
         print(f"[BanG Dream!] 详情页日期解析失败: {detail_url}")
         return []
 
-    raw_date_text = m_date.group(1).strip()
-
-    # 在遇到这些字段前截断，避免污染日期
-    raw_date_text = re.split(r'場所|会場|概要|出演|チケット|料金|開場|開演', raw_date_text)[0].strip()
+    # 在这些字段前截断，避免把后面说明吞进去
+    raw_date_text = re.split(
+        r'場所|会場|概要|出演|チケット|料金|開場|開演|お問い合わせ|主催|協賛',
+        raw_date_text
+    )[0].strip()
 
     dates = _bd_date_candidates(raw_date_text)
     if not dates:
