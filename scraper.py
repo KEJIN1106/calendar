@@ -411,7 +411,6 @@ def fetch_bang_dream_events(max_pages: int = 12) -> list:
     }
 
     all_events = []
-    seen_page_titles = set()
 
     for page in range(1, max_pages + 1):
         url = BASE_URL_BD.format(page)
@@ -424,10 +423,14 @@ def fetch_bang_dream_events(max_pages: int = 12) -> list:
             print(f"[BanG Dream!] 第 {page} 页获取失败: {e}")
             continue
 
+        print(f"[BanG Dream!] 第 {page} 页状态码: {response.status_code}")
+        print(f"[BanG Dream!] 第 {page} 页实际地址: {response.url}")
+
         soup = BeautifulSoup(response.text, "html.parser")
 
-        # 页面主体文本块
         links = soup.select('a[href^="/events/"], a[href*="/events/"]')
+        print(f"[BanG Dream!] 第 {page} 页候选链接数: {len(links)}")
+
         page_events_before = len(all_events)
 
         for a in links:
@@ -439,33 +442,38 @@ def fetch_bang_dream_events(max_pages: int = 12) -> list:
 
             full_url = _normalize_url(href, SITE_ROOT_BD)
 
-            # 排除列表页 / 分页页本身
             if "/events?page=" in full_url or full_url.rstrip("/") == SITE_ROOT_BD + "/events":
                 continue
 
-            # 文本示例：
-            # Live Morfonica単独ライブ 開催日時 2026年9月22日(火・祝) 場所 TACHIKAWA STAGE GARDEN
-            m = re.match(r'^(Live|Event|Release|Store|Other)\s+(.*?)\s+開催日時\s+(.*?)(?:\s+場所\s+.*|\s+概要\s+.*|$)', title_text)
-            if not m:
+            # 更宽松：只要能提取出开头分类即可
+            category_match = re.match(r'^(Live|Event|Release|Store|Other)\s+', title_text)
+            if not category_match:
                 continue
 
-            raw_category = m.group(1).strip()
-            title = m.group(2).strip()
-            raw_date_text = m.group(3).strip()
+            raw_category = category_match.group(1).strip()
+            category = _map_bd_category(raw_category)
+
+            # 去掉分类前缀
+            rest = re.sub(r'^(Live|Event|Release|Store|Other)\s+', '', title_text, count=1).strip()
+
+            # 用“開催日時”分割标题与日期
+            if "開催日時" not in rest:
+                print(f"[BanG Dream!] 跳过（无開催日時）: {title_text[:120]}")
+                continue
+
+            title_part, date_part = rest.split("開催日時", 1)
+            title = title_part.strip()
+            raw_date_text = date_part.strip()
+
+            # 去掉地点和概要后面的内容，避免污染日期文本
+            raw_date_text = re.split(r'\s+場所\s+|\s+概要\s+', raw_date_text)[0].strip()
 
             if not title:
                 continue
 
-            # 避免分页重复抓到相同卡片
-            page_title_key = (page, title, raw_date_text, raw_category)
-            if page_title_key in seen_page_titles:
-                continue
-            seen_page_titles.add(page_title_key)
-
-            category = _map_bd_category(raw_category)
             dates = _bd_date_candidates(raw_date_text)
-
             if not dates:
+                print(f"[BanG Dream!] 日期解析失败: {title_text[:120]}")
                 continue
 
             for date_str in dates:
@@ -483,14 +491,12 @@ def fetch_bang_dream_events(max_pages: int = 12) -> list:
         page_added = len(all_events) - page_events_before
         print(f"[BanG Dream!] 第 {page} 页新增活动数: {page_added}")
 
-        # 连续页没有抓到时可提前结束
         if page > 3 and page_added == 0:
             break
 
     all_events = _dedupe_events(all_events)
     print(f"[BanG Dream!] 抓取完成，总活动数: {len(all_events)}")
     return all_events
-
 
 # =========================
 # Main
