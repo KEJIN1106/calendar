@@ -7,19 +7,22 @@ import hashlib
 import re
 from urllib.parse import urljoin, urlparse, parse_qsl, urlencode, urlunparse
 
-BASE_URL = "https://nanabunnonijyuuni-mobile.com/s/n110/media/list?dy={}"
-SITE_ROOT = "https://nanabunnonijyuuni-mobile.com"
+SITE_ROOT_227 = "https://nanabunnonijyuuni-mobile.com"
+BASE_URL_227 = "https://nanabunnonijyuuni-mobile.com/s/n110/media/list?dy={}"
+
+SITE_ROOT_BD = "https://bang-dream.com"
+BASE_URL_BD = "https://bang-dream.com/events?page={}"
 
 
-def _normalize_url(href: str) -> str:
-    """
-    规范化活动链接，去掉会导致同一活动链接不同但内容相同的参数，
-    例如 ima / dy 等页面状态参数。
-    """
+# =========================
+# Common helpers
+# =========================
+
+def _normalize_url(href: str, site_root: str = "") -> str:
     if not href:
         return ""
 
-    full_url = href if href.startswith("http") else urljoin(SITE_ROOT, href)
+    full_url = href if href.startswith("http") else urljoin(site_root, href)
     parsed = urlparse(full_url)
 
     filtered_query = []
@@ -41,14 +44,6 @@ def _normalize_url(href: str) -> str:
 
 
 def _normalize_title(title: str) -> str:
-    """
-    智能归一化标题，用于模糊去重。
-    尽量消除：
-    - 全角/半角空格
-    - 各种引号/括号差异
-    - 连续空白
-    - 末尾多余标点
-    """
     if not title:
         return ""
 
@@ -83,14 +78,111 @@ def _normalize_title(title: str) -> str:
 
     t = re.sub(r"\s+", "", t)
     t = re.sub(r"[!！?？。．、,，]+$", "", t)
-
     return t
 
 
-def _normalize_category(category_text: str) -> str:
-    """
-    分类统一映射成前端用的英文分类。
-    """
+def _stable_event_id(project: str, date_str: str, title: str, category: str, href: str) -> str:
+    normalized_url = _normalize_url(href)
+    normalized_title = _normalize_title(title)
+    raw = f"{project}|{date_str}|{normalized_title}|{category}|{normalized_url}"
+    return hashlib.md5(raw.encode("utf-8")).hexdigest()
+
+
+def _better_event(new_event: dict, old_event: dict) -> dict:
+    if old_event is None:
+        return new_event
+
+    def score(e: dict) -> tuple:
+        return (
+            1 if e.get("url") else 0,
+            1 if e.get("time") else 0,
+            len(e.get("title", "")),
+            len(e.get("url", "")),
+        )
+
+    return new_event if score(new_event) > score(old_event) else old_event
+
+
+def _dedupe_events(events: list) -> list:
+    strict_map = {}
+
+    for e in events:
+        date_str = (e.get("date") or "").strip()
+        title = (e.get("title") or "").strip()
+        category = (e.get("category") or "").strip()
+        project = (e.get("project") or "").strip()
+        normalized_url = _normalize_url(e.get("url", ""))
+
+        strict_key = (
+            project,
+            date_str,
+            title,
+            category,
+            normalized_url,
+        )
+
+        candidate = {
+            **e,
+            "url": normalized_url,
+        }
+
+        strict_map[strict_key] = _better_event(candidate, strict_map.get(strict_key))
+
+    strict_events = list(strict_map.values())
+
+    smart_map = {}
+
+    for e in strict_events:
+        date_str = (e.get("date") or "").strip()
+        title = (e.get("title") or "").strip()
+        category = (e.get("category") or "").strip()
+        project = (e.get("project") or "").strip()
+
+        smart_key = (
+            project,
+            date_str,
+            _normalize_title(title),
+            category,
+        )
+
+        smart_map[smart_key] = _better_event(e, smart_map.get(smart_key))
+
+    deduped = list(smart_map.values())
+
+    rebuilt = []
+    for e in deduped:
+        rebuilt.append({
+            **e,
+            "id": _stable_event_id(
+                e.get("project", ""),
+                e.get("date", ""),
+                e.get("title", ""),
+                e.get("category", ""),
+                e.get("url", ""),
+            )
+        })
+
+    return rebuilt
+
+
+def _normalize_227_date(raw_date: str, year_month: str) -> str:
+    clean = raw_date.replace(".", "-").replace("/", "-").strip()
+    parts = [p for p in clean.split("-") if p]
+
+    if len(parts) == 2:
+        year = year_month[:4]
+        month, day = parts
+    elif len(parts) == 3:
+        year, month, day = parts
+    else:
+        year = year_month[:4]
+        month = year_month[4:]
+        day = "".join(filter(str.isdigit, raw_date))
+
+    return f"{year}-{month.zfill(2)}-{day.zfill(2)}"
+
+
+def _map_227_category(category_text: str) -> str:
     if not category_text:
         return "Other"
 
@@ -127,117 +219,13 @@ def _normalize_category(category_text: str) -> str:
     return "Other"
 
 
-def _stable_event_id(date_str: str, title: str, category_text: str, href: str) -> str:
-    normalized_url = _normalize_url(href)
-    normalized_title = _normalize_title(title)
-    normalized_category = _normalize_category(category_text)
-    raw = f"{date_str}|{normalized_title}|{normalized_category}|{normalized_url}"
-    return hashlib.md5(raw.encode("utf-8")).hexdigest()
+# =========================
+# 22/7
+# =========================
 
-
-def _normalize_date(raw_date: str, year_month: str) -> str:
-    clean = raw_date.replace(".", "-").replace("/", "-").strip()
-    parts = [p for p in clean.split("-") if p]
-
-    if len(parts) == 2:
-        year = year_month[:4]
-        month, day = parts
-    elif len(parts) == 3:
-        year, month, day = parts
-    else:
-        year = year_month[:4]
-        month = year_month[4:]
-        day = "".join(filter(str.isdigit, raw_date))
-
-    return f"{year}-{month.zfill(2)}-{day.zfill(2)}"
-
-
-def _better_event(new_event: dict, old_event: dict) -> dict:
-    """
-    合并重复项时，优先保留信息更完整的一条。
-    """
-    if old_event is None:
-        return new_event
-
-    def score(e: dict) -> tuple:
-        return (
-            1 if e.get("url") else 0,
-            1 if e.get("time") else 0,
-            len(e.get("title", "")),
-            len(e.get("url", "")),
-        )
-
-    return new_event if score(new_event) > score(old_event) else old_event
-
-
-def _dedupe_events(events: list) -> list:
-    """
-    两层去重：
-    1. 严格去重：日期 + 原标题 + 分类 + 规范化URL
-    2. 智能去重：日期 + 归一化标题 + 分类
-    """
-    # 第一层：严格去重
-    strict_map = {}
-
-    for e in events:
-        date_str = (e.get("date") or "").strip()
-        title = (e.get("title") or "").strip()
-        category = (e.get("category") or "").strip()
-        normalized_url = _normalize_url(e.get("url", ""))
-
-        strict_key = (
-            date_str,
-            title,
-            category,
-            normalized_url,
-        )
-
-        candidate = {
-            **e,
-            "url": normalized_url,
-        }
-
-        strict_map[strict_key] = _better_event(candidate, strict_map.get(strict_key))
-
-    strict_events = list(strict_map.values())
-
-    # 第二层：智能去重
-    smart_map = {}
-
-    for e in strict_events:
-        date_str = (e.get("date") or "").strip()
-        title = (e.get("title") or "").strip()
-        category = (e.get("category") or "").strip()
-
-        smart_key = (
-            date_str,
-            _normalize_title(title),
-            category,
-        )
-
-        smart_map[smart_key] = _better_event(e, smart_map.get(smart_key))
-
-    deduped = list(smart_map.values())
-
-    # 重建稳定 id
-    rebuilt = []
-    for e in deduped:
-        rebuilt.append({
-            **e,
-            "id": _stable_event_id(
-                e.get("date", ""),
-                e.get("title", ""),
-                e.get("category", ""),
-                e.get("url", ""),
-            )
-        })
-
-    return rebuilt
-
-
-def fetch_events_for_month(year_month: str) -> list:
-    url = BASE_URL.format(year_month)
-    print(f"正在获取: {url}")
+def fetch_227_events_for_month(year_month: str) -> list:
+    url = BASE_URL_227.format(year_month)
+    print(f"[22/7] 正在获取: {url}")
 
     headers = {
         "User-Agent": (
@@ -246,25 +234,25 @@ def fetch_events_for_month(year_month: str) -> list:
             "Chrome/122.0.0.0 Safari/537.36"
         ),
         "Accept-Language": "ja,en-US;q=0.9,en;q=0.8",
-        "Referer": "https://nanabunnonijyuuni-mobile.com/",
+        "Referer": SITE_ROOT_227 + "/",
     }
 
     try:
         response = requests.get(url, headers=headers, timeout=30)
         response.raise_for_status()
     except Exception as e:
-        print(f"获取网页失败: {e}")
+        print(f"[22/7] 获取网页失败: {e}")
         return []
 
     soup = BeautifulSoup(response.text, "html.parser")
     events = []
 
     media_boxes = soup.select("section.media_container div.media_box")
-    print(f"{year_month} 找到日期块: {len(media_boxes)}")
+    print(f"[22/7] {year_month} 找到日期块: {len(media_boxes)}")
 
     if not media_boxes:
         legacy_items = soup.select(".media_list li, .schedule_list li, article")
-        print(f"{year_month} 回退旧结构，找到项目数: {len(legacy_items)}")
+        print(f"[22/7] {year_month} 回退旧结构，找到项目数: {len(legacy_items)}")
 
         for item in legacy_items:
             try:
@@ -278,33 +266,27 @@ def fetch_events_for_month(year_month: str) -> list:
                 raw_date = date_elem.get_text(strip=True)
                 title = title_elem.get_text(strip=True)
                 category_text = category_elem.get_text(strip=True) if category_elem else ""
-                clean_date = _normalize_date(raw_date, year_month)
-                cat_en = _normalize_category(category_text)
+                clean_date = _normalize_227_date(raw_date, year_month)
+                cat_en = _map_227_category(category_text)
 
                 link_elem = item.find("a")
-                href = ""
-                detail_url = ""
+                href = link_elem["href"] if link_elem and link_elem.has_attr("href") else ""
+                detail_url = _normalize_url(href, SITE_ROOT_227)
 
-                if link_elem and link_elem.has_attr("href"):
-                    href = link_elem["href"]
-                    detail_url = _normalize_url(href)
-
-                events.append(
-                    {
-                        "id": _stable_event_id(clean_date, title, category_text, href),
-                        "date": clean_date,
-                        "title": title,
-                        "category": cat_en,
-                        "time": "",
-                        "url": detail_url,
-                    }
-                )
+                events.append({
+                    "id": _stable_event_id("22/7", clean_date, title, cat_en, href),
+                    "date": clean_date,
+                    "title": title,
+                    "category": cat_en,
+                    "time": "",
+                    "url": detail_url,
+                    "project": "22/7",
+                    "source": "nanabunnonijyuuni-mobile.com",
+                })
             except Exception as e:
-                print(f"解析旧结构时出错: {e}")
+                print(f"[22/7] 解析旧结构时出错: {e}")
 
-        events = _dedupe_events(events)
-        print(f"{year_month} 抓取到活动数: {len(events)}")
-        return events
+        return _dedupe_events(events)
 
     for box in media_boxes:
         try:
@@ -338,29 +320,181 @@ def fetch_events_for_month(year_month: str) -> list:
                     if not title:
                         continue
 
-                    cat_en = _normalize_category(category_text)
+                    cat_en = _map_227_category(category_text)
                     href = link.get("href", "").strip()
-                    detail_url = _normalize_url(href)
+                    detail_url = _normalize_url(href, SITE_ROOT_227)
 
-                    events.append(
-                        {
-                            "id": _stable_event_id(date_str, title, category_text, href),
-                            "date": date_str,
-                            "title": title,
-                            "category": cat_en,
-                            "time": "",
-                            "url": detail_url,
-                        }
-                    )
+                    events.append({
+                        "id": _stable_event_id("22/7", date_str, title, cat_en, href),
+                        "date": date_str,
+                        "title": title,
+                        "category": cat_en,
+                        "time": "",
+                        "url": detail_url,
+                        "project": "22/7",
+                        "source": "nanabunnonijyuuni-mobile.com",
+                    })
                 except Exception as e:
-                    print(f"解析单个活动时出错: {e}")
+                    print(f"[22/7] 解析单个活动时出错: {e}")
         except Exception as e:
-            print(f"解析日期块时出错: {e}")
+            print(f"[22/7] 解析日期块时出错: {e}")
 
     events = _dedupe_events(events)
-    print(f"{year_month} 抓取到活动数: {len(events)}")
+    print(f"[22/7] {year_month} 抓取到活动数: {len(events)}")
     return events
 
+
+# =========================
+# BanG Dream!
+# =========================
+
+def _bd_date_candidates(date_text: str):
+    """
+    从类似：
+    2026年8月29日(土)・30日(日)
+    2026年4月17日(金)、4月26日(日)、5月1日(金)
+    中提取多个日期，返回 YYYY-MM-DD 列表
+    """
+    if not date_text:
+        return []
+
+    text = date_text.replace("開催日時", "").strip()
+    text = text.replace("、", "・").replace("･", "・")
+
+    matches = list(re.finditer(r'(?:(\d{4})年)?(\d{1,2})月(\d{1,2})日', text))
+    if not matches:
+        return []
+
+    dates = []
+    current_year = None
+
+    for m in matches:
+        year = m.group(1)
+        month = m.group(2)
+        day = m.group(3)
+
+        if year:
+            current_year = int(year)
+        if current_year is None:
+            continue
+
+        dates.append(f"{current_year:04d}-{int(month):02d}-{int(day):02d}")
+
+    return dates
+
+
+def _map_bd_category(category_text: str) -> str:
+    text = (category_text or "").strip().lower()
+    if text == "live":
+        return "Live"
+    if text == "event":
+        return "Event"
+    if text == "release":
+        return "Release"
+    if text == "store":
+        return "Other"
+    if text == "other":
+        return "Other"
+    return "Other"
+
+
+def fetch_bang_dream_events(max_pages: int = 12) -> list:
+    print("[BanG Dream!] 开始抓取")
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/122.0.0.0 Safari/537.36"
+        ),
+        "Accept-Language": "ja,en-US;q=0.9,en;q=0.8",
+        "Referer": SITE_ROOT_BD + "/",
+    }
+
+    all_events = []
+    seen_page_titles = set()
+
+    for page in range(1, max_pages + 1):
+        url = BASE_URL_BD.format(page)
+        print(f"[BanG Dream!] 正在获取: {url}")
+
+        try:
+            response = requests.get(url, headers=headers, timeout=30)
+            response.raise_for_status()
+        except Exception as e:
+            print(f"[BanG Dream!] 第 {page} 页获取失败: {e}")
+            continue
+
+        soup = BeautifulSoup(response.text, "html.parser")
+
+        # 页面主体文本块
+        links = soup.select('a[href^="/events/"], a[href*="/events/"]')
+        page_events_before = len(all_events)
+
+        for a in links:
+            href = a.get("href", "").strip()
+            title_text = a.get_text(" ", strip=True)
+
+            if not href or not title_text:
+                continue
+
+            full_url = _normalize_url(href, SITE_ROOT_BD)
+
+            # 排除列表页 / 分页页本身
+            if "/events?page=" in full_url or full_url.rstrip("/") == SITE_ROOT_BD + "/events":
+                continue
+
+            # 文本示例：
+            # Live Morfonica単独ライブ 開催日時 2026年9月22日(火・祝) 場所 TACHIKAWA STAGE GARDEN
+            m = re.match(r'^(Live|Event|Release|Store|Other)\s+(.*?)\s+開催日時\s+(.*?)(?:\s+場所\s+.*|\s+概要\s+.*|$)', title_text)
+            if not m:
+                continue
+
+            raw_category = m.group(1).strip()
+            title = m.group(2).strip()
+            raw_date_text = m.group(3).strip()
+
+            if not title:
+                continue
+
+            # 避免分页重复抓到相同卡片
+            page_title_key = (page, title, raw_date_text, raw_category)
+            if page_title_key in seen_page_titles:
+                continue
+            seen_page_titles.add(page_title_key)
+
+            category = _map_bd_category(raw_category)
+            dates = _bd_date_candidates(raw_date_text)
+
+            if not dates:
+                continue
+
+            for date_str in dates:
+                all_events.append({
+                    "id": _stable_event_id("BanG Dream!", date_str, title, category, full_url),
+                    "date": date_str,
+                    "title": title,
+                    "category": category,
+                    "time": "",
+                    "url": full_url,
+                    "project": "BanG Dream!",
+                    "source": "bang-dream.com",
+                })
+
+        page_added = len(all_events) - page_events_before
+        print(f"[BanG Dream!] 第 {page} 页新增活动数: {page_added}")
+
+        # 连续页没有抓到时可提前结束
+        if page > 3 and page_added == 0:
+            break
+
+    all_events = _dedupe_events(all_events)
+    print(f"[BanG Dream!] 抓取完成，总活动数: {len(all_events)}")
+    return all_events
+
+
+# =========================
+# Main
+# =========================
 
 def main():
     all_events = []
@@ -370,19 +504,19 @@ def main():
     is_fetch_all = os.environ.get("FETCH_ALL") == "true"
 
     if is_fetch_all:
-        print("--- 执行全量抓取 (2018年至今) ---")
+        print("--- 执行全量抓取 (22/7 2018年至今 + BanG Dream! 分页) ---")
         start_year = 2018
         end_year = now.year + 1
         for year in range(start_year, end_year + 1):
             for month in range(1, 13):
                 months_to_fetch.append(f"{year}{month:02d}")
     else:
-        print("--- 执行日常增量抓取 (近两个月) ---")
+        print("--- 执行日常增量抓取 ---")
         months_to_fetch.append(now.strftime("%Y%m"))
         months_to_fetch.append((now + datetime.timedelta(days=31)).strftime("%Y%m"))
 
     months_to_fetch = sorted(list(set(months_to_fetch)))
-    print("本次抓取月份:", months_to_fetch)
+    print("本次抓取 22/7 月份:", months_to_fetch)
 
     existing_events = []
     if not is_fetch_all and os.path.exists("events.json"):
@@ -393,17 +527,18 @@ def main():
         except Exception as e:
             print(f"读取旧 events.json 失败: {e}")
 
+    # 22/7
     for ym in months_to_fetch:
-        month_events = fetch_events_for_month(ym)
+        month_events = fetch_227_events_for_month(ym)
         all_events.extend(month_events)
 
-    if not is_fetch_all:
-        merged_events = existing_events + all_events
-    else:
-        merged_events = all_events
+    # BanG Dream!
+    bd_events = fetch_bang_dream_events(max_pages=12)
+    all_events.extend(bd_events)
 
+    merged_events = existing_events + all_events if not is_fetch_all else all_events
     final_events = _dedupe_events(merged_events)
-    final_events.sort(key=lambda x: (x["date"], x["title"]))
+    final_events.sort(key=lambda x: (x["date"], x["project"], x["title"]))
 
     with open("events.json", "w", encoding="utf-8") as f:
         json.dump(final_events, f, ensure_ascii=False, indent=2)
