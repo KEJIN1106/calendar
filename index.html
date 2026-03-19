@@ -91,11 +91,6 @@
             return `${Number(m)}/${Number(d)}`;
         }
 
-        function toDate(dateStr) {
-            const [y, m, d] = dateStr.split("-").map(Number);
-            return new Date(y, m - 1, d);
-        }
-
         function getWeekDates(baseDate) {
             const d = new Date(baseDate);
             const day = d.getDay();
@@ -125,10 +120,6 @@
                 map[item.category].push(item);
             });
             return map;
-        }
-
-        function sameMonth(a, b) {
-            return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth();
         }
 
         const App = () => {
@@ -189,14 +180,19 @@
             }, [events, currentMonthPrefix]);
 
             const filteredEvents = useMemo(() => {
-                return allMonthEvents.filter((e) => {
+                return events.filter((e) => {
                     const inCategory = activeCategory === "All" ? true : e.category === activeCategory;
                     const inSearch = searchText.trim()
                         ? (e.title || "").toLowerCase().includes(searchText.trim().toLowerCase())
                         : true;
-                    return inCategory && inSearch;
+
+                    if (viewMode === "week") {
+                        return inCategory && inSearch;
+                    }
+
+                    return e.date?.startsWith(currentMonthPrefix) && inCategory && inSearch;
                 });
-            }, [allMonthEvents, activeCategory, searchText]);
+            }, [events, currentMonthPrefix, activeCategory, searchText, viewMode]);
 
             const monthCategoryStats = useMemo(() => {
                 const stats = {
@@ -234,8 +230,20 @@
 
             const nextMonth = () => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
             const prevMonth = () => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
+
+            const nextWeek = () => {
+                const d = new Date(currentDate);
+                d.setDate(d.getDate() + 7);
+                setCurrentDate(d);
+            };
+
+            const prevWeek = () => {
+                const d = new Date(currentDate);
+                d.setDate(d.getDate() - 7);
+                setCurrentDate(d);
+            };
+
             const jumpToToday = () => setCurrentDate(new Date());
-            const jumpToCurrentMonth = () => setCurrentDate(new Date(2026, 2, 1));
 
             const getEventsForDate = (dateString) => filteredEvents.filter(e => e.date === dateString);
 
@@ -247,15 +255,6 @@
             const groupedListEvents = useMemo(() => groupByDate(sortedFilteredEvents), [sortedFilteredEvents]);
             const groupedCategoryEvents = useMemo(() => groupByCategory(sortedFilteredEvents), [sortedFilteredEvents]);
             const weekDates = useMemo(() => getWeekDates(currentDate), [currentDate]);
-
-            const weekEvents = useMemo(() => {
-                const dateSet = new Set(
-                    weekDates.map(d =>
-                        `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`
-                    )
-                );
-                return sortedFilteredEvents.filter(e => dateSet.has(e.date));
-            }, [weekDates, sortedFilteredEvents]);
 
             const totalCategoriesWithEvents = useMemo(() => {
                 return ["Event", "TV", "Radio", "Web", "Live", "Release", "Other"]
@@ -275,14 +274,6 @@
                                     <i data-lucide="sparkles" className="w-4 h-4"></i>
                                     22/7 官方活动聚合日历
                                 </div>
-                                <h1 className="text-2xl md:text-4xl font-bold leading-tight">
-                                    用更清晰的方式查看
-                                    <br />
-                                    22/7 每月活动安排
-                                </h1>
-                                <p className="mt-3 text-white/85 text-sm md:text-base max-w-2xl">
-                                    支持月历、周视图、列表和分类模式，快速筛选 Event / TV / Radio 等活动。
-                                </p>
                             </div>
 
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 min-w-full md:min-w-[440px]">
@@ -347,12 +338,6 @@
                                     >
                                         今天
                                     </button>
-                                    <button
-                                        onClick={jumpToCurrentMonth}
-                                        className="px-3 py-2 rounded-xl text-sm font-medium border border-gray-200 bg-white hover:bg-gray-50"
-                                    >
-                                        回到示例月
-                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -391,19 +376,39 @@
                 </div>
             );
 
-            const renderCalendarNav = () => (
-                <div className="bg-white rounded-2xl shadow-soft border border-white/60 p-4 md:p-6 flex justify-between items-center">
-                    <button onClick={prevMonth} className="p-2 rounded-full hover:bg-gray-100 transition text-gray-600">
-                        <i data-lucide="chevron-left" className="w-6 h-6"></i>
-                    </button>
-                    <h2 className="text-2xl font-bold text-gray-800">
-                        {currentDate.getFullYear()} 年 {monthNames[currentDate.getMonth()]}
-                    </h2>
-                    <button onClick={nextMonth} className="p-2 rounded-full hover:bg-gray-100 transition text-gray-600">
-                        <i data-lucide="chevron-right" className="w-6 h-6"></i>
-                    </button>
-                </div>
-            );
+            const renderCalendarNav = () => {
+                const weekStart = getWeekDates(currentDate)[0];
+                const weekEnd = getWeekDates(currentDate)[6];
+                const isWeekMode = viewMode === "week";
+
+                const weekTitle = `${weekStart.getFullYear()}年${weekStart.getMonth() + 1}月${weekStart.getDate()}日 - ${weekEnd.getMonth() + 1}月${weekEnd.getDate()}日`;
+
+                return (
+                    <div className="bg-white rounded-2xl shadow-soft border border-white/60 p-4 md:p-6 flex justify-between items-center">
+                        <button
+                            onClick={isWeekMode ? prevWeek : prevMonth}
+                            className="p-2 rounded-full hover:bg-gray-100 transition text-gray-600"
+                            title={isWeekMode ? "上一周" : "上一月"}
+                        >
+                            <i data-lucide="chevron-left" className="w-6 h-6"></i>
+                        </button>
+
+                        <h2 className="text-lg md:text-2xl font-bold text-gray-800 text-center px-4">
+                            {isWeekMode
+                                ? weekTitle
+                                : `${currentDate.getFullYear()} 年 ${monthNames[currentDate.getMonth()]}`}
+                        </h2>
+
+                        <button
+                            onClick={isWeekMode ? nextWeek : nextMonth}
+                            className="p-2 rounded-full hover:bg-gray-100 transition text-gray-600"
+                            title={isWeekMode ? "下一周" : "下一月"}
+                        >
+                            <i data-lucide="chevron-right" className="w-6 h-6"></i>
+                        </button>
+                    </div>
+                );
+            };
 
             const renderMonthView = () => (
                 <div className="bg-white rounded-2xl shadow-soft border border-white/60 overflow-hidden">
@@ -747,7 +752,7 @@
                                     <h3 className="text-lg font-bold text-gray-800 mb-4">说明</h3>
                                     <div className="text-sm text-gray-600 space-y-2">
                                         <p>月历：适合按日期总览。</p>
-                                        <p>周视图：适合看一周内密集安排。</p>
+                                        <p>周视图：适合看一周内密集安排，可按周切换。</p>
                                         <p>列表：适合连续浏览整月活动。</p>
                                         <p>分类：适合单独查看 Event / TV / Radio。</p>
                                     </div>
