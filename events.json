@@ -1,5 +1,135 @@
 [
   {
+    "id": "e868bba10c04f2966b4452224f479977",
+    "date": "2016-08-27",
+    "title": "Animelo Summer Live 2016 刻-TOKI-",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/anisama2016/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "294c04c2a9ba1297d2c70a07b04d0266",
+    "date": "2016-11-13",
+    "title": "BanG Dream! Second☆LIVE Starrin' PARTY 2016!",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bang-dream-2nd-live/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "9cf2394626b546b26c664c1f636371cd",
+    "date": "2016-12-07",
+    "title": "「BanG Dream!」プロジェクト発表会",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/project/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "7ac1cb002d5c71e193ca217a8d63db4b",
+    "date": "2017-02-05",
+    "title": "BanG Dream! 3rd☆LIVE Sparklin' PARTY 2017!",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bang-dream-3rd-live/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "d92c27f156af45cac7798a0a4e9f256a",
+    "date": "2017-06-30",
+    "title": "Roselia 1st Live「Rosenlied」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/roselia-1st-live/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "46dc38920ca5080dad4eb72a410a60ae",
+    "date": "2017-07-29",
+    "title": "Roselia 1st Live「Rosenlied」追加公演",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/roselia-1st-live-rosenlied-add/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "6dedd4b8f6f904c3939007459c4c5dc0",
+    "date": "2017-08-10",
+    "title": "バンドリ！ ガールズバンドパーティ！カフェ",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bgd-cafe/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "876c468e91317ad7b0a38c43c38035dc",
+    "date": "2017-08-20",
+    "title": "BanG Dream! 4th☆LIVE Miracle PARTY 2017!～前日祭～",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/pre-bang-dream-4th2017/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "18dda48c49e77f287093bd8fd5096891",
+    "date": "2017-08-21",
+    "title": "BanG Dream! 4th☆LIVE Miracle PARTY 2017! at 日本武道館",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bang-dream-4th2017/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "4003df4a34a28b28790932a20d38345e",
+    "date": "2017-10-29",
+    "title": "ガルパーティ！in大阪",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/girlsbandparty-osaka/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "e8065a1796565b385dc22779a1d476d1",
+    "date": "2017-11-04",
+    "title": "Poppin'Party Fan Meeting 2017!",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/fan-meeting2017/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "d557b114b0333bd4c011b12a0a9ec5fa",
+    "date": "2018-01-13",
+    "title": "ガルパライブ＆ガルパーティ！in東京",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/girlsbandliveandparty/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "17b3867305a24fa1489e16a9da952572",
+    "date": "2018-01-14",
+    "title": "ガルパライブ＆ガルパーティ！in東京",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/girlsbandliveandparty/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "7113be9a66f9fbf673aef1ce216239fc",
     "date": "2018-01-15",
     "title": "e-radio 「charge!」",
@@ -8,6 +138,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7816",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "c9ef8db9296672630b2aeeee2cd7b34b",
+    "date": "2018-03-21",
+    "title": "Poppin'Party 9th Single・Roselia 5th Singleリリース記念連動お渡し会",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/nagaokaevent/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "6728d900b67d01cf18c6fbe2344aac3e",
+    "date": "2018-03-25",
+    "title": "THE THIRD（仮）1st ライブ",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/the-third1strive/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "89c88c5aea7b2d3eaaa71cfa7538358a",
@@ -160,6 +310,46 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "d1f7711fc13f4d2fc3530a4c94c35647",
+    "date": "2018-06-24",
+    "title": "Roselia 1stアルバム発売記念スペシャルトークイベント",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rose0624/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "bddfc7d8169023a48bf0b89d5136139a",
+    "date": "2018-06-30",
+    "title": "Poppin'Party 2015-2017 LIVE BEST発売記念スペシャルトークイベント",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/popipa0630/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "f6adacc211cdaa6f575c8235f5043065",
+    "date": "2018-07-07",
+    "title": "ラジオ大阪開局60周年記念ライブイベント「V-STATION THE LIVE Passion」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/radio_osaka/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "9d09ddacae3071426a8ba9fc8def3b7e",
+    "date": "2018-07-17",
+    "title": "THE THIRD(仮) 2nd ライブ",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/thethird2nd/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "3c4cc1bf83242a406a9c1bce2e979878",
     "date": "2018-07-19",
     "title": "ニコニコ生放送 「「生のアイドルが好き」」",
@@ -170,6 +360,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "3f46e91db5eb0c5705b8ae9944797795",
+    "date": "2018-07-21",
+    "title": "BiliBIli Macro Link – Star Phase × Anisong World Matsuri 2018",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bmlsp2018/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "8cf43e0e81a1209a8c76780e536fbe55",
     "date": "2018-07-31",
     "title": "ニコニコ生放送 「『かな＆あいりの文化放送ホームランラジオ！ パっとUP』」",
@@ -178,6 +378,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7858",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "15702f9c447057740e90af406fcc0e6b",
+    "date": "2018-08-08",
+    "title": "コカ･コーラ SUMMER STATION 音楽LIVE",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/summerstation2018/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "dfb30bc8141cb51660a51b44ff56894c",
@@ -270,6 +480,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "c39a05a831605fc98467e796d14f26f8",
+    "date": "2018-08-24",
+    "title": "Animelo Summer Live 2018 “OK!”",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl2018/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "4a41a980c0a656dedf51c0ad6732b69c",
     "date": "2018-08-27",
     "title": "テレビ朝日 「「ぱりぴＴＶ」」",
@@ -300,6 +520,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "96781fd7b8a7ba0b5c905c2a3adf1d28",
+    "date": "2018-09-17",
+    "title": "Roselia Fan Meeting 2018",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/roselia-fm2018/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "835397fbb217c625634a94bfe7dd64b7",
     "date": "2018-10-22",
     "title": "STVラジオ 「『ミュージックパレット』」",
@@ -318,6 +548,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7864",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "236d79d79c9befb6822672db8ac1403f",
+    "date": "2018-11-07",
+    "title": "Roselia Live 「Vier」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/vier/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "4c05e3582001fe6c5baa67aa43d12646",
@@ -388,6 +628,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7766",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "d6de0e650321e1cf8b7d7bb3a8265248",
+    "date": "2019-01-19",
+    "title": "ANIMAX MUSIX 2019 OSAKA supported byひかりTV",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/animax-2019/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "895116d0ef60f8615d9d3666fdec907b",
@@ -478,6 +728,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7772",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "b83a326ddc39ede8f0fae1fa956e4ebb",
+    "date": "2019-03-17",
+    "title": "Poppin'Party 12th Single「キズナミュージック♪」＆ 1st Album「Poppin’on!」発売記念 連動スペシャルトークイベント",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/popipa0317/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "fcdabb45793149e9134fdf688e40840f",
@@ -610,6 +870,56 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "6ba1e76437e0b52b60b5ccabedd66799",
+    "date": "2019-07-21",
+    "title": "BILIBILI MACRO LINK-STAR PHASE 2019",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bml2019/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "f4d6536a9d919a6b0378b9b49ae8e61d",
+    "date": "2019-07-21",
+    "title": "RAISE A SUILEN「Heaven and Earth」特別追加公演　UNSTOPPABLE LIVE",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras_d4dj1st/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "0799c853d23af206e818e89e949838cf",
+    "date": "2019-07-28",
+    "title": "WONDERFUL HOBBY LIFE FOR YOU!!『RAISE A SUILEN』ステージ",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/whl4u_ras/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "d0bf3acdf4c2219673db1e3905469d3c",
+    "date": "2019-07-30",
+    "title": "Poppin'Party×SILENT SIREN「NO GIRL NO CRY」発売記念お渡し会",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/ngnc_release/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "065e922f10d37de2a898cae308bf11d5",
+    "date": "2019-07-31",
+    "title": "Poppin'Party×SILENT SIREN「NO GIRL NO CRY」発売記念お渡し会",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/ngnc_release/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "ff16b0d48ca66b20118473ae9271d552",
     "date": "2019-08-02",
     "title": "FM-FUJI 「沈黙の金曜日",
@@ -648,6 +958,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7742",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "12eacd5f6fa376848f94924602bf989a",
+    "date": "2019-08-11",
+    "title": "rockin'on presents ROCK IN JAPAN FESTIVAL 2019",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rockinjapan_popipa/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "84fd86675e8798168dd01589e07cd1f4",
@@ -700,6 +1020,46 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "b105f8bcd4f0f860a57420acc23f0af8",
+    "date": "2019-08-30",
+    "title": "Animelo Summer Live 2019 -STORY-",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl2019/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "53b56c24c6a76d3cffed5d3d03dbed10",
+    "date": "2019-08-31",
+    "title": "Animelo Summer Live 2019 -STORY-",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl2019/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "7b75d7f951abdb584bdfbbdfcc417880",
+    "date": "2019-09-01",
+    "title": "Animelo Summer Live 2019 -STORY-",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl2019/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "c0634a88b6fddd78c692debc1a2d4d2e",
+    "date": "2019-09-05",
+    "title": "Poppin'Party Fan Meeting Tour 2019!",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/popipa-fm2019/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "f30a63e9bee6bd7a186cdbdc1fe008e7",
     "date": "2019-09-10",
     "title": "MC(ミューズクリップ) 9/10発行号",
@@ -730,6 +1090,36 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "171b366786947e1e03ad7af8eacef785",
+    "date": "2019-09-13",
+    "title": "Poppin'Party Fan Meeting Tour 2019!",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/popipa-fm2019/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "a7830fc6a37575be97dd32312817a0f3",
+    "date": "2019-09-14",
+    "title": "Poppin'Party Fan Meeting Tour 2019!",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/popipa-fm2019/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "c815f8bb1a1d0cf45184191713552fb2",
+    "date": "2019-09-15",
+    "title": "「チュチュと一緒にBanG Dream! FILM LIVE」（ミニトークショー付き）",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/chuchu-ouenjyoei/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "d126c9e0b55b67d749eb4b278501a684",
     "date": "2019-09-16",
     "title": "超！A&G+ 「伊福部崇のラジオのラジオ」",
@@ -738,6 +1128,46 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7836",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "d25a720f00e53d0054112793043caca1",
+    "date": "2019-09-26",
+    "title": "Poppin'Party Fan Meeting Tour 2019!",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/popipa-fm2019/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "43303818f03965e227908c26d2a3d021",
+    "date": "2019-09-29",
+    "title": "山小屋・ばさらかpresents 阿蘇ロックフェスティバル 2019 in北九州",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras_asorock/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "0f64a168e13fd0f6838d15ced012e968",
+    "date": "2019-10-03",
+    "title": "Poppin'Party Fan Meeting Tour 2019!",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/popipa-fm2019/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "8971358081561dc126908849a917e8e2",
+    "date": "2019-10-05",
+    "title": "マグロック2019",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/magurock2019/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "3ad6419a4dc0ee9b4911ed2d66a39d5a",
@@ -768,6 +1198,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7746",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "b5356ff3f20c78dfbaba1577fcbde08a",
+    "date": "2019-10-26",
+    "title": "ANIMAX MUSIX 2019 KOBE",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/animax2019/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "ce92792785246189c7190e4d905d489d",
+    "date": "2019-10-27",
+    "title": "ANIMAX MUSIX 2019 KOBE",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/animax2019/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "ed74d038fa7adb4926b1ca4bebf6540a",
@@ -810,6 +1260,36 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "7b7a519d3ab3f65f7567aadbed73133f",
+    "date": "2019-11-29",
+    "title": "Roselia×RAISE A SUILEN合同ライブ「Rausch und/and Craziness」前日祭",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/ruc_fes/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "432e53505cf7092db0b37582a9d64c1a",
+    "date": "2019-11-30",
+    "title": "Roselia×RAISE A SUILEN合同ライブ「Rausch und/and Craziness」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ruc/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "0b8701eb833add45b1ac6d540a15e333",
+    "date": "2019-12-01",
+    "title": "Roselia×RAISE A SUILEN合同ライブ「Rausch und/and Craziness」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ruc/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "76570dbb33b21bc2ab9df4ccf4942e9c",
     "date": "2019-12-03",
     "title": "『アニメージュ』1月号",
@@ -828,6 +1308,46 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7780",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "7eab8742722a3e0e5846d9b0dec786dc",
+    "date": "2019-12-12",
+    "title": "BanG Dream! Xmas Party 2019",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/xmas2019/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "c4b25733dd0320c443da3e14a782db9e",
+    "date": "2019-12-12",
+    "title": "「BanG Dream! 3rd Season」制作発表会",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/3rdxmas/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "736c15578d7ca9c02128ef88b51fe539",
+    "date": "2019-12-29",
+    "title": "THE CREATION～We are RAISE A SUILEN～",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/the_creation/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "3f9f91cffd097af1b2077bb66a219ac6",
+    "date": "2019-12-30",
+    "title": "rockin'on presents COUNTDOWN JAPAN 19/20",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/popipa_cdj1920/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "51c733826abf04ba1f48058ea82a556b",
@@ -890,6 +1410,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "7dd5be4d0201e43bc65b8c70748da15d",
+    "date": "2020-01-16",
+    "title": "RoseliaのRADIO SHOUT! -Lachen- in Nagoya",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/rsl-nagoya/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "58d3da73dda9dd3d61560c66de97f6a3",
+    "date": "2020-01-20",
+    "title": "RoseliaのRADIO SHOUT! -Lachen- in Tokyo",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/rsl-tokyo/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "fecb46d29d91d6840148b00f9b91eda0",
     "date": "2020-01-21",
     "title": "FM FUJI『タイムマシーン３号と帆風千春の俺たちの穴！』",
@@ -920,6 +1460,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "54456bd6302ee5dc63f02a11a1968f98",
+    "date": "2020-01-27",
+    "title": "Pastel＊Palettes特別公演 〜まんまるお山に彩りスペシャル☆〜",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/psplsp/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "38abaa0c665088c303fc82043f95e4f9",
     "date": "2020-01-28",
     "title": "FM FUJI『タイムマシーン３号と帆風千春の俺たちの穴！』",
@@ -940,6 +1490,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "7ead14a6b1527a0f41f6001874c9eb8f",
+    "date": "2020-02-01",
+    "title": "Roselia 「Rausch」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/roselia_rausch/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "6a59df641e77e19c4bf8100d867ff40d",
+    "date": "2020-02-02",
+    "title": "Afterglowスペシャルイベント　いつも通りの放課後デイズ",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/afterglow-sp/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "91b7518ae261e3f7790663b6d6dabd77",
     "date": "2020-02-04",
     "title": "FM FUJI『タイムマシーン３号と帆風千春の俺たちの穴！』",
@@ -948,6 +1518,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7708",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "aef5ea7da0a2aece872c4b30d3c55ce6",
+    "date": "2020-02-09",
+    "title": "RAISE A SUILEN 「Craziness」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras_craziness/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "e31d5b4a9cab688854e7add115523406",
@@ -978,6 +1558,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7708",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "c145f8e28b1a8412dea26d1bf7f949c2",
+    "date": "2020-02-11",
+    "title": "RADIO EXPO ～TBSラジオ万博2020～",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/roselia_radioexpo/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "9da2283096b95fb98915d5248641b0f6",
@@ -1180,6 +1770,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "c634077c24799175399c949d3a5b12cc",
+    "date": "2020-03-21",
+    "title": "Anime Japan 2020",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/aj2020/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "fb5e86d030a415924bd21e7b4ba861f9",
+    "date": "2020-03-22",
+    "title": "Anime Japan 2020",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/aj2020/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "319f0ea04b02daa07d36b87d52ffe9ad",
     "date": "2020-03-24",
     "title": "FM FUJI『タイムマシーン３号と帆風千春の俺たちの穴！』",
@@ -1340,6 +1950,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "5c88296086ae814fb196ab134f48fd1b",
+    "date": "2020-05-01",
+    "title": "【開催中止】Morfonica Debut Event「Prelude」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/morfonica_prelude/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "3257f26a67bb6936eae5dcdfe8b16e29",
     "date": "2020-05-02",
     "title": "文化放送 超！A&G「22/7(ナナブンノニジュウニ) 割り切れないラジオ＋ 」",
@@ -1350,6 +1970,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "239cda1570d89b65c5416df1031dfeb4",
+    "date": "2020-05-02",
+    "title": "BanG Dream! Special☆LIVE Girls Band Party! 2020 前日物販",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/gbp2020goods/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "0436e485e82368ae12db3184650e7f49",
+    "date": "2020-05-03",
+    "title": "【開催延期】BanG Dream! Special☆LIVE Girls Band Party! 2020",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/gbp2020/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "b041febf20abcf13b8361af5931cfb3e",
     "date": "2020-05-05",
     "title": "FM FUJI『タイムマシーン３号と帆風千春の俺たちの穴！』",
@@ -1358,6 +1998,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7708",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "a97f1bff18d0099b8b008eb0a3260f20",
+    "date": "2020-05-06",
+    "title": "rockin'on presents JAPAN JAM 2020",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras_japanjam2020/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "045f24217d24f251e5f9efaa5adc5062",
@@ -1390,6 +2040,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "dc4d67478db3a5195acfee6fac177f81",
+    "date": "2020-05-09",
+    "title": "BanG Dream! Special☆LIVE Girls Band Party! 2020 後日祭",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/gbp2020lf/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "70743c8fc0ca50176389d8e0015e94de",
     "date": "2020-05-10",
     "title": "『声優グランプリ』6月号",
@@ -1398,6 +2058,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7732",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "b0c737e98830045af840e127bacff284",
+    "date": "2020-05-10",
+    "title": "BanG Dream! Special☆LIVE Girls Band Party! 2020 後日祭",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/gbp2020lf/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "8804914b3689d6f566e019aab2f5d1c4",
@@ -1668,6 +2338,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "37c8752c5418e005466c7d61c9984902",
+    "date": "2020-07-04",
+    "title": "バンドリ！＆スタァライト展 in Gallery AaMo",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/gbp_exhibition/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "a706e1321db9a305dfbc349e7a609aad",
@@ -2130,6 +2810,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "564dae5918a9abbe665e4d46f1301c26",
+    "date": "2020-10-07",
+    "title": "Morfonica 1st Live「Cantabile」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/morfonica_aut_2020/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "6ab9311a2f4962980b784a9af68ccf86",
     "date": "2020-10-08",
     "title": "FM滋賀 「キャッチ！」",
@@ -2138,6 +2828,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7904",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "9f5e5b191793ff1e99c0bb6cdef0a0ce",
+    "date": "2020-10-08",
+    "title": "BanG Dream! 8th☆LIVE「Breakthrough!」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/8th-live-oct/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "44f8833bf828c7a45f26b3de6403dc2c",
+    "date": "2020-10-09",
+    "title": "BanG Dream! 8th☆LIVE「Breakthrough!」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/8th-live-oct/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "bbfff234cbcbe4c7a640b86a4e0f99ba",
@@ -2218,6 +2928,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "5aa44ac020015ea7f5768f2edc9a999e",
+    "date": "2020-10-18",
+    "title": "第8回アニ玉祭 TBSラジオ presents Roseliaトークライブ from バンドリ！",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/anitama-tbs-roselia/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "2fdfdc81abd2e017b61107ec3a240753",
@@ -2470,6 +3190,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "89c95932900aca604f08d98e619f70b1",
+    "date": "2020-11-23",
+    "title": "Poppin'Party JOYFUL PARTY, FUN TIME!",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ppp-pwst/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "e21bc806ebae2e8bcbb86d8117bed4e3",
     "date": "2020-11-24",
     "title": "FM FUJI『タイムマシーン３号と帆風千春の俺たちの穴！』",
@@ -2600,6 +3330,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "c3022e5f40fdc61f7f71d1d1019ca2e1",
+    "date": "2020-12-12",
+    "title": "Roselia×RAISE A SUILEN合同オンラインライブ「Rausch und/and Craziness -interlude-」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ruc_interlude/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "35181be48763de078d10b87849167065",
     "date": "2020-12-14",
     "title": "宮瀬玲奈による単独新番組！『宮瀬玲奈の今にゃんしよーと？』ニコニコチャンネルを開設！",
@@ -2650,6 +3390,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "d131c9183d1679d51d60d4de0920910a",
+    "date": "2020-12-19",
+    "title": "Afterglow Sound Only Live「As ever」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/sol_asever/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "b497c42fd3b36f42ee6e6d5ac4be5a0e",
+    "date": "2020-12-20",
+    "title": "Afterglow Sound Only Live「As ever」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/sol_asever/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "bad3169b85d9f441e6aaeb8095ad94bd",
     "date": "2020-12-22",
     "title": "FM FUJI『タイムマシーン３号と帆風千春の俺たちの穴！』",
@@ -2680,6 +3440,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "8e8e562bbbe2f95be2d3ea5afb1d2d89",
+    "date": "2020-12-27",
+    "title": "【開催中止】COUNTDOWN JAPAN 20/21",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/cdj2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "0a5f6eec21d056148544c695408aa435",
     "date": "2020-12-28",
     "title": "『TopYell NEO 2020～2021』",
@@ -2698,6 +3468,36 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7708",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "ea3b9f02ced74a06bb6d398b8e0f3da1",
+    "date": "2020-12-29",
+    "title": "【開催中止】COUNTDOWN JAPAN 20/21",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/cdj2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "97ea87a1c092d1b086d35a41acab9e61",
+    "date": "2020-12-30",
+    "title": "【開催中止】COUNTDOWN JAPAN 20/21",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/cdj2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "b82537941055f8dbf65bcae9ba5757e2",
+    "date": "2020-12-31",
+    "title": "【開催中止】COUNTDOWN JAPAN 20/21",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/cdj2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "41d20c10caeabbf6f63c7a6f39bdec93",
@@ -2788,6 +3588,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7709",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "0cc9a833e09e2ec2e636c0932a724814",
+    "date": "2021-01-11",
+    "title": "バンドリ！スペシャルイベント「らうくれ！」＆「あすはも！」",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/ruc_asharmo/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "650ad67e481624a234f103a59affb098",
@@ -2940,6 +3750,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "09a73b01bdbfa326b84d38fb8fdaaa71",
+    "date": "2021-02-06",
+    "title": "【開催延期】BUSHIROAD ROCK FESTIVAL 2021",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/brfes2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "9829d72feb705d150a09731c1a0c094a",
     "date": "2021-02-09",
     "title": "FM FUJI『タイムマシーン３号と帆風千春の俺たちの穴！』",
@@ -3070,6 +3890,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "0cbca395062b54995a04983b7279c2c0",
+    "date": "2021-02-22",
+    "title": "Roselia×RAISE A SUILEN合同ライブ「Rausch und/and Craziness Ⅱ」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ruc2/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "3e7dbcbbcc7199313d0636ca5fbeb66c",
     "date": "2021-02-23",
     "title": "FM FUJI『タイムマシーン３号と帆風千春の俺たちの穴！』",
@@ -3078,6 +3908,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7708",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "543fc43492caa845ba6eb8f206a49590",
+    "date": "2021-02-23",
+    "title": "Poppin'Party×Morfonica Friendship LIVE「Astral Harmony」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/astralharmony/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "1bd748f8857f0ef22e5ee0918158ba07",
@@ -3150,6 +3990,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "34f1a0042fd3880fa028d700a9c7be34",
+    "date": "2021-02-27",
+    "title": "Pastel＊Palettes Sound Only Live「Flowerful＊」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/sol_flowerful/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "a229205260065331403d3fb4fb1ca406",
     "date": "2021-02-28",
     "title": "22/7『僕が持ってるものなら』発売記念LIVE",
@@ -3158,6 +4008,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/9297",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "3c75d47f2bda3d21484431363a0a4d6a",
+    "date": "2021-02-28",
+    "title": "Pastel＊Palettes Sound Only Live「Flowerful＊」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/sol_flowerful/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "b6a02af55bdb87647610ffeb66bcb622",
@@ -3260,6 +4120,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "7aa7bd71391f7079e0770bb8dbd47c73",
+    "date": "2021-03-14",
+    "title": "ガルパ4周年記念展 in Gallery AaMo",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/gbp_4th_exhibition/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "253c9d25c8bf0c4bed9907567d43d88f",
     "date": "2021-03-16",
     "title": "『宮瀬玲奈の今にゃんしよーと？』",
@@ -3360,6 +4230,46 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "de3f342ca76cae24e3060f48ed012169",
+    "date": "2021-04-03",
+    "title": "JAPAN ONLINE FESTIVAL 2021 Spring",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/jof2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "42b2891f5a2e5a2f4a1d615e04475b82",
+    "date": "2021-04-03",
+    "title": "RAISE A SUILEN SPECIAL ONLINE LIVE 2021",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras-pwst/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "64dea698530da6964f55416e4282d63e",
+    "date": "2021-04-04",
+    "title": "JAPAN ONLINE FESTIVAL 2021 Spring",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/jof2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "a504ebc6b95b5b4ff1f5e894f89d9d71",
+    "date": "2021-04-04",
+    "title": "ぽぴばん！のおでかけin神戸",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/popibang_koube/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "b3589aa19405c96ad2a2de90b882839d",
     "date": "2021-04-05",
     "title": "ニッポン放送　ガクのネ『天城サリー(22/7)のBehind the Scene』",
@@ -3418,6 +4328,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "8e731bb4d4d0680b1acb68b09371f9b2",
+    "date": "2021-04-10",
+    "title": "JAPAN ONLINE FESTIVAL 2021 Spring",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/jof2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "eaa88b98bb66eb2a5e8a4446d6a74917",
+    "date": "2021-04-11",
+    "title": "JAPAN ONLINE FESTIVAL 2021 Spring",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/jof2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "b7796bc87c958199f061d840cdfdff6d",
@@ -3580,6 +4510,56 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "ad62f7539ade06d5f21b70db32c75fb9",
+    "date": "2021-05-01",
+    "title": "Poppin'Party×SILENT SIREN 対バンライブ「NO GIRL NO CRY -Round 2-」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ngnc2/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "fb4757914056df9c2db7c3aa0f7ad4b9",
+    "date": "2021-05-02",
+    "title": "JAPAN JAM 2021",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "f858e72a94a2d55330d85f1ef0c735f2",
+    "date": "2021-05-03",
+    "title": "JAPAN JAM 2021",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "d0551575fc9bb261828fa6241797f46b",
+    "date": "2021-05-04",
+    "title": "JAPAN JAM 2021",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "8a5336383cbede0b80bd8bf181c3d112",
+    "date": "2021-05-05",
+    "title": "JAPAN JAM 2021",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "40a928e4d1123ed1bfc778a79b3469e6",
     "date": "2021-05-08",
     "title": "TOKYO MX・BS11『22/7 計算中』",
@@ -3640,6 +4620,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "e17578567be7996f26a032bb648fa413",
+    "date": "2021-05-15",
+    "title": "ハロー、ハッピーワールド！ Sound Only Live「うぇるかむ to OUR MUSIC♪」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/welcome_to_our_music/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "4eab1f43da1aaaa96fe0849a633260a5",
+    "date": "2021-05-16",
+    "title": "ハロー、ハッピーワールド！ Sound Only Live「うぇるかむ to OUR MUSIC♪」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/welcome_to_our_music/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "a41ec903c3ab96dd4b17e24afa1207dd",
     "date": "2021-05-20",
     "title": "MC（ミューズクリップ） 5/25発行号",
@@ -3648,6 +4648,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7665",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "6799c8a7ef8e53dd1f25ff29f3a48f34",
+    "date": "2021-05-21",
+    "title": "Morfonica Special Live「Andante」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/morfonica-andante/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "d9e2c32405cbc14bf9eb334fa7c02e40",
@@ -3668,6 +4678,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "608ac1e433a3b6dbfda2af3c34bfae64",
+    "date": "2021-05-22",
+    "title": "RAISE A SUILEN ZEPP TOUR 2021「BE LIGHT」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras-tour2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "e5997bc486b77b3634c75cf299b837d5",
@@ -3730,6 +4750,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "0384c52f7fac31c504cbbc9342d35d8e",
+    "date": "2021-06-02",
+    "title": "RAISE A SUILEN ZEPP TOUR 2021「BE LIGHT」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras-tour2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "7d9b328a2f67a8b5d340165567335dbe",
     "date": "2021-06-05",
     "title": "TOKYO MX・BS11『22/7 計算中』",
@@ -3748,6 +4778,36 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "26792440730565ff3541d05127ee4db2",
+    "date": "2021-06-05",
+    "title": "BanG Dream! Girls Talk Party! 2021",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/gtp2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "dc1779d4650de331f4a5fc6ebfbce236",
+    "date": "2021-06-05",
+    "title": "【開催延期】BanG Dream! Special☆LIVE Girls Band Party! 2020→2021",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/gbp2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "3a695aafd215edf1c31f4e852bdc5cc4",
+    "date": "2021-06-06",
+    "title": "BanG Dream! Girls Talk Party! 2021",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/gtp2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "7196d68ef5033aac954ae465b97497ae",
@@ -3890,6 +4950,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "6bd5d758b5cdaa574691ad03b1096651",
+    "date": "2021-06-30",
+    "title": "RAISE A SUILEN ZEPP TOUR 2021「BE LIGHT」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras-tour2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "632acb8ce223647f2f0404c34554ee62",
     "date": "2021-07-03",
     "title": "TOKYO MX・BS11『22/7 計算中』",
@@ -3910,6 +4980,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "c746515d2a223b2bca3d0cbf9b88d22c",
+    "date": "2021-07-03",
+    "title": "バンドリーマー感謝キャラバン 2021",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/caravan2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "9d2e7fd88859f12e96bedc86f753b9f3",
+    "date": "2021-07-04",
+    "title": "ANIME EXPO LITE 2021 × LisAni！LIVE L.A.",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/animeexpolite2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "b5f436cb748bb543c80c04860b58151b",
     "date": "2021-07-06",
     "title": "ニコニコ生放送『天城サリー、絶体絶命の秘密基地～Secret Base～』",
@@ -3918,6 +5008,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7652",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "4886ba0a30225e43728ecd766ed1c88e",
+    "date": "2021-07-08",
+    "title": "Pastel＊Palettes Special Live 「TITLE DREAM」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/psplsp2/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "4e348abd6147447b7ecff1b0943c190d",
@@ -3958,6 +5058,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "cc411bf2a90b6c5e6df4decfc956bf46",
+    "date": "2021-07-10",
+    "title": "Bilibili Macro Link – Star Phase 2021(BML-SP2021)",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bml-sp2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "70178f5c0271c3d03079a954f6d45dba",
@@ -4160,6 +5270,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "5b750c80c5a103840149a7d0846b3ad0",
+    "date": "2021-08-07",
+    "title": "9th☆LIVE直前！富士急de決起会！",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/9th_kekkikai/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "da6c4fd41f68c64207a88f9cae21e6ae",
+    "date": "2021-08-08",
+    "title": "9th☆LIVE直前！富士急de決起会！",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/9th_kekkikai/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "4f4895f27eb100ce7584185da3437a58",
     "date": "2021-08-10",
     "title": "「声優グランプリ」9月号",
@@ -4188,6 +5318,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "c4b8880671fac112a0340b3d171db1e9",
+    "date": "2021-08-14",
+    "title": "ブシロードゲームフェス2021",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/bushifes2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "f6d951fdbefd635495369a4d48e408c6",
@@ -4450,6 +5590,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "4ff17a507434100cb2808c0f3db7b657",
+    "date": "2021-10-17",
+    "title": "香澄とたえの放課後居残りツアー",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/inokori-tours/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "ce31bcd74b7d94c072c276f2e0a1ccdd",
     "date": "2021-10-23",
     "title": "TOKYO MX・BS11『22/7 計算中』",
@@ -4468,6 +5618,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "0ded7f0a85353e8bc0916f3ca7c13e30",
+    "date": "2021-10-28",
+    "title": "Morfonica ZEPP TOUR 2021「Amabile」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/morfonica-tour2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "7d21df4732c0d0c77193e04bb91b6d94",
@@ -4500,6 +5660,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "cb4c72d2550f1140cdcf0ce67d200d88",
+    "date": "2021-11-05",
+    "title": "Morfonica ZEPP TOUR 2021「Amabile」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/morfonica-tour2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "b7247d4256b593b83ee7034bbd75b915",
     "date": "2021-11-06",
     "title": "TOKYO MX・BS11『22/7 計算中』",
@@ -4518,6 +5688,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "3087a6f89ebebd740325a54fa9e90196",
+    "date": "2021-11-07",
+    "title": "香澄とたえの放課後居残りツアー",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/inokori-tours/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "19f4d482d231cbb06f62ba57d26d068c",
@@ -4560,6 +5740,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "95a9c663542ce9ebea50a1135b78cc27",
+    "date": "2021-11-12",
+    "title": "RAISE A SUILEN ZEPP TOUR 2021「BE LIGHT」追加公演",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras-tour2021-encore/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "01d9871b045bec8f861c2ba9accbbe22",
     "date": "2021-11-13",
     "title": "TOKYO MX・BS11『22/7 計算中』",
@@ -4590,6 +5780,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "be6d882e1d4f4b575666e3417271b883",
+    "date": "2021-11-17",
+    "title": "香澄とたえの放課後居残りツアー",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/inokori-tours/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "4e62a38c2de4212aa7fa65b423b30348",
     "date": "2021-11-18",
     "title": "MC（ミューズクリップ） 11/25発行号",
@@ -4618,6 +5818,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "1863c409cb41c136061436a29ad04117",
+    "date": "2021-11-20",
+    "title": "ANIMAX MUSIX 2021",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/animax2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "62d85d228417411033fee4a7f7eb0061",
+    "date": "2021-11-26",
+    "title": "RAISE A SUILEN ZEPP TOUR 2021「BE LIGHT」追加公演",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras-tour2021-encore/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "25106265c146b65409b1eaf78342919b",
@@ -4660,6 +5880,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "0e825a3c5ba413f0529b018e0d69d93f",
+    "date": "2021-12-04",
+    "title": "RAISE A SUILEN ZEPP TOUR 2021「BE LIGHT」追加公演",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras-tour2021-encore/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "c09e2f1d7cf7b6e74f2653c33d8974fc",
     "date": "2021-12-05",
     "title": "MC（ミューズクリップ） 12/10発行号",
@@ -4668,6 +5898,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7627",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "5913d2d5ea3b906633c46732bf256537",
+    "date": "2021-12-05",
+    "title": "Morfonica トークイベント「モニ会へようこそ♪」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/morfonica_talk/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "ec53d2682de0202213b1af3b6f19f470",
@@ -4698,6 +5938,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "5a157cbbb0b12aef986966370546673b",
+    "date": "2021-12-11",
+    "title": "Roselia「Edelstein」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/roselia2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "bcccdd5deaac11e52b8560c97f7c1113",
+    "date": "2021-12-12",
+    "title": "Roselia「Edelstein」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/roselia2021/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "e2b33d0a1403673de80822afe087d78e",
@@ -4798,6 +6058,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "1861d11258ab314ecb12acc4df1e3e8f",
+    "date": "2022-01-10",
+    "title": "「バンドリ！TV LIVE インフォメーションコーナー出張版」",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/bdinfo_event/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "551d20ce3543d79c36989fda2a89fba1",
+    "date": "2022-01-10",
+    "title": "バンドリ！ ガールズニューイヤーパーティ！2022",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/gnp2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "eb891258554b24ffcf9de506a79884d3",
@@ -4908,6 +6188,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "72964a677bc4a97ea0961e7bc1c42606",
+    "date": "2022-02-07",
+    "title": "RAISE A SUILEN SPECIAL LIVE「Repaint」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras_repaint/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "917e9098d1d12e33f9ffc0f54519948c",
@@ -5040,6 +6330,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "0877120436020f1997829955a0ea6d12",
+    "date": "2022-03-06",
+    "title": "ガルパ5周年記念ファンフェスタ",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/gbp5th_fanfesta/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "f37f0852af940df0dada87798693e1db",
     "date": "2022-03-08",
     "title": "ニコニコ生放送『天城サリー、絶体絶命の秘密基地～Secret Base～』",
@@ -5138,6 +6438,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "43962d2e88075e51955b0f7b1cec8935",
+    "date": "2022-03-19",
+    "title": "ガルパ5周年記念ファンフェスタ in 秋葉原",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/gbp5th_akihabara/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "f24f3296f059e65b3f0586c571047bbe",
+    "date": "2022-03-20",
+    "title": "ガルパ5周年記念ファンフェスタ in 秋葉原",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/gbp5th_akihabara/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "d4f510b94d038cd25f3159177d9b6cf4",
@@ -5360,6 +6680,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "83b64bb8b710053722469a4f0d51e0be",
+    "date": "2022-04-24",
+    "title": "Morfonica Concept LIVE「Resonance」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/resonance/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "16ab6e21dd1fee0d7edf4a4b29a8f766",
     "date": "2022-04-27",
     "title": "MC（ミューズクリップ） 5/10発行号",
@@ -5410,6 +6740,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "63a273c089aee40697610ffc01d24d73",
+    "date": "2022-05-01",
+    "title": "JAPAN JAM 2022",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "bf7b3af0b36c5c5f691669712450109d",
+    "date": "2022-05-03",
+    "title": "JAPAN JAM 2022",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "f8230d4518fa6d0a99aace9d3b1316b9",
     "date": "2022-05-04",
     "title": "キャラクターライブBlu-ray & DVD『22/7 5th BIRTHDAY LIVE 2021 ～Colors of Flowers～』発売",
@@ -5420,6 +6770,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "67dff493271afe87034e7d45d1006f6a",
+    "date": "2022-05-04",
+    "title": "JAPAN JAM 2022",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "d85f74be38245ae22b82517a4e521765",
     "date": "2022-05-05",
     "title": "ニコニコ生放送『天城サリー、絶体絶命の秘密基地～Secret Base～』",
@@ -5428,6 +6788,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7399",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "c13286e6d9bc3976fc1a1d7a336c58a4",
+    "date": "2022-05-05",
+    "title": "JAPAN JAM 2022",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "7d2ef3bb92abbf7a1db8389838db0abb",
@@ -5458,6 +6828,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "fac711f5c12d9aa89b2da66f52f2262e",
+    "date": "2022-05-07",
+    "title": "JAPAN JAM 2022",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "0fd0c5e0655225a51ab3f40ad4067687",
@@ -5528,6 +6908,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "a8e47d0be70952bb7ea5eb50faa0f3d9",
+    "date": "2022-05-21",
+    "title": "Roselia単独ライブ「Episode of Roselia」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/live_eor/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "befedbd94efea0eaba499ba46a13132f",
+    "date": "2022-05-22",
+    "title": "Roselia単独ライブ「Episode of Roselia」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/live_eor/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "fd8d5496bb11fa874ede146f351ee123",
@@ -5670,6 +7070,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "a5e77445dd43dc973230c9378fac745a",
+    "date": "2022-06-18",
+    "title": "RAISE A SUILEN×Morfonica「Mythology Chapter 2」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mythology2/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "2a9f1c5f51e824dafc693471135c844f",
     "date": "2022-06-19",
     "title": "FC限定番組「ナナニジハウス ～新曲最速解禁スペシャル～」配信",
@@ -5678,6 +7088,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7550",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "770042f5ae04933c58349c1328835711",
+    "date": "2022-06-19",
+    "title": "RAISE A SUILEN LIVE 2022「OVERKILL」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras_2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "6ef7d14c882f2fa9989b673c1fd5b007",
@@ -5788,6 +7208,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "28043dcc44564bdd4c1f3e8697680f82",
+    "date": "2022-07-03",
+    "title": "MyGO!!!!! 1st LIVE「僕たちはここで叫ぶ」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo_1st/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "fd642ec69f49b6dfec7ee74343d7d292",
@@ -6080,6 +7510,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "5c9497e868a2d1ac35d55d365bbb71f7",
+    "date": "2022-07-24",
+    "title": "コカ・コーラ　SUMMER STATION 音楽LIVE",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/summerstation2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "0bc19b83ec389a818f9f40d7dfea1b6e",
     "date": "2022-07-25",
     "title": "FC限定番組「なごみんの部屋」配信",
@@ -6128,6 +7568,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7599",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "7cf93c4b42991f0f3962c8059452b495",
+    "date": "2022-07-30",
+    "title": "バンドリ！ときめく夏祭り！2022",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/bangdream_summer2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "1eb0db5784de934b4b757dac85a791c4",
@@ -6230,6 +7680,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "71bc196660a2e8b8a3d9d857c49c6385",
+    "date": "2022-08-06",
+    "title": "BanG Dream! RADIO TALK FES vol.1 ～Roselia×RAISE A SUILEN～",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/talk_roselia_ras/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "1efdfe156aec601f38a19753a26d5bfc",
+    "date": "2022-08-06",
+    "title": "【公演中止】rockin'on presents ROCK IN JAPAN FESTIVAL 2022",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rijf2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "826a6315a303748e88c9bcaa79031159",
     "date": "2022-08-07",
     "title": "ナナニジ夏祭り 2022＠Zepp Nagoya",
@@ -6240,6 +7710,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "682b2fe0ff28365e798affcce63d4fd3",
+    "date": "2022-08-07",
+    "title": "【公演中止】rockin'on presents ROCK IN JAPAN FESTIVAL 2022",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rijf2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "263a674a84173b270c752d7511bfdff6",
     "date": "2022-08-11",
     "title": "ナナニジ夏祭り 2022＠KT Zepp Yokohama",
@@ -6248,6 +7728,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7596",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "88f0f131607025b674616cfb162daa0c",
+    "date": "2022-08-11",
+    "title": "【公演中止】rockin'on presents ROCK IN JAPAN FESTIVAL 2022",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rijf2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "410431f6788211606a5410d5131e45e9",
+    "date": "2022-08-12",
+    "title": "【公演中止】rockin'on presents ROCK IN JAPAN FESTIVAL 2022",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rijf2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "720851df24f8bd436c5666e9419241f2",
@@ -6268,6 +7768,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "e9290cade0346672b157a85bcf1654f4",
+    "date": "2022-08-13",
+    "title": "【公演中止】rockin'on presents ROCK IN JAPAN FESTIVAL 2022",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rijf2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "bd83baf235ea487741451213e7aa8946",
@@ -6310,6 +7820,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "45caf69de2473817e3f61756b7c6bc7f",
+    "date": "2022-08-20",
+    "title": "SUMMER SONIC 2022",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/summersonic2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "67ba6ab13950f77b10cc7837dc590706",
+    "date": "2022-08-21",
+    "title": "SUMMER SONIC 2022",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/summersonic2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "51c8c7218690c6368a46cf722eb50e41",
     "date": "2022-08-25",
     "title": "e-radio エフエム滋賀『キャッチ！』",
@@ -6318,6 +7848,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7625",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "bf0060859221cdf063902f86f5ae2ccd",
+    "date": "2022-08-26",
+    "title": "Animelo Summer Live 2022 -Sparkle-",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "67ed2d9c04caac8f5bac932012fa1e48",
@@ -6338,6 +7878,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "82cb1a7d57b1d093d11d5e3584199b42",
+    "date": "2022-08-27",
+    "title": "Animelo Summer Live 2022 -Sparkle-",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "6adeae4194d21f145f96be35574daaed",
+    "date": "2022-08-28",
+    "title": "Animelo Summer Live 2022 -Sparkle-",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "fe0247e206955c560579970292556b3e",
@@ -6430,6 +7990,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "42449eb05d244d14b22f8480212840ec",
+    "date": "2022-09-10",
+    "title": "MyGO!!!!! 2nd LIVE「そのままを抱きしめて」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo_2nd/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "7d201eedf5049410f13abc81617857f9",
     "date": "2022-09-14",
     "title": "「IDOL AND READ 032」",
@@ -6490,6 +8060,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "60fbdec9b6e4b9582d4f6047d02f36fb",
+    "date": "2022-09-23",
+    "title": "BanG Dream! 10th☆LIVE 開催記念　バンドリ！シアター",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/10th_theater/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "9a3295426057f2a588054ba606c47782",
     "date": "2022-09-24",
     "title": "TOKYO MX・BS11『22/7 計算中』",
@@ -6518,6 +8098,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7536",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "94a67314edcebad967fe918b7e190575",
+    "date": "2022-09-25",
+    "title": "BanG Dream! 10th☆LIVE 開催記念　バンドリ！シアター",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/10th_theater/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "aa7e6cabde99fe074768f5f8b9fc5f25",
@@ -6740,6 +8330,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "705c863c9845626a54353f1b210156c0",
+    "date": "2022-10-29",
+    "title": "BanG Dream! RADIO TALK FES vol.2 ～ハロー、ハッピーワールド！×Morfonica～",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/talk_hhw_morfonica/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "c1699f04fff789c60c8a9d7f058d33ea",
     "date": "2022-10-30",
     "title": "10thシングル『神様だって決められない』発売記念「オンライン個別チェキくじ会」・「オンライン個別サイン会」・「オンライン個別トーク会」",
@@ -6870,6 +8470,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "e23d93557da66924bd162e3db6d5daf1",
+    "date": "2022-11-12",
+    "title": "BanG Dream! Special☆LIVE Girls Band Party! 2020→2022",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/gbp2022/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "d2ce18011da39466d3801eab9d595a57",
     "date": "2022-11-13",
     "title": "FM大阪サンデースペシャル「START UP!! 52OSAKA ～Girls Castle～」",
@@ -6968,6 +8578,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "fa63c4b2c3bc4c3a8de67b396460a946",
+    "date": "2022-11-26",
+    "title": "MyGO!!!!! 3rd LIVE「声を抱えて生きる」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo_3rd/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "c3bbfca4b33e45d60a52767e47ae1e19",
@@ -7210,6 +8830,36 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "8087eee7f3fe4d890d64b4faf2901b37",
+    "date": "2022-12-28",
+    "title": "COUNTDOWN JAPAN 22/23",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/cdj2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "bb1dbb5f2eb305ec2cbf91d5dac4994c",
+    "date": "2022-12-29",
+    "title": "COUNTDOWN JAPAN 22/23",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/cdj2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "48e20e30ab712f95b75f0a0a61a6ca67",
+    "date": "2022-12-30",
+    "title": "COUNTDOWN JAPAN 22/23",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/cdj2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "ffb2282c6e4cc742f7a6bcbe0c1969be",
     "date": "2022-12-31",
     "title": "TOKYO MX・BS11『22/7 計算中』",
@@ -7228,6 +8878,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "72a9708d163e5c0af96a2a504d94905e",
+    "date": "2022-12-31",
+    "title": "COUNTDOWN JAPAN 22/23",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/cdj2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "38434c71ef560fd27a22e9c534aec7c4",
@@ -7298,6 +8958,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7490",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "65090fc327101fb13ee1de45b24a3ed4",
+    "date": "2023-01-09",
+    "title": "ブシロード新春大発表会 2023",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/2023newyear_launch_event/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "57090d2ed56a12cf5ff99d2ed617f823",
@@ -7630,6 +9300,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "2ecce7e27f6b1b4dd14b8495ccabe047",
+    "date": "2023-02-12",
+    "title": "オダイバ‼︎超次元音楽祭  ヨコハマからハッピーバレンタインフェス2023",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/choujigen2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "486165823bd9c15f0cab1e7592e9c7a7",
     "date": "2023-02-18",
     "title": "TOKYO MX・BS11『22/7 計算中』",
@@ -7740,6 +9420,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "ce0d0c79afb94e5999a9d98777cce0fd",
+    "date": "2023-03-10",
+    "title": "ガルパ6周年記念ファンフェスタ",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/gbp6th_fanfesta/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "31ce4ce10fcc0f88377cfb632de5bb97",
     "date": "2023-03-11",
     "title": "TOKYO MX・BS11『22/7 計算中』",
@@ -7758,6 +9448,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7727",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "77e7d5779f2d288414316189061f2386",
+    "date": "2023-03-11",
+    "title": "MEGA VEGAS 2023",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/megavegas2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "5ac70ff6920aa1dcbda0472bea036645",
+    "date": "2023-03-12",
+    "title": "MEGA VEGAS 2023",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/megavegas2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "38560c47777e3768ce8eff5a3dbf6e37",
@@ -7788,6 +9498,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7475",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "7f6db760ef3cac11d949f17c5022ce72",
+    "date": "2023-03-18",
+    "title": "ガルパ6周年記念ファンフェスタ in 秋葉原",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/gbp6th_akihabara/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "6def2511137c8bfe711530006b32bd68",
+    "date": "2023-03-19",
+    "title": "ガルパ6周年記念ファンフェスタ in 秋葉原",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/gbp6th_akihabara/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "8791b541feb34c73719a3ca12a65f2ad",
@@ -7910,6 +9640,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "993e4dcec5b971a1db09362bced600f4",
+    "date": "2023-04-09",
+    "title": "MyGO!!!!! 4th LIVE「前へ進む音の中で」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo_4th/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "9ab8f4923f37933c134ff7f5fe5d22a0",
     "date": "2023-04-10",
     "title": "「声優グランプリ」5月号",
@@ -8020,6 +9760,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "33e9ece6018830e36e21b479d249e30d",
+    "date": "2023-04-30",
+    "title": "JAPAN JAM 2023",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "575008f4f0dea940c86362a2245726b1",
     "date": "2023-05-03",
     "title": "Inter FM『MUSIClock』",
@@ -8028,6 +9778,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7468",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "4f446004e28d7d7a3e68b1660089f9a4",
+    "date": "2023-05-03",
+    "title": "JAPAN JAM 2023",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "ba43385f21bed37a167699f4baa599bb",
@@ -8040,6 +9800,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "e18c25847ae08cc64b3a48cc61787670",
+    "date": "2023-05-04",
+    "title": "JAPAN JAM 2023",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "248c0aa18dc2e7221fbf4a27e5d6a58c",
+    "date": "2023-05-05",
+    "title": "JAPAN JAM 2023",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "5b0608cf1eca89f444a495fa980e2c87",
     "date": "2023-05-06",
     "title": "TOKYO MX・BS11『22/7 計算中』",
@@ -8048,6 +9828,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7728",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "dcc365b66339a04a01d9701a2a7f8ffc",
+    "date": "2023-05-06",
+    "title": "JAPAN JAM 2023",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "734d4ca1747a1636a484c85a5902354b",
@@ -8230,6 +10020,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "bad753d5335569582ceb741c0a6675cf",
+    "date": "2023-05-27",
+    "title": "BUSHIROAD ROCK FESTIVAL 2023",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/brfes2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "584a0135f2e98f2d206696154524d49a",
+    "date": "2023-05-28",
+    "title": "RAISE A SUILEN LIVE 2023「EXCLAMATION HIGHLAND」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras_2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "3df01232380fc8830c11a2a7ea11633a",
     "date": "2023-05-31",
     "title": "Inter FM『MUSIClock』",
@@ -8268,6 +10078,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7728",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "0aa3d0159d9641be6c3b4efda6f9200c",
+    "date": "2023-06-04",
+    "title": "Ave Mujica 0th LIVE「Primo die in scaena」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/avemujica_0th/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "08584cbb0345537b8a1977a61b0aa784",
@@ -8480,6 +10300,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "8881ed17329e288278e665ecf78ea9b7",
+    "date": "2023-07-15",
+    "title": "LuckyFes",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/luckyfes/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "37c445015d80b2dc57c138c754bb8bc2",
     "date": "2023-07-16",
     "title": "ナナニジ夏祭り 2023＠Zepp Namba(OSAKA)",
@@ -8488,6 +10318,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7460",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "30bb1b86ffec6501cb304a701c282d13",
+    "date": "2023-07-16",
+    "title": "LuckyFes",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/luckyfes/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "edad2246da8c0d21fd1b07883208e4a7",
@@ -8500,6 +10340,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "28f1752f3e86f9dd652e89892db0006f",
+    "date": "2023-07-17",
+    "title": "LuckyFes",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/luckyfes/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "cdc5f0330e094e035f84a3b14e7be287",
     "date": "2023-07-20",
     "title": "e-radio エフエム滋賀『キャッチ！』",
@@ -8510,6 +10360,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "1f2867ef1c2d7753304c257d897ff416",
+    "date": "2023-07-20",
+    "title": "Morfonica ZEPP TOUR 2023「forte」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/morfonica_tour_forte/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "272b1ea41b5d7ae9964a5a51aac65e8f",
     "date": "2023-07-21",
     "title": "『IDOL AND READ 035』",
@@ -8518,6 +10378,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7442",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "d984572cc44a7e7fffed8173a9b4af97",
+    "date": "2023-07-21",
+    "title": "BILIBILIWORLD 2023 (BW2023)",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bw2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "b4ef29cdce1432d3d79b7a792ace29d0",
@@ -8550,6 +10420,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "bcc300ab938a6a64fcd29cf9ad516c0d",
+    "date": "2023-07-22",
+    "title": "BILIBILIWORLD 2023 (BW2023)",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bw2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "d8a2f0a39b34255640f622dc900f2f98",
+    "date": "2023-07-23",
+    "title": "BILIBILIWORLD 2023 (BW2023)",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bw2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "bf5e69553b5a0bdf0c081db4620c261b",
     "date": "2023-07-29",
     "title": "TOKYO MX・BS11『22/7 計算中』",
@@ -8568,6 +10458,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7414",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "13d36969990761e214a3660d7d906f72",
+    "date": "2023-08-03",
+    "title": "Harezaの日 3rd Anniversary SUMMER FESTIVAL 2023",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/hareza_3rdanniv/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "2d3bd730598cc8410a7d47e1d132eccf",
@@ -8590,6 +10490,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "65ab1909bc84b6520af65562c896272e",
+    "date": "2023-08-11",
+    "title": "ぽぴばん！のおでかけin SUMMER",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/ppp_202308/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "1eb806cf535a9a250070e58d95615252",
     "date": "2023-08-12",
     "title": "TOKYO MX・BS11『22/7 計算中』",
@@ -8598,6 +10508,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7728",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "76a8a45893f9e64352469a09d8c87ea5",
+    "date": "2023-08-12",
+    "title": "MyGO!!!!! 5th LIVE「迷うことに迷わない」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo_5th/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "aa16a6f46aef3da5d88aad5ecc638a11",
+    "date": "2023-08-12",
+    "title": "コミックマーケット102",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/comiket102/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "79a47a86d13832e3c329abe7dc30c516",
@@ -8630,6 +10560,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "e0a5d1165059a9c8c3b859c1926dff43",
+    "date": "2023-08-25",
+    "title": "Animelo Summer Live 2023 -AXEL-",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "b75bbd56c13638c42d3b2e1b989a5102",
     "date": "2023-08-26",
     "title": "TOKYO MX・BS11『22/7 計算中』",
@@ -8638,6 +10578,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7728",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "356480dc8edbec1a3f7752516d002f14",
+    "date": "2023-08-26",
+    "title": "Animelo Summer Live 2023 -AXEL-",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "979f0d061f9d27c657201d913c3ddc4b",
+    "date": "2023-08-27",
+    "title": "Animelo Summer Live 2023 -AXEL-",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "8404e11cd9c333228063300e77bcc82a",
@@ -8658,6 +10618,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7434",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "aec255fc22c7369575c26116de5a1820",
+    "date": "2023-09-06",
+    "title": "Morfonica ZEPP TOUR 2023「forte」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/morfonica_tour_forte/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "125e9246a5e2463566ca41288a57bade",
@@ -8700,6 +10670,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "6401a736dcbd0faca99c72e546decc04",
+    "date": "2023-09-09",
+    "title": "ハロー、ハッピーワールド！ スペシャルイベント「ハッピー！ラッキー！スマイル！フェスティバル！」",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/hhw_2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "75076776074843c8acfb8d6d86cc3eeb",
     "date": "2023-09-11",
     "title": "文化放送 超!A&G+『鷲崎健のヨルナイト×ヨルナイト』",
@@ -8718,6 +10698,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7728",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "054457726c864884e65aaf91838272c9",
+    "date": "2023-09-16",
+    "title": "Roselia「Farbe」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/roselia_2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "7d8a43b73e047e2ba55fdf45ccfb4ffc",
+    "date": "2023-09-17",
+    "title": "Roselia「Farbe」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/roselia_2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "f40586f28e17cf06acf65ae0a4a97118",
@@ -8748,6 +10748,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7728",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "6424c9738d7a4b3338496f451cf17556",
+    "date": "2023-09-24",
+    "title": "TOKYO GAME SHOW 2023",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/tgs2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "00d57b17f62043b057f3165c5cd058fc",
@@ -8788,6 +10798,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7416",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "dbdfdbc66a118783dd3bd0071a67baef",
+    "date": "2023-10-05",
+    "title": "Morfonica ZEPP TOUR 2023「forte」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/morfonica_tour_forte/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "e41f894d8ea2fed6ef1d977856f3a8ef",
@@ -8850,6 +10870,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "08b155ef521a6803e67c5c0a8008eae9",
+    "date": "2023-10-22",
+    "title": "Morfonica トークイベント「モニ会へようこそ♪〜ZEPP TOUR 2023 forte お疲れ会〜」",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/morfonica_talk_2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "68c1d48a4b1107bb0442ff0355edfab2",
     "date": "2023-10-23",
     "title": "『アップトゥボーイVol.332』",
@@ -8888,6 +10918,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7417",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "74998ce209aa20380f38d702c0b220ab",
+    "date": "2023-11-02",
+    "title": "ヴァイスシュヴァルツ15周年記念ライブ",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ws15th-live/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "75dbce37559b1cf0e51e98c8e332c46b",
@@ -8970,6 +11010,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "41e58000421574450e6098c4fe5a8a01",
+    "date": "2023-11-18",
+    "title": "ANIMAX MUSIX 2023",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/animax2023/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "429fcf671d1f4bc0d45bcf4fc68ba733",
     "date": "2023-11-20",
     "title": "文化放送「レコメン！ピックアップ」",
@@ -9018,6 +11068,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7728",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "2b0c70b9d8f6aa69ea0e9959ef604ffb",
+    "date": "2023-11-26",
+    "title": "中之島アニメBOX「BanG Dream! It's MyGO!!!!!スペシャルトークショー」",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/osaka-kitena/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "9c296a251cae6cf68d5a85a89af9ebd8",
@@ -9160,6 +11220,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "7c3ef52c6bf89ad63a8ac76b02a833f6",
+    "date": "2023-12-28",
+    "title": "COUNTDOWN JAPAN 23/24",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/cdj2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "76c2558350b058ed9d652e1a029d482a",
+    "date": "2023-12-29",
+    "title": "COUNTDOWN JAPAN 23/24",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/cdj2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "f8e389b5125ad5adfe9a88e76b3b4bd5",
     "date": "2023-12-30",
     "title": "TOKYO MX・BS11『22/7 計算中』",
@@ -9168,6 +11248,36 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7728",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "1d823d7994a8237588c7bad53f72bd91",
+    "date": "2023-12-30",
+    "title": "COUNTDOWN JAPAN 23/24",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/cdj2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "c26a48c979d7507ab8355b7aab7ad6ab",
+    "date": "2023-12-30",
+    "title": "コミックマーケット103",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/comiket103/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "2bd4b85c09e1c9ba63df84f5fe6e1df2",
+    "date": "2023-12-31",
+    "title": "COUNTDOWN JAPAN 23/24",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/cdj2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "242772741ba51db2df31f0dcf411fd9c",
@@ -9198,6 +11308,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7728",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "1a9c2dda97a97a10c75589c7750bb5ca",
+    "date": "2024-01-06",
+    "title": "ブシロード新春大発表会 2024",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/2024newyear_launch_event/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "6008042c3abf7bcbf2969374149cabfd",
@@ -9310,6 +11430,36 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "d18ffd7936edd73687d44e22690182a3",
+    "date": "2024-01-27",
+    "title": "Ave Mujica 1st LIVE「Perdere Omnia」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/avemujica_1st/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "2a4427256bef4ac98934cad0d2eeaae5",
+    "date": "2024-01-27",
+    "title": "リスアニ！LIVE 2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/lisani2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "3f570afb597b85918ed117955a834d37",
+    "date": "2024-01-28",
+    "title": "リスアニ！LIVE 2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/lisani2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "4c8d489e2c704666ba1a53164f25afba",
     "date": "2024-01-31",
     "title": "『IDOL AND READ 037』",
@@ -9348,6 +11498,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7728",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "d233cb809bf5353707074958fa459acc",
+    "date": "2024-02-12",
+    "title": "MyGO!!!!! ZEPP TOUR 2024「彷徨する渇望」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo_tour2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "ab1704d2c9b2ba5dba95095e0e4ed018",
@@ -9440,6 +11600,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "f08088b35cfb1425cdeb448b124cef96",
+    "date": "2024-03-09",
+    "title": "MEGA VEGAS 2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/megavegas2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "9392296185a4700c143eb2aa207a5a06",
+    "date": "2024-03-10",
+    "title": "MEGA VEGAS 2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/megavegas2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "8ce12b32cf606f226ba0e261599aa2b3",
     "date": "2024-03-12",
     "title": "FM大阪 「OSAKA IDOL QUEST」",
@@ -9460,6 +11640,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "4c198e9c9b9919373f5f4498eff4c770",
+    "date": "2024-03-19",
+    "title": "MyGO!!!!! ZEPP TOUR 2024「彷徨する渇望」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo_tour2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "772680f9fa68a405c1ba6c6785ce207e",
     "date": "2024-03-21",
     "title": "e-radio エフエム滋賀『キャッチ！』",
@@ -9468,6 +11658,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/7625",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "1c81c85e484a45c08ce8bf4a8f39a231",
+    "date": "2024-03-22",
+    "title": "MyGO!!!!! ZEPP TOUR 2024「彷徨する渇望」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo_tour2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "97d043015605b577b6ffd3a4ee425478",
@@ -9490,6 +11690,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "673e5651ca26041065cf16db2576f7da",
+    "date": "2024-03-23",
+    "title": "RAISE A SUILEN ASIA TOUR 2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras-asiatour2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "1fb70e0d3332a6a67036b3ba532b8e31",
     "date": "2024-03-29",
     "title": "FM大阪「アカネクラブ」",
@@ -9510,6 +11720,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "7d2e67b3b7f8783f206a26f5cd0584d6",
+    "date": "2024-03-30",
+    "title": "RAISE A SUILEN ASIA TOUR 2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras-asiatour2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "6a7a898a6e72df9ce0abc92b2b234a2a",
+    "date": "2024-03-31",
+    "title": "RAISE A SUILEN ASIA TOUR 2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras-asiatour2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "8465602bce0bc788239b1b7d22fb1f91",
     "date": "2024-04-01",
     "title": "『TopYellNEO2024 SPRING』",
@@ -9520,6 +11750,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "b369edfcf7d3ab5aeb6647a787074189",
+    "date": "2024-04-06",
+    "title": "Afterglow「After School Event 夕景の一頁」",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/afterglow_after_school_event/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "1a9ef6164538047b1677043d7454c30f",
     "date": "2024-04-10",
     "title": "「声優グランプリ」5月号",
@@ -9528,6 +11768,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8105",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "850566a10db40c57ac486f5d658eeae5",
+    "date": "2024-04-11",
+    "title": "MyGO!!!!! ZEPP TOUR 2024「彷徨する渇望」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo_tour2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "141cb7feeec65a9db026d6442b02d3f4",
+    "date": "2024-04-14",
+    "title": "Morfonica Concept LIVE「forte」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/morfonica_forte2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "4850ee07f33840d4e679570bbf5b7e19",
@@ -9580,6 +11840,36 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "8798984c845ed1a4ac75fc833a094d4c",
+    "date": "2024-04-28",
+    "title": "JAPAN JAM 2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "05cb9b83d60f96f31ff6fbcd70e8eee6",
+    "date": "2024-04-29",
+    "title": "JAPAN JAM 2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "7a450a0e8a188b20b772140bcb7906e3",
+    "date": "2024-04-29",
+    "title": "Poppin'Party×MyGO!!!!! 合同ライブ「Divide/Unite」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/pp_mygo/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "6978218902b4e0d031afe3a7fe490a1c",
     "date": "2024-05-02",
     "title": "下北FM「DJ Tomoaki's Radio Show!」",
@@ -9590,6 +11880,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "2427480febd82e7e5e454e9bb7a0274c",
+    "date": "2024-05-03",
+    "title": "JAPAN JAM 2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "973c228ac5212c240417a5fa319ef10c",
+    "date": "2024-05-03",
+    "title": "上海·申放送-Virtual Super Live-2024 in Shanghai",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/virtualsuperlive2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "f9bf952877034ff7cdbc6d0a80ea5c72",
     "date": "2024-05-04",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -9598,6 +11908,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8107",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "bffbc78ec289e17cc98782527a97f643",
+    "date": "2024-05-04",
+    "title": "JAPAN JAM 2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "4bc53d6c4e1a3176b2e7cb6c1fb68a1e",
+    "date": "2024-05-05",
+    "title": "JAPAN JAM 2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "eea54391f89a1869f31fdf476dccb77d",
@@ -9720,6 +12050,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "56f892596beac41520d9c7d651400582",
+    "date": "2024-06-08",
+    "title": "Ave Mujica 2nd LIVE「Quaerere Lumina」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/avemujica_2nd/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "4ff60979f929cc3f4164fc0d43c8ee35",
     "date": "2024-06-15",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -9728,6 +12068,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8107",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "77ee7a7c06eb29f74519ad40ba9d3b9a",
+    "date": "2024-06-15",
+    "title": "RAISE A SUILEN LIVE 2024「ESSENTIALS」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras_2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "8dbaff0f70091e5b6ed90a2a706b252d",
+    "date": "2024-06-16",
+    "title": "RAISE A SUILEN LIVE 2024「ESSENTIALS」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras_2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "f28277675c91856fc418fc1674a3fc6b",
@@ -9760,6 +12120,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "2fabe255db4a1ba583b59c7e1f0998f5",
+    "date": "2024-06-22",
+    "title": "MyGO!!!!!の「迷子集会」出張版 -奏字音という日常-",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/maigocenter-event/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "edf129893b1044a37720278db643ef81",
     "date": "2024-06-29",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -9780,6 +12150,36 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "10999fd2608c1f0fe360bff764d5ce19",
+    "date": "2024-07-07",
+    "title": "Ave Mujica 2nd LIVE「Quaerere Lumina」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/avemujica_2nd/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "12a062811c6b86946dbc6e0f95c53aa5",
+    "date": "2024-07-12",
+    "title": "BILIBILI MACRO LINK 2024 (BML2024)",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bml2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "00d5a8a46cde1e61eb6bc7e9779b4fbf",
+    "date": "2024-07-12",
+    "title": "Bilibili World 2024",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/bw2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "1e6cd7e92751eba36225ec622853a858",
     "date": "2024-07-13",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -9788,6 +12188,76 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8107",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "ec0601f4f76740f939df5454317e04b5",
+    "date": "2024-07-13",
+    "title": "BILIBILI MACRO LINK 2024 (BML2024)",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bml2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "708ec07e3d6b8f62f044080bebf57b68",
+    "date": "2024-07-13",
+    "title": "Bilibili World 2024",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/bw2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "d9b683107b5accdf363072b6c3facb82",
+    "date": "2024-07-13",
+    "title": "LuckyFes'24",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/luckyfes2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "aae3b047e37ee978996370a0db34a48b",
+    "date": "2024-07-14",
+    "title": "BILIBILI MACRO LINK 2024 (BML2024)",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bml2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "337d6b3223a0a0977ceee8c3f4011bfe",
+    "date": "2024-07-14",
+    "title": "Bilibili World 2024",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/bw2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "3887bcbc8290d8ef15740950a6201ede",
+    "date": "2024-07-14",
+    "title": "LuckyFes'24",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/luckyfes2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "9c6540245410bab05718c39f5d90a052",
+    "date": "2024-07-15",
+    "title": "LuckyFes'24",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/luckyfes2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "81594185c5c31d89984e550bc4ff36f7",
@@ -9820,6 +12290,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "87163bb573471e4dbadbc976d081c3d1",
+    "date": "2024-07-27",
+    "title": "MyGO!!!!! 6th LIVE「見つけた景色、たずさえて」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo_6th/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "961d6cf300c8d9e49c2c977c7f74d736",
+    "date": "2024-07-28",
+    "title": "MyGO!!!!! 6th LIVE「見つけた景色、たずさえて」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo_6th/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "a655419a12d0e373480de09797c4a000",
     "date": "2024-08-03",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -9830,6 +12320,36 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "a6aaf892ac86a1e1c49065b5ee142068",
+    "date": "2024-08-03",
+    "title": "rockin'on presents ROCK IN JAPAN FESTIVAL 2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rijf2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "6c6b590b86763e61d1e59d894ca97bbf",
+    "date": "2024-08-04",
+    "title": "Harezaの日 4th Anniversary SUMMER FESTIVAL 2024",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/hareza_4thanniv/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "4f11e9ad96b81338a9fd4a8ff045e82b",
+    "date": "2024-08-04",
+    "title": "rockin'on presents ROCK IN JAPAN FESTIVAL 2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rijf2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "28c0788240e68a300d205f01825bf4ba",
     "date": "2024-08-10",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -9838,6 +12358,46 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8107",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "fcaf0c3578ecc5d7ca68f01fcf59d2d7",
+    "date": "2024-08-10",
+    "title": "rockin'on presents ROCK IN JAPAN FESTIVAL 2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rijf2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "d650333f01a68486dc8a199a3c9e227b",
+    "date": "2024-08-11",
+    "title": "rockin'on presents ROCK IN JAPAN FESTIVAL 2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rijf2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "296e55a8e19e9812235f16e52380c29e",
+    "date": "2024-08-11",
+    "title": "コミックマーケット104",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/comiket104/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "e42aed549aded940b7eed02a7483853d",
+    "date": "2024-08-12",
+    "title": "rockin'on presents ROCK IN JAPAN FESTIVAL 2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rijf2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "e9208432c1c8e62c87cc4b235a507eb3",
@@ -9870,6 +12430,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "04c0b80ddfe0c68552746e20d103380d",
+    "date": "2024-08-24",
+    "title": "夢限大みゅーたいぷ 1st LIVE「めたもるふぉーぜ」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/yumemita_1st/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "7cf6775c4d99b5383d31be43333c9db9",
+    "date": "2024-08-30",
+    "title": "Animelo Summer Live 2024 -Stargazer-",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "d35c08a6ce3cb5014ff41b747d68fa91",
     "date": "2024-08-31",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -9878,6 +12458,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8107",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "6bbeacedb17a772ac972ed0eaa2da7ec",
+    "date": "2024-08-31",
+    "title": "Animelo Summer Live 2024 -Stargazer-",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "4ff1757f340550c06224f0458ab5d5b6",
+    "date": "2024-09-01",
+    "title": "Animelo Summer Live 2024 -Stargazer-",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "f1c40b81523f368c36f697a5a407c502",
@@ -9918,6 +12518,36 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8107",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "48ae23a4f5a2483dffb1f973092b6e8b",
+    "date": "2024-09-21",
+    "title": "MyGO!!!!! 6th LIVE「見つけた景色、たずさえて」上海追加公演",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo_6th_shanghai/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "97c814aea3d9ec288029b6518994d542",
+    "date": "2024-09-21",
+    "title": "ナガノアニエラフェスタ2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/anierafesta2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "34b6ec7c0e509493ea0b995045dbe763",
+    "date": "2024-09-22",
+    "title": "ナガノアニエラフェスタ2024",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/anierafesta2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "2332003b99ca7e4629b9ff90499d5cba",
@@ -9968,6 +12598,36 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8107",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "9b64df4863cde6a66d9be557d222d362",
+    "date": "2024-10-12",
+    "title": "Morfonica Concept LIVE「ff」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/morfonica_ff2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "2098961f260d5adadccbfadea2649cdd",
+    "date": "2024-10-13",
+    "title": "Ave Mujica 3rd LIVE「Veritas」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/avemujica_3rd/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "142744af1d5f45ffd928d3bdb550b227",
+    "date": "2024-10-14",
+    "title": "Poppin'Party LIVE 2024「Poppin'Canvas 〜芸術の秋、音楽の秋！〜」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ppp2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "f12d2a062aca721c7ec6a463e86827e5",
@@ -10070,6 +12730,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "d8da9416ddf8549118570938dab3c822",
+    "date": "2024-11-23",
+    "title": "ANIMAX MUSIX 2024 FALL",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/animax2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "4fd589c68a8704af1277ae5e6fdda5af",
     "date": "2024-11-27",
     "title": "超!A&G＋「A&G Wendsday special  A&Gミュージック X」",
@@ -10110,6 +12780,36 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "aee4ebaf9d8a6027936805c3c4f1a82e",
+    "date": "2024-11-30",
+    "title": "バンドリ！とれたてカラフル♪収穫祭 feat. Dreamer's Tunes",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/bang-dream-talk2024/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "c3c104a4edefda8c0898e9e35a5bece6",
+    "date": "2024-12-01",
+    "title": "TVアニメ「BanG Dream! Ave Mujica」#1 世界最速同時上映会",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/avemujica_20241201/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "42e3ab3cb500e80f7605775ad6e70663",
+    "date": "2024-12-01",
+    "title": "TVアニメ「BanG Dream! Ave Mujica」グローバル先行上映会",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/avemujica_global/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "268cd73849f4eb56d82fd40d7308413d",
     "date": "2024-12-04",
     "title": "『矢吹奈子のレコメン！』",
@@ -10128,6 +12828,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8107",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "9f70d36283d37ed6f32c3e259421801e",
+    "date": "2024-12-07",
+    "title": "TVアニメ「BanG Dream! Ave Mujica」グローバル先行上映会",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/avemujica_global/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "e4ffbd858f64efcf899fa2d4bfc3f1bf",
+    "date": "2024-12-08",
+    "title": "RAISE A SUILEN ZEPP TOUR 2024-2025「PANDEMONIUM」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras-tour2024-2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "8a4ff690518da89b7aa87527a9716c1e",
@@ -10150,6 +12870,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "d3dcf29d1cea8b3d54fc79451e3241e5",
+    "date": "2024-12-14",
+    "title": "Roselia「Stille Nacht, Rosen Nacht」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/roselia2024winter/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "aa0b4f729b94c783f7e8cdbdb0bd969a",
+    "date": "2024-12-15",
+    "title": "Ave Mujica 4th LIVE「Adventus」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/avemujica_4th/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "3c905a98ffbf0d1395eaf828bf11183f",
     "date": "2024-12-21",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -10158,6 +12898,36 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8107",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "89e6f3099e95091e65fc87cba3463aba",
+    "date": "2024-12-21",
+    "title": "MyGO!!!!! 7th LIVE「こたえなんてなくても」事前/当日物販",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/20241221_jizenbuppan/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "310c4e29042ae0c044a6d41654c5ddf8",
+    "date": "2024-12-22",
+    "title": "MyGO!!!!! 7th LIVE「こたえなんてなくても」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo_7th/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "a63c6a1b1f656b3f72abcb9cfc60f3c9",
+    "date": "2024-12-22",
+    "title": "MyGO!!!!! 7th LIVE「こたえなんてなくても」事前/当日物販",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/20241221_jizenbuppan/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "5f3d02072dfc76c3abd8eb83fd3c353f",
@@ -10180,6 +12950,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "20297d358ab622f0a09b0a9044cc264b",
+    "date": "2024-12-27",
+    "title": "夢限大みゅーたいぷ　千石ユノ主催DJイベント「YUNO’s PARTY Lv.1」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/yumemita_yunos_party_lv1/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "7e01c11018aeafd5ab20864f8aad7372",
     "date": "2024-12-28",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -10188,6 +12968,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8107",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "9ee3526a322afdf29a7b135b351f7af0",
+    "date": "2024-12-28",
+    "title": "RAISE A SUILEN ZEPP TOUR 2024-2025「PANDEMONIUM」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras-tour2024-2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "6d61c64dea3686da91a27eba7d8fa9a3",
@@ -10200,6 +12990,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "57f2a4d034a95130abc2e0863526c25f",
+    "date": "2025-01-05",
+    "title": "RAISE A SUILEN ZEPP TOUR 2024-2025「PANDEMONIUM」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras-tour2024-2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "0c710a4cfaaa7f3d6fbc18c706a0c46c",
     "date": "2025-01-11",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -10208,6 +13008,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8107",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "66bf7e217b25e2068361a04e87651fe4",
+    "date": "2025-01-12",
+    "title": "MyGO!!!!!×トゲナシトゲアリ「Avoid Note」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo-togetoge/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "fc1c9a5446c1e1330f20d727c8cdac7a",
+    "date": "2025-01-13",
+    "title": "ブシロード新春大発表会 2025",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/2025newyear_launch_event/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "8b97118596d818001cd6ed808340b9ac",
@@ -10220,6 +13040,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "af4f9ef2b90f008eed3380e7dcc56f3d",
+    "date": "2025-01-19",
+    "title": "RAISE A SUILEN ZEPP TOUR 2024-2025「PANDEMONIUM」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras-tour2024-2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "ec4b238fbcc227604cbde09770513fbb",
     "date": "2025-01-23",
     "title": "e-radio エフエム滋賀『キャッチ！』",
@@ -10228,6 +13058,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8296",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "5459d6c97b87cd40b74f1687e0eea90b",
+    "date": "2025-01-23",
+    "title": "NANIMONO × 夢限大みゅーたいぷ 『新人類は何者かになる夢を見るか？』",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/yumemita_nanimono_taiban/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "14622b124fb88a57af466f3ffd0f885e",
+    "date": "2025-01-24",
+    "title": "リスアニ！LIVE 2025",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/lisani2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "fca0206caf91e0c7b31675a18632e40c",
@@ -10240,6 +13090,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "580ad84cf15ebd4f7f4a8244daeddf38",
+    "date": "2025-01-25",
+    "title": "RAISE A SUILEN ZEPP TOUR 2024-2025「PANDEMONIUM」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras-tour2024-2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "4c94c965387806bea3fa86c8c036d25f",
     "date": "2025-02-01",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -10248,6 +13108,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8107",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "b0bafd8686eab9181d84cc6cae0c87f2",
+    "date": "2025-02-02",
+    "title": "Ave Mujica「KiLLKiSS」購入者限定フリーライブ",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/avemujica_2025free/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "f7a888765c0dc2e2032d1411d48d2ead",
@@ -10280,6 +13150,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "6a169ada3b7d196ce4031cefd3813a50",
+    "date": "2025-02-15",
+    "title": "Roselia「Stille Nacht, Rosen Nacht」上海追加公演",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rosen-nacht_shanghai/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "f6681c3908d69a98be474d6c35e54d94",
+    "date": "2025-02-16",
+    "title": "夢限大みゅーたいぷ 2nd LIVE「でぃすかばりー☆じゃーにー」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/yumemita_2nd/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "10cad13099a0eac529ad5e714ec45107",
     "date": "2025-02-20",
     "title": "e-radio エフエム滋賀『キャッチ！』",
@@ -10308,6 +13198,46 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8107",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "e4448465a64308ef405460f7ca6df511",
+    "date": "2025-02-22",
+    "title": "リスパレ！LIVE vol.2",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/lispale2/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "aac547c2c55be8ae75a3ce1709d1208f",
+    "date": "2025-02-23",
+    "title": "RoseliaのRADIO SHOUT! -Spaß-",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/radioshout_event2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "cbc32ca574bb56b2857f7620293a46e2",
+    "date": "2025-02-23",
+    "title": "リスパレ！LIVE vol.2",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/lispale2/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "e3dd8f7157073127c876f6264fbae820",
+    "date": "2025-02-24",
+    "title": "Pastel＊Palettes Special Event「Together!!」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/psplsp2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "ce3fa70543621d1071f2475c725235a1",
@@ -10360,6 +13290,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "5b90567f18af4bec1a3aa0fb051ce21e",
+    "date": "2025-03-20",
+    "title": "Poppin'Partyトークイベント「ポピパの新学期！」",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/pp_event_2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "fa727e36a24b54776d777f6efd881c66",
     "date": "2025-03-22",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -10378,6 +13318,36 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8657",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "b9ae9ce6530519d138cd110f6cb9cb4e",
+    "date": "2025-03-22",
+    "title": "AnimeJapan 2025",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/animejapan2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "5c7fb4ff0665c7be4b853b147e1a7117",
+    "date": "2025-03-22",
+    "title": "MEGA VEGAS 2025",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/megavegas2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "5e2bec1f90bb2996cb89b07ba0ae5fcd",
+    "date": "2025-03-23",
+    "title": "MEGA VEGAS 2025",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/megavegas2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "521cecc13c8b4fe31e973edb851aea44",
@@ -10450,6 +13420,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "5053eebe3e3ec070bcc4c0e7ab0e7ec1",
+    "date": "2025-04-19",
+    "title": "Morfonica LIVE「Rubato」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/morfonica_live2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "75d647ee1fa857c96b46f3b8e7c2b7e8",
     "date": "2025-04-24",
     "title": "FM AICHI 「中電シーティーアイ Welcome Generation」",
@@ -10480,6 +13460,36 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "ac748345a8ef3662fae5c81dd6afe503",
+    "date": "2025-04-26",
+    "title": "MyGO!!!!!×Ave Mujica 合同ライブ「わかれ道の、その先へ」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo-avemujica2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "89ba754e44b205dd95224b5e60c003ae",
+    "date": "2025-04-27",
+    "title": "MyGO!!!!!×Ave Mujica 合同ライブ「わかれ道の、その先へ」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo-avemujica2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "a90e7fdd7e18ffcbe52187a90424988a",
+    "date": "2025-04-29",
+    "title": "JAPAN JAM 2025",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "4f6210ac2faa41a6669548f3e8d22145",
     "date": "2025-05-03",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -10490,6 +13500,66 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "fef246e2e2cee4ff31a4d1769fbd5af4",
+    "date": "2025-05-03",
+    "title": "JAPAN JAM 2025",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "3eb1df653e51c66705981c3c20b931fa",
+    "date": "2025-05-03",
+    "title": "夢限大みゅーたいぷ 3rd LIVE「ふりーてぃんぐ もーめんと」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/yumemita_3rd/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "2afb7c1a0447082f978a2125e8ab1c69",
+    "date": "2025-05-04",
+    "title": "JAPAN JAM 2025",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "09be051c25340fe66993ad54348b9d1e",
+    "date": "2025-05-04",
+    "title": "夢限大みゅーたいぷ 3rd LIVE「ふりーてぃんぐ もーめんと」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/yumemita_3rd/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "74b221dd9502bb5a575d61b0834f3e28",
+    "date": "2025-05-05",
+    "title": "JAPAN JAM 2025",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/japanjam2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "d033086ae99ce3640049c4d8cd96f32a",
+    "date": "2025-05-07",
+    "title": "夢限大みゅーたいぷ 3rd LIVE「ふりーてぃんぐ もーめんと」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/yumemita_3rd/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "71e3e15a9adf6528120068cbae07c250",
     "date": "2025-05-10",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -10498,6 +13568,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8107",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "f78460f86b72e4421c23c9beb2ffe88a",
+    "date": "2025-05-10",
+    "title": "マチ★アソビvol.28",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/machiasobi2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "1c2681edcc95a726471bca8d83b5faee",
+    "date": "2025-05-11",
+    "title": "マチ★アソビvol.28",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/machiasobi2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "2e96a4276f4ae41ee1a6488cc4b4475b",
@@ -10530,6 +13620,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "e5cb494df38026f2001f44bc332c2f3a",
+    "date": "2025-05-24",
+    "title": "ANISAMA WORLD 2025 in TAOYUAN",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl-taoyuan2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "604016edcef270c96e9921e8b74f0e5a",
+    "date": "2025-05-26",
+    "title": "Poppin'Party 10th Anniversary LIVE「ホシノコドウ」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ppp_live2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "76d9d936759098465e793566a9a16802",
     "date": "2025-05-31",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -10550,6 +13660,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "8f9c3b08da51ac5f261b9b2749e08e48",
+    "date": "2025-06-07",
+    "title": "ANISAMA WORLD 2025 in MANILA",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl-manila2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "86dc50563b2a5a055f8d3ba126d440f7",
     "date": "2025-06-14",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -10558,6 +13678,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8107",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "051e1e0cab87d157ede9ba374df8dd9d",
+    "date": "2025-06-14",
+    "title": "RAISE A SUILEN LIVE 2025「REBEL SOUNDWAVE」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras_2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "99e4d5d5a1eff1f0bc1d21ca21b7787a",
+    "date": "2025-06-15",
+    "title": "Roselia「Sei stark」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/roselia2025live/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "dc3ed7970ecebd893db7cba43e5e87e2",
@@ -10710,6 +13850,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "4ba0474ba12044114ac455f16e4c14f5",
+    "date": "2025-07-11",
+    "title": "BILIBILI MACRO LINK 2025 (BML2025)",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bml2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "474edc90a686c1dde4c816916af6b8a3",
+    "date": "2025-07-11",
+    "title": "BilibiliWorld 2025（BW2025）",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bw2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "e2de1ce7e000a1ae8681c076c67a4c6a",
     "date": "2025-07-12",
     "title": "FM NORTH WAVE 「Anison-R ～マンガ・アニメ研究部～」",
@@ -10750,6 +13910,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "a55c972277b2c9d3e03270484935b47e",
+    "date": "2025-07-12",
+    "title": "BILIBILI MACRO LINK 2025 (BML2025)",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bml2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "a1dc0856d690a58c9aabed9bfadd2c53",
+    "date": "2025-07-12",
+    "title": "BilibiliWorld 2025（BW2025）",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bw2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "df574df4aeea19aadbe03a896b763618",
     "date": "2025-07-13",
     "title": "FM大阪 「Girls Street」",
@@ -10758,6 +13938,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8887",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "fdbc2206411b6b3be14b65c14b9d957e",
+    "date": "2025-07-13",
+    "title": "BILIBILI MACRO LINK 2025 (BML2025)",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bml2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "75824a00bb02ee62245efafee354ce1e",
+    "date": "2025-07-13",
+    "title": "BilibiliWorld 2025（BW2025）",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bw2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "57659bac307b63106d31f202272ceb97",
@@ -10940,6 +14140,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "d3aa28c4b3636019536fb3ebe8b70c56",
+    "date": "2025-07-26",
+    "title": "Ave Mujica 5th LIVE「Nova Historia」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/avemujica_5th/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "607f16698fa2e9847b0830e1bfb32f20",
+    "date": "2025-07-27",
+    "title": "Ave Mujica 5th LIVE「Nova Historia」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/avemujica_5th/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "fc206a4e97f48a82fb28cc5c73f512c6",
     "date": "2025-07-28",
     "title": "HBCラジオ「アニメロティック第3期」",
@@ -11020,6 +14240,36 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "a7a8fb584b31909ab204ffc26c236299",
+    "date": "2025-08-09",
+    "title": "LuckyFes'25",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/luckyfes2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "57b0dbca250f94c58dbab46d5aa335cf",
+    "date": "2025-08-10",
+    "title": "LuckyFes'25",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/luckyfes2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "4f36bf0e2d03ff19cab8f0afc6831656",
+    "date": "2025-08-11",
+    "title": "LuckyFes'25",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/luckyfes2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "c55d32e71a29a2f1ce25ed251dd594c7",
     "date": "2025-08-13",
     "title": "STVラジオ「まるごと！エンタメーション」",
@@ -11048,6 +14298,36 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8107",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "fdab6297bb001fc2289e81b6a181283e",
+    "date": "2025-08-16",
+    "title": "MyGO!!!!!の「迷子集会」出張版 第二弾 - 日常の欠片 -",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/maigocenter-event2/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "edea57726c16e6ee6f9478bc9f2ac1fe",
+    "date": "2025-08-16",
+    "title": "SUMMER SONIC 2025",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/summersonic2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "15d90bfb505bc958d9278cb2dd157793",
+    "date": "2025-08-17",
+    "title": "SUMMER SONIC 2025",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/summersonic2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "b307f8e2f69c3e52380e5cc08cc2d03a",
@@ -11100,6 +14380,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "346797c0e9113143593829b8c6becc9f",
+    "date": "2025-08-23",
+    "title": "Poppin'Party Global LIVE 2025「Shiny High-Five!!」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ppp_live2025_shanghai/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "6e7b4218568fa44a80ec0ccccfac7aba",
     "date": "2025-08-28",
     "title": "FM滋賀「キャッチ！」",
@@ -11130,6 +14420,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "ad00cd658c1f0b264d1ab90411860ca0",
+    "date": "2025-08-29",
+    "title": "Animelo Summer Live 2025 “ThanXX!”",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "ec8f3d97c2164f813cc613b82f763b75",
     "date": "2025-08-30",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -11138,6 +14438,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/8107",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "7b48a40d9cd4e3dff208c6c49da6d203",
+    "date": "2025-08-30",
+    "title": "Animelo Summer Live 2025 “ThanXX!”",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "f6aa69f4fe4b99abb7942efc7abbabff",
+    "date": "2025-08-31",
+    "title": "Animelo Summer Live 2025 “ThanXX!”",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/asl2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "545d8c8f8934421b289e657b029a93fe",
@@ -11170,6 +14490,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "42da709e53469a7d56fd59b4f8288857",
+    "date": "2025-09-07",
+    "title": "夢限大みゅーたいぷ 4th LIVE「アンロック・ザ・フューチャー」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/yumemita_4th/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "d03b5cf8815cbe9c6f52f5bd79a0c4a2",
+    "date": "2025-09-12",
+    "title": "Roselia 16th・17th Single 購入者限定抽選式フリーライブ「Stolz」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/roselia_2025free/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "fb2d2f9fc1a1e90344c4f126c3bb4567",
     "date": "2025-09-13",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -11190,6 +14530,56 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "e29255f3b71f0cf7bfbadb4de64945eb",
+    "date": "2025-09-13",
+    "title": "rockin'on presents ROCK IN JAPAN FESTIVAL 2025",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rijf2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "c1a637e5766e6534df858d6541d8234e",
+    "date": "2025-09-13",
+    "title": "ナガノアニエラフェスタ2025",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/anierafesta2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "f493b0603cd8d1a3425aeb62d7da510b",
+    "date": "2025-09-14",
+    "title": "rockin'on presents ROCK IN JAPAN FESTIVAL 2025",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rijf2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "b8784cf3c95f283f0ddeacfb6bb7e700",
+    "date": "2025-09-14",
+    "title": "ナガノアニエラフェスタ2025",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/anierafesta2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "8f97ebdd6a12515db2cf6e5e6f087208",
+    "date": "2025-09-15",
+    "title": "rockin'on presents ROCK IN JAPAN FESTIVAL 2025",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rijf2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "a2d41e8bff52fed86ec554a52118a8a5",
     "date": "2025-09-20",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -11208,6 +14598,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/9185",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "bb3ac1d8033c534087cc00e1f43f1081",
+    "date": "2025-09-20",
+    "title": "rockin'on presents ROCK IN JAPAN FESTIVAL 2025",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rijf2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "951fcc20992498a2f189b08c8afbcbe6",
+    "date": "2025-09-21",
+    "title": "rockin'on presents ROCK IN JAPAN FESTIVAL 2025",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/rijf2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "0dfd9f3277eebf53a0522b3fe7e1c743",
@@ -11380,6 +14790,36 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "9426e0b5a9ffc706754f52f037bc3215",
+    "date": "2025-10-11",
+    "title": "MyGO!!!!!×Ave Mujica 合同ライブ「わかれ道の、その先へ」上海追加公演",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo-avemujica2025_shanghai/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "d8ee4737ed06cd0f154cc0f6d311c476",
+    "date": "2025-10-11",
+    "title": "RoseliaのRADIO SHOUT! -rede weiter-",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/radioshout_rede_weiter/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "127a440fa34b39cdc4f38d557c084a05",
+    "date": "2025-10-12",
+    "title": "MyGO!!!!!×Ave Mujica 合同ライブ「わかれ道の、その先へ」上海追加公演",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo-avemujica2025_shanghai/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "fb48f592f94412056c1fd0e7241eb1fa",
     "date": "2025-10-13",
     "title": "HYPE // VIBE supported by bis",
@@ -11490,6 +14930,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "814d232986caeeaa3cfe1eb8556679a4",
+    "date": "2025-10-24",
+    "title": "ARALE Acoustic LIVE ～Copal～",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/arale_acousticlive2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "19a1ca6662ab19aa0e4ec01e2fb4c50c",
     "date": "2025-10-25",
     "title": "LOVE FM『22/7のラジオの時間になったっちゃん』",
@@ -11560,6 +15010,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "d37773099360c3268d7eca3973fd80a9",
+    "date": "2025-11-02",
+    "title": "JR東海 presents 出発進行！バンドリ！10周年記念トークジャーニー！",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/bangdream-10th-talkjourney/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "bc63966850e1283792472aafd50a9c41",
+    "date": "2025-11-03",
+    "title": "集え！ゆめみた筋トレ部 ～君も部員にならないか？～",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/yumemita_kinntorebu/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "5946bee22d7da6e8d5eedcf5c87c30b0",
     "date": "2025-11-08",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -11620,6 +15090,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "c1b41e5d80c7b4b0ae5e0a00b264ffae",
+    "date": "2025-11-15",
+    "title": "RAISE A SUILEN 2DAYS LIVE「RUMBLEHEADZ」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras_2025live/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "1f535821286de87cd871599ac3bd2a10",
+    "date": "2025-11-16",
+    "title": "RAISE A SUILEN 2DAYS LIVE「RUMBLEHEADZ」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras_2025live/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "12b77ad4283b55c625d8ebe5f0010a19",
     "date": "2025-11-20",
     "title": "e-radio エフエム滋賀『キャッチ！』",
@@ -11628,6 +15118,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/9159",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "21986b01832b1acc18fa83f2599fcac7",
+    "date": "2025-11-20",
+    "title": "夢限大みゅーたいぷ デビュー2周年記念配信！ 公開収録",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/yumemita_secondanniversary/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "b5bd8f9e4b3b6b26f15257e15273b817",
@@ -11700,6 +15200,36 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "23abdcfb5735accfd73ce37d247a7e6c",
+    "date": "2025-11-29",
+    "title": "JR東海 presents 出発進行！バンドリ！10周年記念トークジャーニー！",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/bangdream-10th-talkjourney/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "4216abd23232824828016bad723c5764",
+    "date": "2025-11-29",
+    "title": "夢限大みゅーたいぷ 47都道府県制覇の旅 「スーパーポジション 〜夢限大編〜」@石川",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/yumemita_superposition_mugendai_ishikawa/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "1ad136e0e127d4fdab0b4438edcde5c7",
+    "date": "2025-11-30",
+    "title": "夢限大みゅーたいぷ 47都道府県制覇の旅 「スーパーポジション 〜夢限大編〜」@石川",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/yumemita_superposition_mugendai_ishikawa/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "63667211bdfb14bbb345274665cd8d44",
     "date": "2025-12-06",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -11718,6 +15248,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/9185",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "57a18cf93f38737a90406ae4370387c7",
+    "date": "2025-12-06",
+    "title": "MyGO!!!!! 8th LIVE「想いのかたちが積もるとき」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo_8th/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "be68566108edbd9f62b820f978133894",
+    "date": "2025-12-07",
+    "title": "RAISE A SUILEN×トゲナシトゲアリ「RAISE MY CATHARSIS」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras-togetoge/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "98d82090f7a4ede7ddf153db7b49d134",
@@ -11950,6 +15500,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "5041b29ad2578943271cd771450bef11",
+    "date": "2025-12-29",
+    "title": "千石ユノ主催DJイベント「YUNO’s PARTY Lv.2」",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/yumemita_yunos_party_lv2/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "9afdff4b1b1cd19cfd0a16fc2df5c45d",
+    "date": "2025-12-30",
+    "title": "Morfonica 5th Anniversary LIVE「Maestoso」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/morfonica_live_2025/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "27a612c126d2b787945d4cf4b4564f2f",
     "date": "2026-01-03",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -11970,6 +15540,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "37ed1ded644ad97e5d7d541addd14a18",
+    "date": "2026-01-03",
+    "title": "Poppin'Party New Year LIVE「Happy BanG Year!!」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ppp_live2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "54b1f4b8ccea101fbb3afc19fa33dc67",
     "date": "2026-01-07",
     "title": "「まって、ムリ！Fes　〜 二次通 from 夜な夜なプロジェクト〜」公開収録 Vol.3",
@@ -11978,6 +15558,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/9197",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "bad09e796dbf14fbe005811b1fe75b7a",
+    "date": "2026-01-07",
+    "title": "Morfonica トークイベント「モニ会へようこそ♪～放課後のお茶会～」",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/morfonica_talk_2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "58cff06727a5e85fe2518b388c169fc6",
@@ -12010,6 +15600,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "8a07d52a5e96daaf990534bea0975126",
+    "date": "2026-01-10",
+    "title": "Ave Mujica トークイベント「UNMASQUERADE」",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/avemujica_talkevent_2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "eb8ba3fa4129b93dbda9569a2045689a",
+    "date": "2026-01-12",
+    "title": "カードファイト!! ヴァンガード 15th Anniversary ブシロード新春大発表会2026",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/2026newyear_launch_event/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "bec352054d9920c8abbaebf6655ccd1b",
     "date": "2026-01-17",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -12040,6 +15650,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "bb19cfe16e136b303c65e8e1939ab710",
+    "date": "2026-01-22",
+    "title": "RAISE A SUILEN×Fear, and Loathing in Las Vegas「Drown Out the Noise」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ras-vegas2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "6bbd1b5322d1a469f66fadc5c870d7ad",
     "date": "2026-01-24",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -12068,6 +15688,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/9208",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "7d8a0c3eddf1802b8194d75d044c928c",
+    "date": "2026-01-25",
+    "title": "JR東海 presents 出発進行！バンドリ！10周年記念トークジャーニー！",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/bangdream-10th-talkjourney/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "e682c8da86162ce86a17c57976ec8e4b",
@@ -12108,6 +15738,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/9185",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "069054425ed8bb7ef2cb963e5f3f8466",
+    "date": "2026-01-31",
+    "title": "リスアニ！LIVE 2026",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/lisani2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "1082b2f436f8f04bd6c04ecdbd2020e3",
+    "date": "2026-02-01",
+    "title": "リスアニ！LIVE 2026",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/lisani2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "108500a3df5c85366bebca2b55239ddc",
@@ -12230,6 +15880,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "72d224c61338ff870ab7c32b5619f533",
+    "date": "2026-02-21",
+    "title": "Ave Mujica トークイベント「UNMASQUERADE」",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/avemujica_talkevent_2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "354238c131e1b16d1397073e2750fc89",
     "date": "2026-02-23",
     "title": "22/7リアル公演「ナナニジライブ inジャパンフェスタ」@西新井文化ホール",
@@ -12298,6 +15958,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/9185",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "52bdb7138d43c626a834681f1996435e",
+    "date": "2026-02-28",
+    "title": "BanG Dream! 10th Anniversary LIVE「In the name of BanG Dream!」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/bangdream-10th-anniversary-live/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "054c6fd15e37299b68632ba5f5a3ce97",
+    "date": "2026-03-01",
+    "title": "MyGO!!!!!×Ave Mujica ツーマンライブ「“moment / memory”」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo-avemujica2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "66e9c87797cd2491b3c4093f581cad8a",
@@ -12380,6 +16060,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "44677718f773b55b41efc7ac2829ffc3",
+    "date": "2026-03-20",
+    "title": "MEGA VEGAS 2026",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/megavegas2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "af535eb2fc97fb21b8c2046f2c4899e3",
     "date": "2026-03-21",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -12398,6 +16088,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/9185",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "6fbf5cf27ac9797d85f37a764d88d8b8",
+    "date": "2026-03-21",
+    "title": "MEGA VEGAS 2026",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/megavegas2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "6d6c6a3b912f3f5059414c5e1119401b",
@@ -12440,6 +16140,36 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "ce0ab399c7de32063af168f9721f53a5",
+    "date": "2026-03-28",
+    "title": "AnimeJapan 2026",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/animejapan-2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "a843a569cdb96e4ade9dedd73dbe73e0",
+    "date": "2026-03-29",
+    "title": "AnimeJapan 2026",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/animejapan-2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "fc4db7968b57baa22450ccd5ad833320",
+    "date": "2026-04-03",
+    "title": "CENTRAL MUSIC & ENTERTAINMENT FESTIVAL 2026",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/central_music_entertainment_festival_2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "3edf94a02294b633a7e55419bb7d2fd9",
     "date": "2026-04-04",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -12468,6 +16198,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/9279",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "485d9b29f1b41ec15ec73216ca880294",
+    "date": "2026-04-04",
+    "title": "CENTRAL MUSIC & ENTERTAINMENT FESTIVAL 2026",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/central_music_entertainment_festival_2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "70f0922f4f8ccc2b680e3ea629b14907",
+    "date": "2026-04-05",
+    "title": "CENTRAL MUSIC & ENTERTAINMENT FESTIVAL 2026",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/central_music_entertainment_festival_2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "68f64590654d51f0136369cb99e9482b",
@@ -12550,6 +16300,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "329aeef71619aafac8be331d8af7cd47",
+    "date": "2026-04-26",
+    "title": "峰月律Presents「もぐもぐPON☆パジャマぱ〜てぃ」",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/yumemita_mogumogupon/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "87410b8986dbd4a8389d75b3825d4f4e",
     "date": "2026-05-02",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -12570,6 +16330,16 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "14268a1f862b07b0fa6e8c42530d8926",
+    "date": "2026-05-03",
+    "title": "Poppin'Party×Roselia 合同ライブ「DREAMS GO ON」",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/ppp-roselia2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "15067b55856dbd9a1e4e5ce4a670fa48",
     "date": "2026-05-09",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -12588,6 +16358,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/9185",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "bc1f729c60a317923b6bd7050fd9d212",
+    "date": "2026-05-09",
+    "title": "MyGO!!!!!の「迷子集会」出張版 第三弾 - 日常の築葉書 -",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/maigocenter-event3/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "77eda2419571a69780a0d954a8a3c9fa",
@@ -12688,6 +16468,26 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/9185",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "e93edeebb116ae902e3da537bab4fa77",
+    "date": "2026-06-06",
+    "title": "FLOW THE FESTIVAL 2026",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/flowthefestival2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "5ee723deda5a6c2aa3393b5d2ef0bbbc",
+    "date": "2026-06-07",
+    "title": "FLOW THE FESTIVAL 2026",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/flowthefestival2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "15a52d90aeffd78174f26431a5d1fd9b",
@@ -12820,6 +16620,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "d0f12b09e908d1127f60a9ecb344504f",
+    "date": "2026-07-18",
+    "title": "MyGO!!!!! 9th LIVE",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo_9th/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "16ecaa1bee3394cd7c79487024e5f114",
+    "date": "2026-07-19",
+    "title": "MyGO!!!!! 9th LIVE",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/mygo_9th/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "65338ea88d5e9f6510451135526fc95b",
     "date": "2026-07-23",
     "title": "e-radio エフエム滋賀『キャッチ！』",
@@ -12888,6 +16708,56 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/9185",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "0d7e35ae6287bc841fc1dd4d0ca0b19c",
+    "date": "2026-08-08",
+    "title": "LuckyFes'26",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/luckyfes2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "a5acdeadd75a094a41e68349f74828f2",
+    "date": "2026-08-08",
+    "title": "MyGO!!!!!の「迷子集会」出張版 第三弾 - 日常の築葉書 -",
+    "category": "Event",
+    "time": "",
+    "url": "https://bang-dream.com/events/maigocenter-event3/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "8c66f7f830142bf9028b0f130d5756cc",
+    "date": "2026-08-09",
+    "title": "LuckyFes'26",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/luckyfes2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "aec0bd94d73ad9609016bc7168520e24",
+    "date": "2026-08-10",
+    "title": "LuckyFes'26",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/luckyfes2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "eebda530c86e361fd4454be14ac2cc0b",
+    "date": "2026-08-11",
+    "title": "LuckyFes'26",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/luckyfes2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "f2e43490201dd4167587d71011aaf6f7",
@@ -12960,6 +16830,26 @@
     "source": "nanabunnonijyuuni-mobile.com"
   },
   {
+    "id": "697f558d4883f9d4ac52ee417c4ef658",
+    "date": "2026-08-29",
+    "title": "Roselia「Lehre der Rose」 - Roselia 10th Anniversary Best Album「Lehre der Rose」リリース記念ライブ",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/lehre-der-rose/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
+    "id": "6bb7ec1302797e151dcb658f47d432f8",
+    "date": "2026-08-30",
+    "title": "Roselia「Lehre der Rose」 - Roselia 10th Anniversary Best Album「Lehre der Rose」リリース記念ライブ",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/lehre-der-rose/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
+  },
+  {
     "id": "8dc18d6407208b62f3d57ad482b618ce",
     "date": "2026-09-05",
     "title": "TOKYO MX・BS11『22/7 計算外』",
@@ -13018,6 +16908,16 @@
     "url": "https://nanabunnonijyuuni-mobile.com/s/n110/media/detail/9185",
     "project": "22/7",
     "source": "nanabunnonijyuuni-mobile.com"
+  },
+  {
+    "id": "21e88de0557c5792fa320fc2be0cb210",
+    "date": "2026-09-22",
+    "title": "Morfonica単独ライブ",
+    "category": "Live",
+    "time": "",
+    "url": "https://bang-dream.com/events/morfonica_live_2026/",
+    "project": "BanG Dream!",
+    "source": "bang-dream.com"
   },
   {
     "id": "877ecd30378d915027667398b6023323",
