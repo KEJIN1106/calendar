@@ -4,34 +4,93 @@ import json
 import datetime
 import os
 import hashlib
+import re
+from urllib.parse import urljoin, urlparse, parse_qsl, urlencode, urlunparse
 
 BASE_URL = "https://nanabunnonijyuuni-mobile.com/s/n110/media/list?dy={}"
 SITE_ROOT = "https://nanabunnonijyuuni-mobile.com"
 
 
-def _stable_event_id(date_str: str, title: str, category_text: str, href: str) -> str:
-    raw = f"{date_str}|{title}|{category_text}|{href}"
-    return hashlib.md5(raw.encode("utf-8")).hexdigest()
+def _normalize_url(href: str) -> str:
+    """
+    规范化活动链接，去掉会导致同一活动链接不同但内容相同的参数，
+    例如 ima / dy 等页面状态参数。
+    """
+    if not href:
+        return ""
+
+    full_url = href if href.startswith("http") else urljoin(SITE_ROOT, href)
+    parsed = urlparse(full_url)
+
+    filtered_query = []
+    for key, value in parse_qsl(parsed.query, keep_blank_values=True):
+        if key.lower() not in {"ima", "dy"}:
+            filtered_query.append((key, value))
+
+    normalized_query = urlencode(filtered_query, doseq=True)
+
+    normalized = urlunparse((
+        parsed.scheme,
+        parsed.netloc,
+        parsed.path,
+        parsed.params,
+        normalized_query,
+        ""
+    ))
+    return normalized
 
 
-def _normalize_date(raw_date: str, year_month: str) -> str:
-    clean = raw_date.replace(".", "-").replace("/", "-").strip()
-    parts = [p for p in clean.split("-") if p]
+def _normalize_title(title: str) -> str:
+    """
+    智能归一化标题，用于模糊去重。
+    尽量消除：
+    - 全角/半角空格
+    - 各种引号/括号差异
+    - 连续空白
+    - 末尾多余标点
+    """
+    if not title:
+        return ""
 
-    if len(parts) == 2:
-        year = year_month[:4]
-        month, day = parts
-    elif len(parts) == 3:
-        year, month, day = parts
-    else:
-        year = year_month[:4]
-        month = year_month[4:]
-        day = "".join(filter(str.isdigit, raw_date))
+    t = title.strip().lower()
 
-    return f"{year}-{month.zfill(2)}-{day.zfill(2)}"
+    replacements = {
+        "　": " ",
+        "『": "",
+        "』": "",
+        "「": "",
+        "」": "",
+        "“": "",
+        "”": "",
+        "\"": "",
+        "'": "",
+        "（": "(",
+        "）": ")",
+        "【": "[",
+        "】": "]",
+        "～": "~",
+        "−": "-",
+        "—": "-",
+        "―": "-",
+        "‐": "-",
+        "！": "!",
+        "？": "?",
+        "：": ":",
+    }
+
+    for old, new in replacements.items():
+        t = t.replace(old, new)
+
+    t = re.sub(r"\s+", "", t)
+    t = re.sub(r"[!！?？。．、,，]+$", "", t)
+
+    return t
 
 
-def _map_category(category_text: str) -> str:
+def _normalize_category(category_text: str) -> str:
+    """
+    分类统一映射成前端用的英文分类。
+    """
     if not category_text:
         return "Other"
 
@@ -52,19 +111,128 @@ def _map_category(category_text: str) -> str:
         "雑誌": "Release",
         "cd": "Release",
         "dvd": "Release",
+        "cddvd": "Release",
         "その他": "Other",
         "other": "Other",
     }
 
     for key, value in mapping.items():
-        if key.lower() == text:
+        if key == text:
             return value
 
     for key, value in mapping.items():
-        if key.lower() in text:
+        if key in text:
             return value
 
     return "Other"
+
+
+def _stable_event_id(date_str: str, title: str, category_text: str, href: str) -> str:
+    normalized_url = _normalize_url(href)
+    normalized_title = _normalize_title(title)
+    normalized_category = _normalize_category(category_text)
+    raw = f"{date_str}|{normalized_title}|{normalized_category}|{normalized_url}"
+    return hashlib.md5(raw.encode("utf-8")).hexdigest()
+
+
+def _normalize_date(raw_date: str, year_month: str) -> str:
+    clean = raw_date.replace(".", "-").replace("/", "-").strip()
+    parts = [p for p in clean.split("-") if p]
+
+    if len(parts) == 2:
+        year = year_month[:4]
+        month, day = parts
+    elif len(parts) == 3:
+        year, month, day = parts
+    else:
+        year = year_month[:4]
+        month = year_month[4:]
+        day = "".join(filter(str.isdigit, raw_date))
+
+    return f"{year}-{month.zfill(2)}-{day.zfill(2)}"
+
+
+def _better_event(new_event: dict, old_event: dict) -> dict:
+    """
+    合并重复项时，优先保留信息更完整的一条。
+    """
+    if old_event is None:
+        return new_event
+
+    def score(e: dict) -> tuple:
+        return (
+            1 if e.get("url") else 0,
+            1 if e.get("time") else 0,
+            len(e.get("title", "")),
+            len(e.get("url", "")),
+        )
+
+    return new_event if score(new_event) > score(old_event) else old_event
+
+
+def _dedupe_events(events: list) -> list:
+    """
+    两层去重：
+    1. 严格去重：日期 + 原标题 + 分类 + 规范化URL
+    2. 智能去重：日期 + 归一化标题 + 分类
+    """
+    # 第一层：严格去重
+    strict_map = {}
+
+    for e in events:
+        date_str = (e.get("date") or "").strip()
+        title = (e.get("title") or "").strip()
+        category = (e.get("category") or "").strip()
+        normalized_url = _normalize_url(e.get("url", ""))
+
+        strict_key = (
+            date_str,
+            title,
+            category,
+            normalized_url,
+        )
+
+        candidate = {
+            **e,
+            "url": normalized_url,
+        }
+
+        strict_map[strict_key] = _better_event(candidate, strict_map.get(strict_key))
+
+    strict_events = list(strict_map.values())
+
+    # 第二层：智能去重
+    smart_map = {}
+
+    for e in strict_events:
+        date_str = (e.get("date") or "").strip()
+        title = (e.get("title") or "").strip()
+        category = (e.get("category") or "").strip()
+
+        smart_key = (
+            date_str,
+            _normalize_title(title),
+            category,
+        )
+
+        smart_map[smart_key] = _better_event(e, smart_map.get(smart_key))
+
+    deduped = list(smart_map.values())
+
+    # 重建稳定 id
+    rebuilt = []
+    for e in deduped:
+        rebuilt.append({
+            **e,
+            "id": _stable_event_id(
+                e.get("date", ""),
+                e.get("title", ""),
+                e.get("category", ""),
+                e.get("url", ""),
+            )
+        })
+
+    return rebuilt
 
 
 def fetch_events_for_month(year_month: str) -> list:
@@ -111,7 +279,7 @@ def fetch_events_for_month(year_month: str) -> list:
                 title = title_elem.get_text(strip=True)
                 category_text = category_elem.get_text(strip=True) if category_elem else ""
                 clean_date = _normalize_date(raw_date, year_month)
-                cat_en = _map_category(category_text)
+                cat_en = _normalize_category(category_text)
 
                 link_elem = item.find("a")
                 href = ""
@@ -119,7 +287,7 @@ def fetch_events_for_month(year_month: str) -> list:
 
                 if link_elem and link_elem.has_attr("href"):
                     href = link_elem["href"]
-                    detail_url = href if href.startswith("http") else f"{SITE_ROOT}{href}"
+                    detail_url = _normalize_url(href)
 
                 events.append(
                     {
@@ -134,6 +302,7 @@ def fetch_events_for_month(year_month: str) -> list:
             except Exception as e:
                 print(f"解析旧结构时出错: {e}")
 
+        events = _dedupe_events(events)
         print(f"{year_month} 抓取到活动数: {len(events)}")
         return events
 
@@ -169,9 +338,9 @@ def fetch_events_for_month(year_month: str) -> list:
                     if not title:
                         continue
 
-                    cat_en = _map_category(category_text)
+                    cat_en = _normalize_category(category_text)
                     href = link.get("href", "").strip()
-                    detail_url = href if href.startswith("http") else (f"{SITE_ROOT}{href}" if href else "")
+                    detail_url = _normalize_url(href)
 
                     events.append(
                         {
@@ -188,6 +357,7 @@ def fetch_events_for_month(year_month: str) -> list:
         except Exception as e:
             print(f"解析日期块时出错: {e}")
 
+    events = _dedupe_events(events)
     print(f"{year_month} 抓取到活动数: {len(events)}")
     return events
 
@@ -224,20 +394,15 @@ def main():
             print(f"读取旧 events.json 失败: {e}")
 
     for ym in months_to_fetch:
-        events = fetch_events_for_month(ym)
-        all_events.extend(events)
+        month_events = fetch_events_for_month(ym)
+        all_events.extend(month_events)
 
     if not is_fetch_all:
-        events_dict = {e["id"]: e for e in existing_events}
-        for e in all_events:
-            events_dict[e["id"]] = e
-        final_events = list(events_dict.values())
+        merged_events = existing_events + all_events
     else:
-        dedup = {}
-        for e in all_events:
-            dedup[e["id"]] = e
-        final_events = list(dedup.values())
+        merged_events = all_events
 
+    final_events = _dedupe_events(merged_events)
     final_events.sort(key=lambda x: (x["date"], x["title"]))
 
     with open("events.json", "w", encoding="utf-8") as f:
